@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# CENTRAL DE ONGS
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas `
 
-`DISCIPLINA`
+`2º SEMESTRE/2022`
 
-`SEMESTRE`
-
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo geral deste trabalho é criar uma aplicação interativa que permita o encontro entre ONGs e voluntários para a promoção de objetivos comuns e ações conjuntas.
+Além de promover benefícios sociais, o trabalho voluntário também beneficia a saúde daqueles que praticam tal atividade. Dentre as vantagens do trabalho voluntário para a saúde, destacam-se a maior longevidade, menores taxas de depressão na terceira idade e menor incidência de doenças cardíacas.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Felipe Jorge Buzelin
+* Janaína Pinheiro Leal Do Couto 
+* Matheus Estevam Nunes Cordeiro 
+* Samara Martins Oliveira 
+* Thais Malta Boscatti 
+* Thais Munhoz Carneiro 
+* Vinicius Monteiro Fortino 
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson da Costa
 
 ## Instruções de utilização
 
