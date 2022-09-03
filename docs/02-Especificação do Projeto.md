@@ -4,30 +4,50 @@ A determinação exata do problema, suas personas, requisitos funcionais e não-
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem. 
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+![Persona Beatriz Costa](img/Persona-Beatriz-Costa.png)
+
+![Persona Hugo Martins](img/Persona-Hugo-Martins.png)
+
+![Persona Paula Matos](img/Persona-Paula-Matos.png)
+
+![Persona Pedro Silva](img/Persona-Pedro-Silva.png)
+
+![Persona Renata Alcantara](img/Persona-Renata-Alcantara.png)
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários. 
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Hugo Martins        | Encontrar uma ONG que esteja arrecadando dinheiro para realização de projetos ligados ao basquete                   | Para que seja possível incentivar o esporte e apoiar jovens que estejam interessados, tanto no lazer, quanto na carreira.    que possam administrar contas |
+|Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Evitar cadastros duplicados               |
+|Hugo Martins  | Acessar regularmente sua conta cadastrada por meio de login           | Evitar cadastros duplicados               |
+|Paula Matos   | Cadastrar a ONG Marmitas Solidárias e as vagas em aberto para voluntários interessados em participar da distribuição das marmitas          | Buscar voluntários para apoiar e ampliar as ações do projeto              |
+|Paula Matos   | Cadastrar informações sobre pontos de coleta de arrecadação de alimentos          | Facilitar a arrecadação de alimentos para a ONG              |
+|Paula Matos   | Avaliar o perfil dos candidatos que aplicaram para ocupar as vagas          | Para decidir se vai aceitar ou negar a candidatura                |
+|Paula Matos   | Buscar voluntários maiores de 18 anos          | Assegurar que menores de idade não estão realizando tarefas vedadas para suas idades                |
+|Beatriz Costa   | Ter a possibilidade encerrar sua participação como voluntária quando necessário           | Encerrar formalmente sua participação caso não seja possível prosseguir com o trabalho voluntário              |
+|Beatriz Costa   | Avaliar a qualidade do trabalho prestado pela ONG           | Permitir que outros voluntários tenham mais fundamento para decidirem se desejam ou não trabalhar na instituição              |
+|Beatriz Costa   | Cadastrar-se para apoiar ONGs  que estejam envolvidas com proteção animal           | Evitar cadastros duplicados               |
+|Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Dedicar o tempo livre a causas que despertam o interesse pessoal e ganhar experiência profissional               |
+|Renata Alcântara   | Recuperar o acesso ao site em caso de perda da senha          | Evitar ter que cadastrar um novo usuário e perder o acesso aos registros anteriores               |
+|Renata Alcântara   | Ser notificada por e-mail quando for aprovada para a vaga          | Acompanhar se o processo de candidatura foi bem sucedido                 |
+|Renata Alcântara   | Cadastrar-se como voluntária para auxiliar estudantes a melhorarem seu desempenho nos estudos          | Elevar as chances de estudantes conseguirem ingressar no ensino superior ou serem aprovados no ano letivo                |
+|Pedro Silva   | Cadastrar a ONG e as vagas para encontrar professores que possam ensinar aos alunos que farão o ENEM           | Poder discutir com os amigos e colegas de trabalhos sobre temas de interesse                |
+|Pedro Silva   | Cadastrar informações para arrecadação de doações financeiras           | Garantir a manutenção das instalações físicas da escola e proporcionar material didático aos alunos.               |
+|Pedro Silva  | Avaliar o trabalho prestado pelos voluntários à ONG           | Permitir que outras ONGs avaliem melhor a candidatura do voluntário              |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
 ## Requisitos
 
-O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir.
+O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir. 
 
 ### Requisitos Funcionais
 
-A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues. 
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
