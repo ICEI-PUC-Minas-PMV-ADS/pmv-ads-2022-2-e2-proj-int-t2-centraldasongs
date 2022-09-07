@@ -94,4 +94,5 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 Os componentes abaixo representam o diagrama de casos de uso da solução ONGs, nele podemos ver como cada Ator interage com o sistema.
 
-![Diagrama Caso de Uso]
+![image](https://user-images.githubusercontent.com/101024834/188764910-32ad6df3-b5bd-4f3d-82af-e8475c020fe4.png)
+
