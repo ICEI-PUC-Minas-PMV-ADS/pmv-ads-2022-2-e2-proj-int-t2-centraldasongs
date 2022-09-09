@@ -57,4 +57,7 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 
 # Apresentação
 
-<li><a href="presentation/PITCH-Central-das-Ongs.mp4"> Apresentação da solução</a></li>
+Vídeo de apresentação Central das ONGs.
+Neste vídeo, será apresentado uma breve história sobre ongs no Brasil e o objetivo do nosso projeto de aplicação interativa.
+
+<a href="https://youtu.be/ay75azhGeP0" rel="nofollow"><img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/blob/2ce189dacc49305c28ff9cce8235fd43bb28f2fb/docs/img/central-das-ongs-play1.jpeg" style="width: 60%;"></a>
