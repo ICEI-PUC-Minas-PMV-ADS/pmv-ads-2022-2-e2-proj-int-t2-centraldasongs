@@ -80,6 +80,6 @@ Já as ferramentas empregadas no projeto e suas respectivas funções são:
 |Editor de código |Visual Studio Code |
 |Ferramentas de comunicação |Github, Microsoft Teams, WhatsApp |
 |Ferramentas de diagramação | Figma, Canva|
-|Ferramentas de modelagem de processos | ?????? |
+|Ferramentas de modelagem de processos | Lucidchart, MySQL Worbench |
 |Ferramentas de gestão de projetos |GitHub Projects ]
 
