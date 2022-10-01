@@ -65,7 +65,6 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-012| O usuário Gestor das ONGs poderá avaliar o perfil dos candidatos das vagas assim como podendo aceitar ou negar a candidatura   | ALTA |
 |RF-013| Usuários aprovados pelos gestores receberam um e-mail de confirmação   | BAIXA |
 |RF-014| Usuários voluntários podem encerrar sua participação nas ONGs pelo site   | BAIXA |
-|RF-015| O sistema deve permitir que haja uma avaliação entre perfis de ONGs e Voluntários   | BAIXA |
 
 ### Requisitos não Funcionais
 
