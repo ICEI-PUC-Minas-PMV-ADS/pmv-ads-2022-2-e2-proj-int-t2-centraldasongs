@@ -73,7 +73,7 @@ Roteiro:
 | Passos              | - Acessar o navegador pelo celular;<br>- Informar o endereço do site;                                                                                                                                                                                                                 |
 | Critérios de Êxito  | - Todas as páginas deverão se comportar de forma com que nenhum texto, imagem ou caixa se sobreponha ou dificulte a legibilidade<br>- As letras devem ser nítidas e de fácil leitura<br>- Os formulários devem ser de fácil preenchimento mesmo quando o teclado inteligente aparecer |
 
-| Caso de Teste       | CT-07 – Links direcionaveis                                                     |
+| Caso de Teste       | CT-08 – Links direcionaveis                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
 | Requisito Associado |                                                                                 |
 | Objetivo do Teste   | Verificar a facilidade de navegabilidade no site                                |
