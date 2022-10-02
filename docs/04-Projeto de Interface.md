@@ -85,5 +85,7 @@ Quando possuir vagas ativas é possível vê-las dispostas no centro da tela.
 Ao selecionar uma das vagas ativas, o usuário pode selecionar a opção 'Editar vaga' ou 'Ver candidatos'.
 
 **Tela 17**
-![Ver candidatos](img/VerCandidatos.jpg)
+
+![Ver candidatos](img/VerCandidatos.PNG)
+
 Ao selecionar essa opção, o usuário verá os candidatos inscritos para a vaga com as informações de contato e a mensagem deixada por eles na candidatura. Além disso, ao lado de cada candidato, existe a opção de aprovar ou recusar a candidatura.
