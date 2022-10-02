@@ -24,3 +24,4 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ![Homepage](img/Homepage.jpg)
 ![Login](img/Login.jpg)
+![Cadastrar nova vaga](img/Cadastrarnovavaga.jpg)
