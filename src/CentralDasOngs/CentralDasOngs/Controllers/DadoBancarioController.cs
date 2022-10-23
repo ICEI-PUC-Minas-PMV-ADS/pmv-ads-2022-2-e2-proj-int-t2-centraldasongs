@@ -63,12 +63,11 @@ namespace CentralDasOngs.Controllers
         {
             if (ModelState.IsValid)
             {
-                dadoBancario.UsuarioOngCnpj = TempData["user_id"].ToString();
+                dadoBancario.UsuarioOngCnpj = TempData["user_idCnpj"].ToString();
                 _context.Add(dadoBancario);
                 await _context.SaveChangesAsync();
-                TempData["tipo"] = true;
-                TempData["user_id"] = dadoBancario.UsuarioOngCnpj;
-                return RedirectToAction("Create", "Endereco");
+                TempData["user_idCnpj"] = dadoBancario.UsuarioOngCnpj;
+                return RedirectToAction("CreateEnderecoCnpj", "Endereco");
             }
             ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Nome", dadoBancario.Codigo);
             ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id", dadoBancario.UsuarioOngCnpj);

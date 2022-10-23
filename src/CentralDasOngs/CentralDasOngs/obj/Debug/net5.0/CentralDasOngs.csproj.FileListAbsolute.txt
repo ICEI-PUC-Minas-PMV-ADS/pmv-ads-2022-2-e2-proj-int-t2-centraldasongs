@@ -1317,7 +1317,6 @@ C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\Endereco\Create.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\Endereco\Delete.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\Endereco\Details.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\Endereco\Edit.cshtml.g.cs
@@ -1327,7 +1326,6 @@ C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioOng\Details.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioOng\Edit.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioOng\Index.cshtml.g.cs
-C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioVoluntario\Create.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioVoluntario\Delete.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioVoluntario\Details.cshtml.g.cs
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioVoluntario\Edit.cshtml.g.cs
@@ -1341,3 +1339,4 @@ C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\CentralDasOngs.pdb
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\CentralDasOngs.genruntimeconfig.cache
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\ref\CentralDasOngs.dll
+C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralDasOngs\obj\Debug\net5.0\Razor\Views\UsuarioVoluntario\Create.cshtml.g.cs

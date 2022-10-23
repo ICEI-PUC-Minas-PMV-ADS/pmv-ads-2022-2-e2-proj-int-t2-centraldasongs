@@ -35,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Views\Endereco\Create.cshtml" />
     <Content Include="Views\Endereco\Delete.cshtml" />
     <Content Include="Views\Endereco\Details.cshtml" />
     <Content Include="Views\Endereco\Edit.cshtml" />
@@ -70,6 +69,8 @@
     <None Include="Views\UsuarioVoluntario\Edit.cshtml" />
     <None Include="Views\UsuarioVoluntario\Index.cshtml" />
     <None Include="Views\UsuarioVoluntario\Login.cshtml" />
+    <None Include="Views\UsuarioVoluntario\RecuperarSenha.cshtml" />
+    <None Include="Views\UsuarioVoluntario\VerificaDadosRecuperacao.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

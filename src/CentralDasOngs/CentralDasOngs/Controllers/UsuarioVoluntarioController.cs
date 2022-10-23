@@ -69,6 +69,82 @@ namespace CentralDasOngs.Controllers
             return View();
         }
 
+        [AllowAnonymous]
+        public IActionResult VerificaDadosRecuperacao()
+        {
+            return View();
+        }
+
+        //POST: Login
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> VerificaDadosRecuperacao([Bind("Email,Cpf")] UsuarioVoluntario usuario) //Definindo que no login ele recebe apenas o Id e Senha (Feito com o Bind)
+        {
+            var user = await _context.UsuariosVoluntarios
+            .FirstOrDefaultAsync(m => m.Email == usuario.Email);
+            if (user == null)
+            {
+                ViewBag.MensagemLogin = "Email ou CPF incorreto!";
+                return View();
+            }
+            user = await _context.UsuariosVoluntarios
+                .FirstOrDefaultAsync(m => m.Cpf == usuario.Cpf);
+            if (user == null)
+            {
+                ViewBag.MensagemLogin = "Email ou CPF incorreto!";
+                return View();
+            }
+            TempData["user_id"] = usuario.Cpf;
+            return Redirect("RecuperarSenha");
+        }
+
+        [AllowAnonymous]
+        public IActionResult RecuperarSenha()
+        {
+            return View();
+        }
+        public async Task<IActionResult> RecuperarSenha(string id)
+        {
+            id = TempData["user_id"].ToString();
+            var usuarioVoluntario = await _context.UsuariosVoluntarios.FindAsync(id);
+
+            return View(id, usuarioVoluntario);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RecuperarSenha(string id, [Bind("Senha")] UsuarioVoluntario usuarioVoluntario)
+        {
+            if (id != usuarioVoluntario.Cpf_Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    usuarioVoluntario.Senha = BCrypt.Net.BCrypt.HashPassword(usuarioVoluntario.Senha);
+                    _context.Update(usuarioVoluntario);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UsuarioVoluntarioExists(usuarioVoluntario.Cpf_Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Login");
+            }
+            return View(usuarioVoluntario);
+        }
+
         //Logout
         public async Task<IActionResult> Logout()
         {
@@ -130,12 +206,11 @@ namespace CentralDasOngs.Controllers
                 string cpf4 = usuarioVoluntario.Cpf_Id[9..];
                 usuarioVoluntario.Cpf = $"{cpf1}.{cpf2}.{cpf3}-{cpf4}";
                 usuarioVoluntario.Tipo = Tipo.Voluntario;
-                TempData["user_id"] = usuarioVoluntario.Cpf_Id;
-                TempData["tipo"] = false;
+                TempData["user_cpf"] = usuarioVoluntario.Cpf;
                 usuarioVoluntario.Senha = BCrypt.Net.BCrypt.HashPassword(usuarioVoluntario.Senha);
                 _context.Add(usuarioVoluntario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Create","Endereco");
+                return RedirectToAction("Create", "Endereco");
             }
             return View(usuarioVoluntario);
         }

@@ -28,7 +28,10 @@
                 <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar</a>
             </div>
             <div>
-                <a class="btn btn-info" asp-controller="UsuarioVoluntario" asp-action="Create">Criar conta</a>
+                <a asp-controller="UsuarioVoluntario" asp-action="Create">Criar conta</a>
+            </div>
+            <div>
+                <a asp-controller="UsuarioVoluntario" asp-action="VerificaDadosRecuperacao">Esqueci minha senha</a>
             </div>
         </form>
         <h2>@ViewBag.MensagemLogin</h2>

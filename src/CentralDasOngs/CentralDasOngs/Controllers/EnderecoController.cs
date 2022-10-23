@@ -51,8 +51,8 @@ namespace CentralDasOngs.Controllers
         public IActionResult Create()
         {
             ViewData["Uf"] = new SelectList(_context.Ufs, "Uf", "Uf");
-            ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id");
             ViewData["UsuarioVoluntarioCpf"] = new SelectList(_context.UsuariosVoluntarios, "Cpf_Id", "Cpf_Id");
+            ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id");
             return View();
         }
 
@@ -61,18 +61,9 @@ namespace CentralDasOngs.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Logradouro,Bairro,NumeroEndereco,Complemento,Cidade,UsuarioVoluntarioCpf,UsuarioOngCnpj,Uf")] Endereco endereco)
-        {
-            bool tipo = (bool)TempData["tipo"];
-            if (tipo)
+        public async Task<IActionResult> Create([Bind("Id,Logradouro,Bairro,NumeroEndereco,Complemento,Cidade,UsuarioOngCnpj,UsuarioVoluntarioCpf,Uf")] Endereco endereco)
             {
-                endereco.UsuarioOngCnpj = TempData["user_id"].ToString();
-            }
-            else
-            {
-                endereco.UsuarioVoluntarioCpf = TempData["user_id"].ToString();
-            }
-            //TempData["user_id"] =null;
+            endereco.UsuarioVoluntarioCpf = TempData["user_cpf"].ToString();
             if (ModelState.IsValid)
             {
                 _context.Add(endereco);
@@ -84,6 +75,8 @@ namespace CentralDasOngs.Controllers
             ViewData["UsuarioVoluntarioCpf"] = new SelectList(_context.UsuariosVoluntarios, "Cpf_Id", "Cpf_Id", endereco.UsuarioVoluntarioCpf);
             return View(endereco);
         }
+
+
 
         // GET: Endereco/Edit/5
         public async Task<IActionResult> Edit(int? id)
