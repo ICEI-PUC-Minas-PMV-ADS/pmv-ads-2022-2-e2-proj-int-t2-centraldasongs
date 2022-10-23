@@ -49,7 +49,7 @@ namespace CentralDasOngs.Controllers
         // GET: DadoBancario/Create
         public IActionResult Create()
         {
-            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Codigo");
+            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Nome");
             ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id");
             return View();
         }
@@ -70,7 +70,7 @@ namespace CentralDasOngs.Controllers
                 TempData["user_id"] = dadoBancario.UsuarioOngCnpj;
                 return RedirectToAction("Create", "Endereco");
             }
-            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Codigo", dadoBancario.Codigo);
+            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Nome", dadoBancario.Codigo);
             ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id", dadoBancario.UsuarioOngCnpj);
             return View(dadoBancario);
         }
@@ -88,7 +88,7 @@ namespace CentralDasOngs.Controllers
             {
                 return NotFound();
             }
-            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Codigo", dadoBancario.Codigo);
+            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Nome", dadoBancario.Codigo);
             ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id", dadoBancario.UsuarioOngCnpj);
             return View(dadoBancario);
         }
@@ -125,7 +125,7 @@ namespace CentralDasOngs.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Codigo", dadoBancario.Codigo);
+            ViewData["Codigo"] = new SelectList(_context.Bancos, "Codigo", "Nome", dadoBancario.Codigo);
             ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id", dadoBancario.UsuarioOngCnpj);
             return View(dadoBancario);
         }

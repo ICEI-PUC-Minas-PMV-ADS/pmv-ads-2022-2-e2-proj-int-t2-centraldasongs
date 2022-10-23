@@ -86,13 +86,13 @@ namespace CentralDasOngs.Migrations
                         column: x => x.Codigo,
                         principalTable: "bancos",
                         principalColumn: "Codigo",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_DadosBancarios_UsuariosOng_UsuarioOngCnpj",
                         column: x => x.UsuarioOngCnpj,
                         principalTable: "UsuariosOng",
                         principalColumn: "Cnpj_Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -124,13 +124,13 @@ namespace CentralDasOngs.Migrations
                         column: x => x.UsuarioOngCnpj,
                         principalTable: "UsuariosOng",
                         principalColumn: "Cnpj_Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_enderecos_UsuariosVoluntarios_UsuarioVoluntarioCpf",
                         column: x => x.UsuarioVoluntarioCpf,
                         principalTable: "UsuariosVoluntarios",
                         principalColumn: "Cpf_Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
