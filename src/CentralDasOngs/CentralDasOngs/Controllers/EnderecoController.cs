@@ -77,7 +77,7 @@ namespace CentralDasOngs.Controllers
             {
                 _context.Add(endereco);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index","Home");
             }
             ViewData["Uf"] = new SelectList(_context.Ufs, "Uf", "Uf", endereco.Uf);
             ViewData["UsuarioOngCnpj"] = new SelectList(_context.UsuariosOng, "Cnpj_Id", "Cnpj_Id", endereco.UsuarioOngCnpj);

@@ -21,12 +21,44 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioVoluntario" asp-action="Create">Sou um voluntário</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioOng" asp-action="Create">Sou uma ONG</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                            @if (User.IsInRole("Ong"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioOng" asp-action="Details" asp-route-id="@User.Claims.ElementAt(2).Value">Minha ONG</a>
+                                </li>
+                            }
+                        @if (User.IsInRole("Voluntario"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioVoluntario" asp-action="Details" asp-route-id="@User.Claims.ElementAt(2).Value">Minha conta</a>
+                            </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                Olá, @User.Identity.Name
+                                @if (User.IsInRole("Ong"))
+                                {
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioOng" asp-action="Logout">Sair</a>
+                                }
+                                @if (User.IsInRole("Voluntario"))
+                                {
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioVoluntario" asp-action="Logout">Sair</a>
+                                }
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioOng" asp-action="Login">Sou uma ONG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioVoluntario" asp-action="Login">Sou Voluntario</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
