@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Compile Remove="Views\Endereco\**" />
+    <Compile Remove="Views\NovaPasta\**" />
+    <Compile Remove="Views\UsuarioOng\**" />
+    <Compile Remove="Views\UsuarioVoluntario\**" />
+    <Content Remove="Migrations\**" />
+    <Content Remove="Views\Endereco\**" />
+    <Content Remove="Views\NovaPasta\**" />
+    <Content Remove="Views\UsuarioOng\**" />
+    <Content Remove="Views\UsuarioVoluntario\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="Views\Endereco\**" />
+    <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="Views\UsuarioOng\**" />
+    <EmbeddedResource Remove="Views\UsuarioVoluntario\**" />
+    <None Remove="Migrations\**" />
+    <None Remove="Views\Endereco\**" />
+    <None Remove="Views\NovaPasta\**" />
+    <None Remove="Views\UsuarioOng\**" />
+    <None Remove="Views\UsuarioVoluntario\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20221023050952_Inicial.cs" />
+    <Compile Include="Migrations\20221023050952_Inicial.Designer.cs" />
+    <Compile Include="Migrations\CentralDasOngsContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Endereco\Create.cshtml" />
+    <Content Include="Views\Endereco\Delete.cshtml" />
+    <Content Include="Views\Endereco\Details.cshtml" />
+    <Content Include="Views\Endereco\Edit.cshtml" />
+    <Content Include="Views\Endereco\Index.cshtml" />
+    <Content Include="Views\UsuarioOng\Create.cshtml" />
+    <Content Include="Views\UsuarioOng\Delete.cshtml" />
+    <Content Include="Views\UsuarioOng\Details.cshtml" />
+    <Content Include="Views\UsuarioOng\Edit.cshtml" />
+    <Content Include="Views\UsuarioOng\Index.cshtml" />
+    <Content Include="Views\UsuarioVoluntario\Create.cshtml" />
+    <Content Include="Views\UsuarioVoluntario\Delete.cshtml" />
+    <Content Include="Views\UsuarioVoluntario\Details.cshtml" />
+    <Content Include="Views\UsuarioVoluntario\Edit.cshtml" />
+    <Content Include="Views\UsuarioVoluntario\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Endereco\Create.cshtml" />
+    <None Include="Views\Endereco\Delete.cshtml" />
+    <None Include="Views\Endereco\Details.cshtml" />
+    <None Include="Views\Endereco\Edit.cshtml" />
+    <None Include="Views\Endereco\Index.cshtml" />
+    <None Include="Views\UsuarioOng\Create.cshtml" />
+    <None Include="Views\UsuarioOng\Delete.cshtml" />
+    <None Include="Views\UsuarioOng\Details.cshtml" />
+    <None Include="Views\UsuarioOng\Edit.cshtml" />
+    <None Include="Views\UsuarioOng\Index.cshtml" />
+    <None Include="Views\UsuarioVoluntario\Create.cshtml" />
+    <None Include="Views\UsuarioVoluntario\Delete.cshtml" />
+    <None Include="Views\UsuarioVoluntario\Details.cshtml" />
+    <None Include="Views\UsuarioVoluntario\Edit.cshtml" />
+    <None Include="Views\UsuarioVoluntario\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>
