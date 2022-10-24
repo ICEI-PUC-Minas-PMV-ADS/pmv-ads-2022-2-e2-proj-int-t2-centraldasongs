@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bYg4cNXlecoxZUdafqDGrR9d8ru6qn/zbsxDh984NPVuvZDDUYsLNsst0TIy7Jprg41kskUOSvJc8GoN+HwrwA==",
+  "dgSpecHash": "dnO7FuySE2Nso3S8Rguxb2QatJ/QtsPac8fMMpSb+vhoUSdp6IFgZejbhLIuBp5HbbMcb0OQVaL7HMZSq5auFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_Testes\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
+  "projectFilePath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Estevam\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Matheus Estevam\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
