@@ -11,7 +11,7 @@ namespace CentralDasOngs.Models
         public int Code { get; set; }
         public string Name { get; set; }
 
-        public ICollection<OngBankInformation> Id { get; set; }
+        public ICollection<OngBankInformationModel> Id { get; set; }
 
     }
 }

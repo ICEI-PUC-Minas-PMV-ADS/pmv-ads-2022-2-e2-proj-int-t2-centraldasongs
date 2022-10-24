@@ -44,7 +44,8 @@ namespace CentralDasOngs.Controllers
             {
                 return NotFound();
             }
-
+            var userAdress = await _context.AdressModel
+                .FirstOrDefaultAsync(m => m.UserVoluntarioId == id);
             return View(userVoluntarioModel);
         }
 
@@ -98,12 +99,15 @@ namespace CentralDasOngs.Controllers
             {
                 return NotFound();
             }
+            var userAdress = await _context.AdressModel
+                .FirstOrDefaultAsync(m => m.UserVoluntarioId == id);
 
             var userVoluntarioModel = await _context.UserVoluntarioModel.FindAsync(id);
             if (userVoluntarioModel == null)
             {
                 return NotFound();
             }
+            ViewData["State"] = new SelectList(_context.StateModel, "Uf", "Uf");
             return View(userVoluntarioModel);
         }
 
@@ -140,6 +144,7 @@ namespace CentralDasOngs.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["State"] = new SelectList(_context.StateModel, "Uf", "Uf");
             return View(userVoluntarioModel);
         }
 

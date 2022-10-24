@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CentralDasOngs.Models
 {
     [Table("ong_bank_information")]
-    public class OngBankInformation
+    public class OngBankInformationModel
     {
         [Key]
         public int Id { get; set; }

@@ -14,7 +14,7 @@ namespace CentralDasOngs.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Cnpj { get; set; }
 
-        public OngBankInformation OngBankInformation { get; set; }
+        public OngBankInformationModel OngBankInformation { get; set; }
         public AdressModel AdressModel { get; set; }
 
     }

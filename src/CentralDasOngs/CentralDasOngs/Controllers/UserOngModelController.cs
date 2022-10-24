@@ -45,7 +45,14 @@ namespace CentralDasOngs.Controllers
             {
                 return NotFound();
             }
+            var userAdress = await _context.AdressModel
+                .FirstOrDefaultAsync(m => m.UserOngId == id);
 
+            var userBankInformation = await _context.OngBankInformationModel
+                .FirstOrDefaultAsync(m => m.UserOngId == id);
+            
+            var userBank = await _context.BankModel
+                .FirstOrDefaultAsync(m => m.Code == userBankInformation.BankId);
             return View(userOngModel);
         }
 
@@ -102,11 +109,19 @@ namespace CentralDasOngs.Controllers
                 return NotFound();
             }
 
+            var userAdress = await _context.AdressModel
+                .FirstOrDefaultAsync(m => m.UserOngId == id);
+
+            var userBankInformation = await _context.OngBankInformationModel
+                .FirstOrDefaultAsync(m => m.UserOngId == id);
+
             var userOngModel = await _context.UserOngModel.FindAsync(id);
             if (userOngModel == null)
             {
                 return NotFound();
             }
+            ViewData["State"] = new SelectList(_context.StateModel, "Uf", "Uf");
+            ViewData["BankId"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userOngModel);
         }
 
@@ -143,6 +158,8 @@ namespace CentralDasOngs.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["State"] = new SelectList(_context.StateModel, "Uf", "Uf");
+            ViewData["BankId"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userOngModel);
         }
 

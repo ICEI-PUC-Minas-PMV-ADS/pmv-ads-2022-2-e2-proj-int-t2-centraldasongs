@@ -14,6 +14,6 @@ namespace CentralDasOngs.Data
         public DbSet<StateModel> StateModel { get; set; }
         public DbSet<UserOngModel> UserOngModel { get; set; }
         public DbSet<BankModel> BankModel { get; set; }
-        public DbSet<OngBankInformation> OngBankInformation { get; set; }
+        public DbSet<OngBankInformationModel> OngBankInformationModel { get; set; }
     }
 }
