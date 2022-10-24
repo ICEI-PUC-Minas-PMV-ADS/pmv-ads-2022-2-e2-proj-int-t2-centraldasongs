@@ -22,11 +22,52 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserVoluntarioModel" asp-action="Create">Criar Usuario Voluntario</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserOngModel" asp-action="Index">Lista de ONGs</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserOngModel" asp-action="Create">Criar Usuario Ong</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole("Ong")) //Verificando se o usuario é admin, caso ele seja, aparece o campo de Usuario
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserOngModel" asp-action="Details" asp-route-id="@User.Claims.ElementAt(2).Value">Minha ONG</a>
+                                </li>
+                            }
+                            @if(User.IsInRole("Voluntario"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserVoluntarioModel" asp-action="Details" asp-route-id="@User.Claims.ElementAt(2).Value">Minha conta</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated) //Se o usuario está autenticado
+                        {
+                            @if (User.IsInRole("Ong")) //Verificando se o usuario é admin, caso ele seja, aparece o campo de Usuario
+                            {
+                                <li class="nav-item">
+                                    Olá, @User.Identity.Name
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserOngModel" asp-action="Logout">Sair</a>
+                                </li>
+                            }
+                            @if (User.IsInRole("Voluntario"))
+                            {
+                                <li class="nav-item">
+                                    Olá, @User.Identity.Name
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserVoluntarioModel" asp-action="Logout">Sair</a>
+                                </li>
+                            }
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UserOngModel" asp-action="Login">Sou uma ONG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UserVoluntarioModel" asp-action="Login">Sou voluntário</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

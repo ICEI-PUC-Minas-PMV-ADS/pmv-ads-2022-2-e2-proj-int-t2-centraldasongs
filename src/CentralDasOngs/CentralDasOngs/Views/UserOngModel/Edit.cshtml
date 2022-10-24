@@ -33,20 +33,65 @@
                 <input asp-for="Contact" class="form-control" />
                 <span asp-validation-for="Contact" class="text-danger"></span>
             </div>
+            <hr>
             <div class="form-group">
-                <label asp-for="UserType" class="control-label"></label>
-                <select asp-for="UserType" class="form-control"></select>
-                <span asp-validation-for="UserType" class="text-danger"></span>
+                <label asp-for="AdressModel.State" class="control-label"></label>
+                <select asp-for="AdressModel.State" class="form-control" asp-items="ViewBag.State"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <label asp-for="AdressModel.City" class="control-label"></label>
+                <input asp-for="AdressModel.City" class="form-control" />
+                <span asp-validation-for="AdressModel. City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdressModel.District" class="control-label"></label>
+                <input asp-for="AdressModel.District" class="form-control" />
+                <span asp-validation-for="AdressModel.District" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdressModel.Street" class="control-label"></label>
+                <input asp-for="AdressModel.Street" class="form-control" />
+                <span asp-validation-for="AdressModel.Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdressModel.HouseNumber" class="control-label"></label>
+                <input asp-for="AdressModel.HouseNumber" class="form-control" />
+                <span asp-validation-for="AdressModel.HouseNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdressModel.Complement" class="control-label"></label>
+                <input asp-for="AdressModel.Complement" class="form-control" />
+                <span asp-validation-for="AdressModel.Complement" class="text-danger"></span>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label asp-for="OngBankInformation.AccountNumber" class="control-label"></label>
+                <input asp-for="OngBankInformation.AccountNumber" class="form-control" />
+                <span asp-validation-for="OngBankInformation.AccountNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OngBankInformation.Agency" class="control-label"></label>
+                <input asp-for="OngBankInformation.Agency" class="form-control" />
+                <span asp-validation-for="OngBankInformation.Agency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OngBankInformation.AccountType" class="control-label"></label>
+                <input asp-for="OngBankInformation.AccountType" class="form-control" />
+                <span asp-validation-for="OngBankInformation.AccountType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OngBankInformation.BankId" class="control-label"></label>
+                <select asp-for="OngBankInformation.BankId" class="form-control" asp-items="ViewBag.BankId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar alterações" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Details" asp-route-id="@Model.Cnpj">Voltar</a>
 </div>
 
 @section Scripts {
