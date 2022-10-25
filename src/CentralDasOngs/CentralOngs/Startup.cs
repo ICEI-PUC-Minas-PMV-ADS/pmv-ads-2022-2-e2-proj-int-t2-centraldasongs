@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace CentralOngs
 {
@@ -31,7 +32,8 @@ namespace CentralOngs
             });
 
             services.AddDbContext<DatabaseContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"))
+                //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
             );
 
             services.AddControllersWithViews();

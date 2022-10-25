@@ -10,8 +10,6 @@ namespace CentralOngs.Models
         [Key]
         public int Code { get; set; }
         public string Name { get; set; }
-
-        public ICollection<OngBankInformationModel> Id { get; set; }
     }
 }
 

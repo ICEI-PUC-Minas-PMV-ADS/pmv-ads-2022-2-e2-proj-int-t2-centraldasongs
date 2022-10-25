@@ -14,7 +14,7 @@ namespace CentralOngs.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Cnpj { get; set; }
 
-        public OngBankInformationModel OngBankInformation { get; set; }
+        public virtual BankAccountModel BankAccount { get; set; }
     }
 }
 

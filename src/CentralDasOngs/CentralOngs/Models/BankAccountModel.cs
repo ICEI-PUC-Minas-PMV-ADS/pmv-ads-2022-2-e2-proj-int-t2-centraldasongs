@@ -5,8 +5,8 @@ using System.Xml.Linq;
 
 namespace CentralOngs.Models
 {
-    [Table("ong_bank_information")]
-    public class OngBankInformationModel
+    [Table("bank_account")]
+    public class BankAccountModel
     {
         [Key]
         public int Id { get; set; }
@@ -17,7 +17,7 @@ namespace CentralOngs.Models
 
         [Required]
         [Display(Name = "Agência")]
-        public int Agency { get; set; }
+        public int Branch { get; set; }
 
         [Required]
         [Display(Name = "Operação")]
