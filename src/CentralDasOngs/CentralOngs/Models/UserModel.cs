@@ -25,6 +25,12 @@ namespace CentralOngs.Models
         [Required(ErrorMessage = "É necessário informar o contato!")]
         [RegularExpression(@"^\(?(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$", ErrorMessage = "Numero de contato invalido!")]
         public string Contact { get; set; }
+
+        [Display(Name = "Endereço")]
+        [DataType(DataType.PhoneNumber)]
+        [Required(ErrorMessage = "É necessário informar o endereço!")]
+        public virtual AddressModel Address { get; set; }
+
         public UserType UserType { get; set; }
     }
 }

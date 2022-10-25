@@ -15,7 +15,6 @@ namespace CentralOngs.Models
         public long Cnpj { get; set; }
 
         public OngBankInformationModel OngBankInformation { get; set; }
-        public AddressModel AdressModel { get; set; }
     }
 }
 
