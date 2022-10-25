@@ -21,6 +21,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
+             <td> 
+                <a asp-action="Details" asp-route-id="@item.Cnpj">Saiba mais</a>
+             </td>
         </tr>
 }
     </tbody>

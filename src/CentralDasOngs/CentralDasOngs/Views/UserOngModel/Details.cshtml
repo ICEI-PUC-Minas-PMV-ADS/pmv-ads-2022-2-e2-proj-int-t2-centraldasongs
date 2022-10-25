@@ -103,7 +103,13 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Cnpj">Editar</a> |
-    <a asp-action="Delete" asp-route-id="@Model.Cnpj">Deletar</a> |
+    @if (User.Identity.IsAuthenticated)
+    {
+        @if (User.IsInRole("Ong") && Model.Cnpj.ToString() == User.Claims.ElementAt(2).Value)
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Cnpj">Editar</a>
+            <a asp-action="Delete" asp-route-id="@Model.Cnpj">Deletar</a>
+        }
+    }
     <a asp-controller="Home" asp-action="Index">Voltar</a>
 </div>
