@@ -6,6 +6,9 @@ namespace CentralOngs.Models
 {
     public abstract class UserModel
     {
+        [Key]
+        public int Id { get; set; }
+
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "É necessário informar o nome!")]
         public string Name { get; set; }

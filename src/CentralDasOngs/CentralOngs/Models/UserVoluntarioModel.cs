@@ -8,11 +8,10 @@ namespace CentralOngs.Models
     [Table("user_voluntario")]
     public class UserVoluntarioModel
     {
-        [Key]
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "É necessário informar o CPF!")]
         //[RegularExpression(@"^\d{3}\d{3}\d{3}\d{2}$", ErrorMessage = "Numero de cpf invalido! Informar apenas numeros")]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Cpf { get; set; }
 
         [Display(Name = "Data de nascimento")]

@@ -23,18 +23,8 @@ namespace CentralOngs.Models
         [Display(Name = "Operação")]
         public int AccountType { get; set; }
 
-        [ForeignKey("BankId")]
         [Display(Name = "Banco")]
-        public BankModel Bank { get; set; }
-
-        [Required]
-        [Display(Name = "Banco")]
-        public int BankId { get; set; }
-
-
-        [ForeignKey("UserOngId")]
-        public UserOngModel UserOng { get; set; }
-        public long UserOngId { get; set; }
+        public virtual BankModel Bank { get; set; }
     }
 }
 

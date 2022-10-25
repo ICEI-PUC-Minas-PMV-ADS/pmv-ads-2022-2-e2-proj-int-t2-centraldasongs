@@ -11,9 +11,7 @@ namespace CentralOngs.Models
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("State")]
-        public StateModel StateModel { get; set; }
-        public string State { get; set; }
+        public virtual StateModel State { get; set; }
 
         [Display(Name = "Cidade")]
         [Required(ErrorMessage = "É necessário informar a cidade!")]
@@ -29,18 +27,10 @@ namespace CentralOngs.Models
 
         [Display(Name = "Numero")]
         [Required(ErrorMessage = "É necessário informar o numero do endereço!")]
-        public int HouseNumber { get; set; }
+        public int Number { get; set; }
 
         [Display(Name = "Complemento")]
         public string Complement { get; set; }
-
-        [ForeignKey("UserVoluntarioId")]
-        public UserVoluntarioModel UserVoluntarioModel { get; set; }
-        public long? UserVoluntarioId { get; set; }
-
-        [ForeignKey("UserOngId")]
-        public UserOngModel UserOngModel { get; set; }
-        public long? UserOngId { get; set; }
     }
 }
 
