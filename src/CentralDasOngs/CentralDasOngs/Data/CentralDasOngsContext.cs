@@ -1,4 +1,6 @@
-﻿using CentralDasOngs.Models;
+﻿using System.Reflection.Metadata;
+using CentralDasOngs.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace CentralDasOngs.Data

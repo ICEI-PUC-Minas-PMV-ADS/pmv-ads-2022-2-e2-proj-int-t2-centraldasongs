@@ -13,7 +13,7 @@ namespace CentralDasOngs.Migrations
                 {
                     Code = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "varchar(200)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -24,7 +24,7 @@ namespace CentralDasOngs.Migrations
                 name: "ufs",
                 columns: table => new
                 {
-                    Uf = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Uf = table.Column<string>(type: "varchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -36,10 +36,10 @@ namespace CentralDasOngs.Migrations
                 columns: table => new
                 {
                     Cnpj = table.Column<long>(type: "bigint", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Contact = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Email = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Password = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Contact = table.Column<string>(type: "varchar(200)", nullable: false),
                     UserType = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -52,11 +52,11 @@ namespace CentralDasOngs.Migrations
                 columns: table => new
                 {
                     Cpf = table.Column<long>(type: "bigint", nullable: false),
-                    DateBirthDay = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Contact = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DateBirthDay = table.Column<DateTime>(type: "timestamp", nullable: false),
+                    Name = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Email = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Password = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Contact = table.Column<string>(type: "varchar(200)", nullable: false),
                     UserType = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -70,7 +70,7 @@ namespace CentralDasOngs.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    AccountNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AccountNumber = table.Column<string>(type: "varchar(200)", nullable: false),
                     Agency = table.Column<int>(type: "int", nullable: false),
                     AccountType = table.Column<int>(type: "int", nullable: false),
                     BankId = table.Column<int>(type: "int", nullable: false),
@@ -99,12 +99,12 @@ namespace CentralDasOngs.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    State = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    District = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Street = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    State = table.Column<string>(type: "varchar(450)", nullable: true),
+                    City = table.Column<string>(type: "varchar(200)", nullable: false),
+                    District = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Street = table.Column<string>(type: "varchar(200)", nullable: false),
                     HouseNumber = table.Column<int>(type: "int", nullable: false),
-                    Complement = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Complement = table.Column<string>(type: "varchar(200)", nullable: true),
                     UserVoluntarioId = table.Column<long>(type: "bigint", nullable: true),
                     UserOngId = table.Column<long>(type: "bigint", nullable: true)
                 },
@@ -140,15 +140,15 @@ namespace CentralDasOngs.Migrations
                 name: "IX_adress_UserOngId",
                 table: "adress",
                 column: "UserOngId",
-                unique: true,
-                filter: "[UserOngId] IS NOT NULL");
+                unique: true)
+            .Annotation("SqlServer:FilteredIndex", "[UserOngId] IS NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_adress_UserVoluntarioId",
                 table: "adress",
                 column: "UserVoluntarioId",
-                unique: true,
-                filter: "[UserVoluntarioId] IS NOT NULL");
+                unique: true)
+            .Annotation("SqlServer:FilteredIndex", "[UserVoluntarioId] IS NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ong_bank_information_BankId",

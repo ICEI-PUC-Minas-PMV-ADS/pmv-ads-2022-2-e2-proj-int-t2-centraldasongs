@@ -41,7 +41,7 @@ namespace CentralDasOngs
                 options.LoginPath = "/Home/Index/";
             });
             services.AddDbContext<CentralDasOngsContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"))
             );
 
 
@@ -58,10 +58,8 @@ namespace CentralDasOngs
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
             }
-            app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
