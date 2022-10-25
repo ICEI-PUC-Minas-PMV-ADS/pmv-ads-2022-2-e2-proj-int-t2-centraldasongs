@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{A365405F-DE34-4767-ADB3-688D4674D711}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CentralDasOngs/Startup.cs">
+    <Files>
+      <File FileName="CentralDasOngs/appsettings.json" Line="10" Column="81" />
+      <File FileName="CentralDasOngs/Startup.cs" Line="44" Column="37" />
+      <File FileName="CentralDasOngs/Data/CentralDasOngsContext.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CentralDasOngs" expanded="True">
+            <Node name="CentralDasOngs" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="UserOngModel" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CentralDasOngs PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
