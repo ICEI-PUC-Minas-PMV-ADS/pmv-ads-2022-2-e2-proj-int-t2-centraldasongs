@@ -3,6 +3,7 @@ using System;
 using CentralOngs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CentralOngs.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20221025222247_Refactoring")]
+    partial class Refactoring
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,7 +47,7 @@ namespace CentralOngs.Migrations
                     b.Property<int>("Number")
                         .HasColumnType("integer");
 
-                    b.Property<string>("State")
+                    b.Property<string>("StateUF")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -55,7 +57,7 @@ namespace CentralOngs.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("State");
+                    b.HasIndex("StateUF");
 
                     b.ToTable("address");
                 });
@@ -75,7 +77,7 @@ namespace CentralOngs.Migrations
                     b.Property<int>("AccountType")
                         .HasColumnType("integer");
 
-                    b.Property<int>("BankId")
+                    b.Property<int>("BankCode")
                         .HasColumnType("integer");
 
                     b.Property<int>("Branch")
@@ -83,7 +85,7 @@ namespace CentralOngs.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BankId");
+                    b.HasIndex("BankCode");
 
                     b.ToTable("bank_account");
                 });
@@ -107,16 +109,12 @@ namespace CentralOngs.Migrations
 
             modelBuilder.Entity("CentralOngs.Models.StateModel", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
-
                     b.Property<string>("UF")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("UF");
 
-                    b.ToTable("UFs");
+                    b.ToTable("UF");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.UserOngModel", b =>
@@ -209,20 +207,20 @@ namespace CentralOngs.Migrations
 
             modelBuilder.Entity("CentralOngs.Models.AddressModel", b =>
                 {
-                    b.HasOne("CentralOngs.Models.StateModel", "StateModel")
+                    b.HasOne("CentralOngs.Models.StateModel", "State")
                         .WithMany()
-                        .HasForeignKey("State")
+                        .HasForeignKey("StateUF")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("StateModel");
+                    b.Navigation("State");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.BankAccountModel", b =>
                 {
                     b.HasOne("CentralOngs.Models.BankModel", "Bank")
                         .WithMany()
-                        .HasForeignKey("BankId")
+                        .HasForeignKey("BankCode")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

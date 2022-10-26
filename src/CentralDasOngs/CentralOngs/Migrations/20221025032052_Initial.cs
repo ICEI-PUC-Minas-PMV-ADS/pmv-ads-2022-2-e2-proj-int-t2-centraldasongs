@@ -135,8 +135,7 @@ namespace CentralOngs.Migrations
                 name: "IX_address_UserOngId",
                 table: "address",
                 column: "UserOngId",
-                unique: true,
-                filter: "[UserOngId] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_address_UserVoluntarioId",

@@ -3,6 +3,7 @@ using System;
 using CentralOngs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CentralOngs.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20221026003711_RefactoringUFwIdAndForeignKey")]
+    partial class RefactoringUFwIdAndForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,7 +77,7 @@ namespace CentralOngs.Migrations
                     b.Property<int>("AccountType")
                         .HasColumnType("integer");
 
-                    b.Property<int>("BankId")
+                    b.Property<int>("BankCode")
                         .HasColumnType("integer");
 
                     b.Property<int>("Branch")
@@ -83,7 +85,7 @@ namespace CentralOngs.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BankId");
+                    b.HasIndex("BankCode");
 
                     b.ToTable("bank_account");
                 });
@@ -222,7 +224,7 @@ namespace CentralOngs.Migrations
                 {
                     b.HasOne("CentralOngs.Models.BankModel", "Bank")
                         .WithMany()
-                        .HasForeignKey("BankId")
+                        .HasForeignKey("BankCode")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

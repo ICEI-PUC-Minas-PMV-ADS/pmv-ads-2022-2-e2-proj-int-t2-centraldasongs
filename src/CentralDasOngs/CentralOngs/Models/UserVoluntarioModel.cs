@@ -6,12 +6,10 @@ using System.Xml.Linq;
 namespace CentralOngs.Models
 {
     [Table("user_voluntario")]
-    public class UserVoluntarioModel
+    public class UserVoluntarioModel : UserModel
     {
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "É necessário informar o CPF!")]
-        //[RegularExpression(@"^\d{3}\d{3}\d{3}\d{2}$", ErrorMessage = "Numero de cpf invalido! Informar apenas numeros")]
-        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Cpf { get; set; }
 
         [Display(Name = "Data de nascimento")]

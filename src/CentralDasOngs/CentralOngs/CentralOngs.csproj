@@ -14,6 +14,8 @@
     <None Remove="Microsoft.EntityFrameworkCore.Relational" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Views\Ongs\" />
+    <None Remove="Seeds\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="6.0.7" />
@@ -26,5 +28,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Ongs\" />
+    <Folder Include="Seeds\" />
   </ItemGroup>
 </Project>
