@@ -34,8 +34,8 @@
 | **Caso de Teste** 	| **CT-06 – Verificação de idade do candidato** 	|
 |	Requisito Associado 	| RF-007 - O sistema deve verificar se o usuário possui mais de 18 anos. |
 | Objetivo do Teste 	| Aparecer vagas para maiores de idade apenas para usuarios com mais de 18 anos |
-| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Fazer login com usuario voluntario. |
-|Critério de Êxito | - Usuario com menos de 18 anos não visualizar vagas para maior de idade. |
+| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Fazer login com usuario voluntario; <br> - Clicar em "Minha conta". |
+|Critério de Êxito | - Devera aparecer um campo informando a idade do ususario |
 |  	|  	|
 | **Caso de Teste** 	| **CT-07 – Encerrar participação em atividades** 	|
 |	Requisito Associado 	| RF-014 - Usuários voluntários podem encerrar sua participação nas ONGs pelo site. |
@@ -46,8 +46,8 @@
 | **Caso de Teste** 	| **CT-08 – Recuperar Senha** 	|
 |	Requisito Associado 	| RF-005 - O sistema deve permitir que o usuário cadastre uma nova senha caso ele esqueça a atual. |
 | Objetivo do Teste 	| Recuperar senha de login. |
-| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Clicar em "Entrar"; <br> - Clicar em "Esqueci minha senha"; <br>Preencher os campos obrigatórios (e-mail); <br> - A DEFINIR FOMRA DE RECUPERAÇÃO DE SENHA.<br>|
-|Critério de Êxito | - Mensagem informando que a senha foi atualizada e redirecionamento para a pagina home |
+| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Clicar em "Entrar"; <br> - Clicar em "Esqueci minha senha"; <br>Preencher os campos obrigatórios (e-mail, CNPJ/CPF); <br> - Inserir nova senha; <br> - Clicar em "Concluir".|
+|Critério de Êxito | - Redirecionamento para a pagina Login <br> - Realização do login com a nova senha |
 |  	|  	|
 | **Caso de Teste** 	| **CT-09 – Confirmação de aprovação** 	|
 |	Requisito Associado 	| RF-013 - Usuários aprovados pelos gestores receberam um e-mail de confirmação. |
@@ -70,7 +70,7 @@
 | **Caso de Teste** 	| **CT-012 – Excluir usuario** 	|
 |	Requisito Associado 	| RF-004 - O sistema permitirá que os usuários criados possam excluir seu usuário. |
 | Objetivo do Teste 	| Verificar se o usuário consegue excluir seu usuario |
-| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Clicar em "Entrar"; <br> - Fazer login <br> - Clicar em Editar Perfil;<br> - Clicar em Excluir Conta; <br> - Clicar em Confirmar.|
+| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Clicar em "Entrar"; <br> - Fazer login <br> - Clicar em Minha ONG/Meu Perfil;<br> - Clicar em Excluir Conta; <br> - Clicar em Confirmar.|
 |Critério de Êxito | - Mensagem de confirmação de exclusão.|
 
 
