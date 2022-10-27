@@ -16,7 +16,7 @@ namespace CentralDasOngs.Models
 
         [Required]
         [Display(Name = "Agência")]
-        public int Agency { get; set; }
+        public int Branch { get; set; }
 
         [Required]
         [Display(Name = "Operação")]

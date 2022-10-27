@@ -74,7 +74,7 @@ namespace CentralDasOngs.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Cnpj,Name,Email,Password,Contact,UserType,Address,BankAccount,")] UserOngModel userOngModel)
+        public async Task<IActionResult> Create([Bind("Cnpj,Name,Email,Password,Contact,UserType,Address,BankAccount")] UserOngModel userOngModel)
         {
             if (ModelState.IsValid)
             {

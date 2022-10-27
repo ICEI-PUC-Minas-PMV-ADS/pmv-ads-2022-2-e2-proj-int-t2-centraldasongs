@@ -13,6 +13,8 @@ namespace CentralDasOngs.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long Cnpj { get; set; }
 
+        public string About { get; set; }
+
         public virtual BankAccountModel BankAccount { get; set; }
     }
 }
