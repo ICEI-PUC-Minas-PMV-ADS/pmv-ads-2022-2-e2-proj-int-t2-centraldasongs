@@ -19,7 +19,7 @@ namespace CentralDasOngs.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CentralDasOngs.Models.AdressModel", b =>
+            modelBuilder.Entity("CentralDasOngs.Models.AddressModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,53 +37,30 @@ namespace CentralDasOngs.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("HouseNumber")
+                    b.Property<int>("Number")
                         .HasColumnType("int");
 
-                    b.Property<string>("State")
+                    b.Property<string>("StateId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Street")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("UserOngId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("UserVoluntarioId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("State");
+                    b.HasIndex("StateId");
 
-                    b.HasIndex("UserOngId")
-                        .IsUnique()
-                        .HasFilter("[UserOngId] IS NOT NULL");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
-                    b.HasIndex("UserVoluntarioId")
-                        .IsUnique()
-                        .HasFilter("[UserVoluntarioId] IS NOT NULL");
-
-                    b.ToTable("adress");
+                    b.ToTable("Address");
                 });
 
-            modelBuilder.Entity("CentralDasOngs.Models.BankModel", b =>
-                {
-                    b.Property<int>("Code")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Code");
-
-                    b.ToTable("banks");
-                });
-
-            modelBuilder.Entity("CentralDasOngs.Models.OngBankInformation", b =>
+            modelBuilder.Entity("CentralDasOngs.Models.BankAccountModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -103,8 +80,8 @@ namespace CentralDasOngs.Migrations
                     b.Property<int>("BankId")
                         .HasColumnType("int");
 
-                    b.Property<long>("UserOngId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("UserOngId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -113,23 +90,40 @@ namespace CentralDasOngs.Migrations
                     b.HasIndex("UserOngId")
                         .IsUnique();
 
-                    b.ToTable("ong_bank_information");
+                    b.ToTable("BankAccount");
+                });
+
+            modelBuilder.Entity("CentralDasOngs.Models.BankModel", b =>
+                {
+                    b.Property<int>("Code")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Code");
+
+                    b.ToTable("Banks");
                 });
 
             modelBuilder.Entity("CentralDasOngs.Models.StateModel", b =>
                 {
-                    b.Property<string>("Uf")
+                    b.Property<string>("UF")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("Uf");
+                    b.HasKey("UF");
 
-                    b.ToTable("ufs");
+                    b.ToTable("UFs");
                 });
 
-            modelBuilder.Entity("CentralDasOngs.Models.UserOngModel", b =>
+            modelBuilder.Entity("CentralDasOngs.Models.UserModel", b =>
                 {
-                    b.Property<long>("Cnpj")
-                        .HasColumnType("bigint");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Contact")
                         .IsRequired()
@@ -150,75 +144,62 @@ namespace CentralDasOngs.Migrations
                     b.Property<int>("UserType")
                         .HasColumnType("int");
 
-                    b.HasKey("Cnpj");
+                    b.HasKey("Id");
+
+                    b.ToTable("UserModel");
+                });
+
+            modelBuilder.Entity("CentralDasOngs.Models.UserOngModel", b =>
+                {
+                    b.HasBaseType("CentralDasOngs.Models.UserModel");
+
+                    b.Property<long>("Cnpj")
+                        .HasColumnType("bigint");
 
                     b.ToTable("user_ong");
                 });
 
             modelBuilder.Entity("CentralDasOngs.Models.UserVoluntarioModel", b =>
                 {
+                    b.HasBaseType("CentralDasOngs.Models.UserModel");
+
                     b.Property<long>("Cpf")
                         .HasColumnType("bigint");
-
-                    b.Property<string>("Contact")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateBirthDay")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserType")
-                        .HasColumnType("int");
-
-                    b.HasKey("Cpf");
-
-                    b.ToTable("user_voluntario");
+                    b.ToTable("UserVoluntario");
                 });
 
-            modelBuilder.Entity("CentralDasOngs.Models.AdressModel", b =>
+            modelBuilder.Entity("CentralDasOngs.Models.AddressModel", b =>
                 {
-                    b.HasOne("CentralDasOngs.Models.StateModel", "StateModel")
-                        .WithMany("Id")
-                        .HasForeignKey("State");
+                    b.HasOne("CentralDasOngs.Models.StateModel", "State")
+                        .WithMany("Address")
+                        .HasForeignKey("StateId");
 
-                    b.HasOne("CentralDasOngs.Models.UserOngModel", "UserOngModel")
-                        .WithOne("AdressModel")
-                        .HasForeignKey("CentralDasOngs.Models.AdressModel", "UserOngId");
+                    b.HasOne("CentralDasOngs.Models.UserModel", "User")
+                        .WithOne("Address")
+                        .HasForeignKey("CentralDasOngs.Models.AddressModel", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("CentralDasOngs.Models.UserVoluntarioModel", "UserVoluntarioModel")
-                        .WithOne("AdressModel")
-                        .HasForeignKey("CentralDasOngs.Models.AdressModel", "UserVoluntarioId");
+                    b.Navigation("State");
 
-                    b.Navigation("StateModel");
-
-                    b.Navigation("UserOngModel");
-
-                    b.Navigation("UserVoluntarioModel");
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("CentralDasOngs.Models.OngBankInformation", b =>
+            modelBuilder.Entity("CentralDasOngs.Models.BankAccountModel", b =>
                 {
                     b.HasOne("CentralDasOngs.Models.BankModel", "Bank")
-                        .WithMany("Id")
+                        .WithMany("BankAccount")
                         .HasForeignKey("BankId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("CentralDasOngs.Models.UserOngModel", "UserOng")
-                        .WithOne("OngBankInformation")
-                        .HasForeignKey("CentralDasOngs.Models.OngBankInformation", "UserOngId")
+                        .WithOne("BankAccount")
+                        .HasForeignKey("CentralDasOngs.Models.BankAccountModel", "UserOngId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -227,26 +208,42 @@ namespace CentralDasOngs.Migrations
                     b.Navigation("UserOng");
                 });
 
-            modelBuilder.Entity("CentralDasOngs.Models.BankModel", b =>
-                {
-                    b.Navigation("Id");
-                });
-
-            modelBuilder.Entity("CentralDasOngs.Models.StateModel", b =>
-                {
-                    b.Navigation("Id");
-                });
-
             modelBuilder.Entity("CentralDasOngs.Models.UserOngModel", b =>
                 {
-                    b.Navigation("AdressModel");
-
-                    b.Navigation("OngBankInformation");
+                    b.HasOne("CentralDasOngs.Models.UserModel", null)
+                        .WithOne()
+                        .HasForeignKey("CentralDasOngs.Models.UserOngModel", "Id")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CentralDasOngs.Models.UserVoluntarioModel", b =>
                 {
-                    b.Navigation("AdressModel");
+                    b.HasOne("CentralDasOngs.Models.UserModel", null)
+                        .WithOne()
+                        .HasForeignKey("CentralDasOngs.Models.UserVoluntarioModel", "Id")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CentralDasOngs.Models.BankModel", b =>
+                {
+                    b.Navigation("BankAccount");
+                });
+
+            modelBuilder.Entity("CentralDasOngs.Models.StateModel", b =>
+                {
+                    b.Navigation("Address");
+                });
+
+            modelBuilder.Entity("CentralDasOngs.Models.UserModel", b =>
+                {
+                    b.Navigation("Address");
+                });
+
+            modelBuilder.Entity("CentralDasOngs.Models.UserOngModel", b =>
+                {
+                    b.Navigation("BankAccount");
                 });
 #pragma warning restore 612, 618
         }

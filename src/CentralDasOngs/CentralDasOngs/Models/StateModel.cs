@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CentralDasOngs.Models
 {
-    [Table("ufs")]
+    [Table("UFs")]
     public class StateModel
     {
         [Key]
-        public string Uf { get; set; }
-
-        public virtual IList<AdressModel> Id { get; set; }
+        public string UF { get; set; }
+        public virtual IList<AddressModel> Address { get; set; }
     }
 }
