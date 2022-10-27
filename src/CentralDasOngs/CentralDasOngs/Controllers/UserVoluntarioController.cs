@@ -85,7 +85,7 @@ namespace CentralDasOngs.Controllers
 
                 _context.Add(userVoluntarioModel);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Login");
             }
             ViewData["StateList"] = new SelectList(_context.StateModel, "UF", "UF");
             return View(userVoluntarioModel);

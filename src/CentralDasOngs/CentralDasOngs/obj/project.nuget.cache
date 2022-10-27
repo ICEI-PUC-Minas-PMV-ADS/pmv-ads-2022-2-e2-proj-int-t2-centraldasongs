@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u4MEoR423qJXyk/bLCADKrJqbL8PMmWuQgMA+MG7G9SscOxd6bleC6I5kjxm7rD5gpMH2Zt++mrUTcem0F/vAQ==",
+  "dgSpecHash": "8iYjBMH+3IcuGXP/w+Olq+vwbTQBntf4zyJbOmGfkejl2wmmtkNprY9apPOI9Rz9E3JW/MuEPqxG052qLnX+0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_OldVersion\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
+  "projectFilePath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Estevam\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Matheus Estevam\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

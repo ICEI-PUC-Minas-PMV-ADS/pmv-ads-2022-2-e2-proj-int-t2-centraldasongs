@@ -4,10 +4,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Informações</h1>
 
 <div>
-    <h4>UserOngModel</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -34,8 +33,18 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.UserType)
         </dd>
-    </dl>
-    <hr />
+@*        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.About)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.About)
+        </dd>
+*@    </dl>
+    
+    <hr/>
+
+    <p>Endereço</p>
+    
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Address.State)
@@ -74,7 +83,8 @@
             @Html.DisplayFor(model => model.Address.Complement)
         </dd>
     </dl>
-    <hr />
+    <hr/>
+    <p>Conta bacanria</p>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BankAccount.Bank.Name)
@@ -107,8 +117,9 @@
     {
         @if (User.IsInRole("Ong") && Model.Id.ToString() == User.Claims.ElementAt(1).Value)
         {
-            <a asp-action="Delete" asp-route-id="@Model.Id">Deletar</a>
+            <a asp-action="Delete" asp-route-id="@Model.Id">Deletar |</a> 
+            <a asp-action="UpdatePassword" asp-route-id="@Model.Id">Mudar Senha |</a>
         }
     }
-    <a asp-controller="Home" asp-action="Index">Voltar</a>
+    <a asp-action="Index">Voltar</a>
 </div>

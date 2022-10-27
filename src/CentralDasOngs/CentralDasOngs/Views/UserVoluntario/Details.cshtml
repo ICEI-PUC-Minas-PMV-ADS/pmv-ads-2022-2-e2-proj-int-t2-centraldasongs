@@ -22,17 +22,17 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DateBirthDay)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Password)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Contact)
@@ -83,5 +83,5 @@
 </div>
 <div>
     <a asp-action="Delete" asp-route-id="@Model.Id">Deletar</a> |
-    <a asp-controller="Home" asp-action="Index">Voltar</a>
+    <a asp-controller="Home" asp-action="Index"> Voltar</a>
 </div>
