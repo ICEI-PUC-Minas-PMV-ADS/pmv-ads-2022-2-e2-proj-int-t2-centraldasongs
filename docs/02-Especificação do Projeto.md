@@ -57,7 +57,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-004| O sistema permitirá que os usuários criados possam excluir seu usuário;   | ALTA |
 |RF-005| O sistema deve permitir que o usuário cadastre uma nova senha caso ele esqueça a atual;   | MÉDIA |
 |RF-006| O sistema deve verificar se o usuário já foi cadastrado   | ALTA |
-|RF-007| O sistema deve verificar se o usuário possui mais de 18 anos   | MÉDIA |
+|RF-007| O sistema deve informar a a idade do usuario baseado na sua data de nascimento   | MÉDIA |
 |RF-008| O sistema deve permitir que o usuário edite seus dados | MÉDIA |
 |RF-008| O usuário Gestor das ONGs poderá criar vagas para voluntários   | ALTA |
 |RF-009| O usuário Gestor das ONGs poderá inserir informações para doações   | ALTA |
