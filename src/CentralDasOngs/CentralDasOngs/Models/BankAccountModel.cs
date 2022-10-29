@@ -22,7 +22,8 @@ namespace CentralDasOngs.Models
         [Display(Name = "Operação")]
         public int AccountType { get; set; }
 
-        public virtual BankModel Bank { get; set; }        
+        public virtual BankModel Bank { get; set; }
+        [Display(Name ="Banco")]
         public int BankId { get; set; }
 
         public UserOngModel UserOng { get; set; }

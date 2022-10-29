@@ -34,6 +34,7 @@ namespace CentralDasOngs.Models
         public int UserId { get; set; }
 
         public virtual StateModel State { get; set; }
+        [Display(Name ="Estado")]
         public string StateId { get; set; }
     }
 }
