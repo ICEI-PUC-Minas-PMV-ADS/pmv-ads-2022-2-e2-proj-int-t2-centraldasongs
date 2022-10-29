@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj": {}
+    "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_Testes\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj": {
+    "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_Testes\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_Testes\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
         "projectName": "CentralDasOngs",
-        "projectPath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
+        "projectPath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_Testes\\CentralDasOngs\\CentralDasOngs\\CentralDasOngs.csproj",
         "packagesPath": "C:\\Users\\Matheus Estevam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralDasOngs\\obj\\",
+        "outputPath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_Testes\\CentralDasOngs\\CentralDasOngs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matheus Estevam\\AppData\\Roaming\\NuGet\\NuGet.Config",
