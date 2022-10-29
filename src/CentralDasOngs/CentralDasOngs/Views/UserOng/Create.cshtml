@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Criar conta</h1>
 
-<h4>UserOngModel</h4>
+<h4>ONG</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -94,14 +94,14 @@
                 <select asp-for="BankAccount.BankId" class="form-control" asp-items="ViewBag.BankList"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-controller="Home" asp-action="Index">Voltar</a>
+    <a asp-controller="Home" asp-action="Index" type="button" class="btn btn-secondary">Voltar</a>
 </div>
 
 @section Scripts {
