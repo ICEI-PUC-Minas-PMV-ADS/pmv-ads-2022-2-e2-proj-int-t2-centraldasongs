@@ -3,30 +3,71 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CentralOngs</title>
+    <title>@ViewData["Title"] - CentralDasOngs</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-info border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CentralOngs</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="../img/CentralDasOngsTexto.png" alt="logo_text"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ongs" asp-action="Create">Criando ONG</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserOng" asp-action="Index">Lista de ONGs</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ongs" asp-action="Index">Listando ONGs</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole("Ong")) //Verificando se o usuario é admin, caso ele seja, aparece o campo de Usuario
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserOng" asp-action="Details" asp-route-id="@User.Claims.ElementAt(1).Value">Minha ONG</a>
+                                </li>
+                            }
+                            @if(User.IsInRole("Voluntario"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserVoluntario" asp-action="Details" asp-route-id="@User.Claims.ElementAt(1).Value">Minha conta</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated) //Se o usuario está autenticado
+                        {
+                            @if (User.IsInRole("Ong")) //Verificando se o usuario é admin, caso ele seja, aparece o campo de Usuario
+                            {
+                                <li class="nav-item">
+                                    Olá, @User.Identity.Name
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserOng" asp-action="Logout">Sair</a>
+                                </li>
+                            }
+                            @if (User.IsInRole("Voluntario"))
+                            {
+                                <li class="nav-item">
+                                    Olá, @User.Identity.Name
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserVoluntario" asp-action="Logout">Sair</a>
+                                </li>
+                            }
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UserOng" asp-action="Login">Sou uma ONG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UserVoluntario" asp-action="Login">Sou voluntário</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -38,14 +79,14 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted bg-info">
         <div class="container">
-            &copy; 2022 - CentralOngs - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <img src="../img/CentralDasOngsLogo.png" alt="logo_img"/>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

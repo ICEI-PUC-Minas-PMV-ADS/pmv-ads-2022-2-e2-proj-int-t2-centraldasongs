@@ -32,12 +32,12 @@ namespace CentralOngs
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            //.AddCookie(options =>
-            //{
-            //    options.AccessDeniedPath = "/UsuariosVoluntario/AccessDenied/";
-            //    options.LoginPath = "/Home/Index/";
-            //});
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.AccessDeniedPath = "/UsuariosVoluntario/AccessDenied/";
+                options.LoginPath = "/Home/Index/";
+            });
 
             services.AddDbContext<DatabaseContext>(options =>
                 //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
@@ -61,6 +61,10 @@ namespace CentralOngs
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseCookiePolicy();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

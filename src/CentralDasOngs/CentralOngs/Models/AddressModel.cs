@@ -5,6 +5,7 @@ using System.Xml.Linq;
 
 namespace CentralOngs.Models
 {
+    [Table("Address")]
     public class AddressModel
     {
         [Key]
