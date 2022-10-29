@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CentralOngs.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221026004046_RefactoringBankList")]
-    partial class RefactoringBankList
+    [Migration("20221029031500_RemovingRequireds")]
+    partial class RemovingRequireds
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,7 +47,7 @@ namespace CentralOngs.Migrations
                     b.Property<int>("Number")
                         .HasColumnType("integer");
 
-                    b.Property<string>("State")
+                    b.Property<string>("StateId")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -55,11 +55,17 @@ namespace CentralOngs.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("State");
+                    b.HasIndex("StateId");
 
-                    b.ToTable("address");
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("AddressModel");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.BankAccountModel", b =>
@@ -83,11 +89,17 @@ namespace CentralOngs.Migrations
                     b.Property<int>("Branch")
                         .HasColumnType("integer");
 
+                    b.Property<int>("UserOngId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BankId");
 
-                    b.ToTable("bank_account");
+                    b.HasIndex("UserOngId")
+                        .IsUnique();
+
+                    b.ToTable("BankAccount");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.BankModel", b =>
@@ -104,39 +116,26 @@ namespace CentralOngs.Migrations
 
                     b.HasKey("Code");
 
-                    b.ToTable("banks");
+                    b.ToTable("Banks");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.StateModel", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
-
                     b.Property<string>("UF")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("UF");
 
                     b.ToTable("UFs");
                 });
 
-            modelBuilder.Entity("CentralOngs.Models.UserOngModel", b =>
+            modelBuilder.Entity("CentralOngs.Models.UserModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AddressId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("BankAccountId")
-                        .HasColumnType("integer");
-
-                    b.Property<long>("Cnpj")
-                        .HasColumnType("bigint");
 
                     b.Property<string>("Contact")
                         .IsRequired()
@@ -159,27 +158,22 @@ namespace CentralOngs.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
+                    b.ToTable("UserModel");
+                });
 
-                    b.HasIndex("BankAccountId");
+            modelBuilder.Entity("CentralOngs.Models.UserOngModel", b =>
+                {
+                    b.HasBaseType("CentralOngs.Models.UserModel");
+
+                    b.Property<long>("Cnpj")
+                        .HasColumnType("bigint");
 
                     b.ToTable("user_ong");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.UserVoluntarioModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AddressId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Contact")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.HasBaseType("CentralOngs.Models.UserModel");
 
                     b.Property<long>("Cpf")
                         .HasColumnType("bigint");
@@ -187,78 +181,85 @@ namespace CentralOngs.Migrations
                     b.Property<DateTime>("DateBirthDay")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("UserType")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AddressId");
-
-                    b.ToTable("user_voluntario");
+                    b.ToTable("UserVoluntario");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.AddressModel", b =>
                 {
-                    b.HasOne("CentralOngs.Models.StateModel", "StateModel")
-                        .WithMany()
-                        .HasForeignKey("State")
+                    b.HasOne("CentralOngs.Models.StateModel", "State")
+                        .WithMany("Address")
+                        .HasForeignKey("StateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("StateModel");
+                    b.HasOne("CentralOngs.Models.UserModel", "User")
+                        .WithOne("Address")
+                        .HasForeignKey("CentralOngs.Models.AddressModel", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("State");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.BankAccountModel", b =>
                 {
                     b.HasOne("CentralOngs.Models.BankModel", "Bank")
-                        .WithMany()
+                        .WithMany("BankAccount")
                         .HasForeignKey("BankId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CentralOngs.Models.UserOngModel", "UserOng")
+                        .WithOne("BankAccount")
+                        .HasForeignKey("CentralOngs.Models.BankAccountModel", "UserOngId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Bank");
+
+                    b.Navigation("UserOng");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.UserOngModel", b =>
                 {
-                    b.HasOne("CentralOngs.Models.AddressModel", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressId")
+                    b.HasOne("CentralOngs.Models.UserModel", null)
+                        .WithOne()
+                        .HasForeignKey("CentralOngs.Models.UserOngModel", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("CentralOngs.Models.BankAccountModel", "BankAccount")
-                        .WithMany()
-                        .HasForeignKey("BankAccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Address");
-
-                    b.Navigation("BankAccount");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.UserVoluntarioModel", b =>
                 {
-                    b.HasOne("CentralOngs.Models.AddressModel", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressId")
+                    b.HasOne("CentralOngs.Models.UserModel", null)
+                        .WithOne()
+                        .HasForeignKey("CentralOngs.Models.UserVoluntarioModel", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
 
+            modelBuilder.Entity("CentralOngs.Models.BankModel", b =>
+                {
+                    b.Navigation("BankAccount");
+                });
+
+            modelBuilder.Entity("CentralOngs.Models.StateModel", b =>
+                {
                     b.Navigation("Address");
+                });
+
+            modelBuilder.Entity("CentralOngs.Models.UserModel", b =>
+                {
+                    b.Navigation("Address")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CentralOngs.Models.UserOngModel", b =>
+                {
+                    b.Navigation("BankAccount")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

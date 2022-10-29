@@ -8,8 +8,7 @@ namespace CentralOngs.Models
     public class StateModel
     {
         [Key]
-        public string Id { get; set; }
-
-        public string UF { get; set; }
+        public string Name { get; set; }
+        public virtual IList<AddressModel> Address { get; set; }
     }
 }

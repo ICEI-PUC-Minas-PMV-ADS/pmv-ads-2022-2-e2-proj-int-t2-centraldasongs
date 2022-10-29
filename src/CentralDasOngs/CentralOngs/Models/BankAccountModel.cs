@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace CentralOngs.Models
 {
-    [Table("bank_account")]
+    [Table("BankAccount")]
     public class BankAccountModel
     {
         [Key]
@@ -23,13 +23,11 @@ namespace CentralOngs.Models
         //[Display(Name = "Operação")]
         public int AccountType { get; set; }
 
-        //[Display(Name = "Banco")]
-        [ForeignKey("BankId")]
-        public virtual BankModel Bank { get; set; }
-
-        [Required]
-        [Display(Name = "Banco")]
+        public virtual BankModel? Bank { get; set; }
         public int BankId { get; set; }
+
+        public UserOngModel? UserOng { get; set; }
+        public int UserOngId { get; set; }
 
     }
 }

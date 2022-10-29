@@ -16,6 +16,7 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Views\Ongs\" />
     <None Remove="Seeds\" />
+    <None Remove="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="6.0.7" />
@@ -32,5 +33,6 @@
   <ItemGroup>
     <Folder Include="Views\Ongs\" />
     <Folder Include="Seeds\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 </Project>

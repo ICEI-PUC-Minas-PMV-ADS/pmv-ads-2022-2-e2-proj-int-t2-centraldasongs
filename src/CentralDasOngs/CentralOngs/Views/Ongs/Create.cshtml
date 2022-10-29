@@ -7,7 +7,7 @@
 <h1>Cadastro de ONG</h1>
 
 <h4>Cadastre aqui sua ONG</h4>
-<hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -16,7 +16,6 @@
                 <label asp-for="Cnpj" class="control-label"></label>
                 <input asp-for="Cnpj" class="form-control" />
                 <span asp-validation-for="Cnpj" class="text-danger"></span>
-                <p class="text-danger">@ViewBag.MensageCreate</p>
             </div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -27,7 +26,7 @@
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
-                <p class="text-danger">@ViewBag.MensageCreate</p>
+                <p class="text-danger">@ViewBag.MensageEmail</p>
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
@@ -39,14 +38,13 @@
                 <input asp-for="Contact" class="form-control" />
                 <span asp-validation-for="Contact" class="text-danger"></span>
             </div>
+
             <hr>
 
             <div class="form-group">
-                <label asp-for="Address.State" class="control-label"></label>
-                <select asp-for="Address.State" class="form-control" asp-items="ViewBag.StateList"></select>
+                <label asp-for="Address.StateName"></label>
+                <select asp-for="Address.StateName" class="form-control" asp-items="ViewBag.StateList"></select>
             </div>
-
-
             <div class="form-group">
                 <label asp-for="Address.City" class="control-label"></label>
                 <input asp-for="Address.City" class="form-control" />
@@ -72,8 +70,10 @@
                 <input asp-for="Address.Complement" class="form-control" />
                 <span asp-validation-for="Address.Complement" class="text-danger"></span>
             </div>
+
             <hr>
-            @*<div class="form-group">
+
+            <div class="form-group">
                 <label asp-for="BankAccount.AccountNumber" class="control-label"></label>
                 <input asp-for="BankAccount.AccountNumber" class="form-control" />
                 <span asp-validation-for="BankAccount.AccountNumber" class="text-danger"></span>
@@ -91,7 +91,7 @@
             <div class="form-group">
                 <label asp-for="BankAccount.BankId" class="control-label"></label>
                 <select asp-for="BankAccount.BankId" class="form-control" asp-items="ViewBag.BankList"></select>
-            </div>*@
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -102,6 +102,7 @@
 <div>
     <a asp-controller="Home" asp-action="Index">Voltar</a>
 </div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
