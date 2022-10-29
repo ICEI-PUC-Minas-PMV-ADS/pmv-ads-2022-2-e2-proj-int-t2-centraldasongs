@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace CentralOngs
 {
@@ -30,6 +31,13 @@ namespace CentralOngs
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            //.AddCookie(options =>
+            //{
+            //    options.AccessDeniedPath = "/UsuariosVoluntario/AccessDenied/";
+            //    options.LoginPath = "/Home/Index/";
+            //});
 
             services.AddDbContext<DatabaseContext>(options =>
                 //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
