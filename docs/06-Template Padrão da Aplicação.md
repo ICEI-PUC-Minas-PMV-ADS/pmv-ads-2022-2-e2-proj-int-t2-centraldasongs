@@ -1,12 +1,34 @@
 # Template Padrão da Aplicação
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+O template padrão a ser utilizado corresponde ao modelo de wireframe interativo proposto no tópico "Projeto de Interface". Será adotado um layout padrão, que será utilizado em todas as telas da aplicação.
 
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+## Tela Home
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+A tela inicial apresenta as vagas disponíveis no momento, bem como as opções de filtro no campo esquerdo. No canto superior direito, podemos ver os botões 'Sou uma ONG', e 'Sou Voluntário'. No canto superior esquerdo, encontram-se os botões "Home" e "Lista de ONGs".
+
+![image](https://user-images.githubusercontent.com/100412134/198906033-a64debc0-fc89-4d20-af05-db69f9c65ffd.png)
+
+## Tela "Sou uma ONG"
+
+Essa tela permite o login de ONGs. Para isso, os campos devem ser preechidos com as informações requisitadas e, em seguida, deve-se clicar no botão "entrar".
+
+![image](https://user-images.githubusercontent.com/100412134/198906275-7a9a5314-90a7-495a-a1b4-7d2faddb6c46.png)
+
+## Tela "Sou Voluntário"
+
+Essa tela permite o login de voluntários. Para isso, os campos devem ser preechidos com as informações requisitadas e, em seguida, deve-se clicar no botão "entrar".
+
+![image](https://user-images.githubusercontent.com/100412134/198906319-c08c058d-47f0-466b-8540-d1c9d921e0d6.png)
+
+## Tela de Cadastro de ONG
+
+Essa tela permite o cadastro de um usuário para uma ONG. Para isso, os campos devem ser preechidos com as informações requisitadas e, em seguida, deve-se clicar no botão "cadastrar".
+
+![image](https://user-images.githubusercontent.com/100412134/198906698-ca52752f-43da-4baa-b760-d3dccf4fbca6.png)
+
+## Tela de Cadastro de Voluntário
+
+Essa tela permite o cadastro de um usuário para um voluntário. Para isso, os campos devem ser preechidos com as informações requisitadas e, em seguida, deve-se clicar no botão "cadastrar".
+
+![image](https://user-images.githubusercontent.com/100412134/198906571-0163765a-48e6-4ef0-9cc3-56e07c2894c3.png)
+
