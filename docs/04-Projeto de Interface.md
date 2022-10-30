@@ -12,34 +12,29 @@ As telas foram projetadas de modo intuitivo pensando na facilidade do usuário d
 A tela inicial apresenta as vagas disponíveis no momento, bem como as opções de filtro no campo esquerdo. No canto superior direito, podemos ver os botões 'Entrar', 'Quero ser voluntário' e 'Sou uma ONG'.
 
 **Tela 2**
+<br>
 ![Login](img/Login.jpg)
-Ao clicar no botão 'Entrar', é possível ver as entradas de login (e-mail e senha) e ainda a opção 'Não possuo cadastro'.
+Ao clicar no botão 'Entrar', é possível ver as entradas de login (e-mail e senha) e ainda as opções para criar conta como ONG ou Usuário.
 
 **Tela 3**
-![Não possuo cadastro](img/Nãopossuocadastro.jpg)
-Se a opção 'Não possuo cadastro' for escolhida, o usuário verá as opções 'Quero ser voluntário' e 'Sou uma ONG'.
+<br>
+![Quero ser voluntário](img/Queroservoluntário.jpg)
+A tela de cadastro do voluntário exige que o usuário preencha os campos com nome, data de nascimento, CPF, endereço e telefone, bem como as informações de login como E-mail e senha.
 
 **Tela 4**
-![Quero ser voluntário](img/Queroservoluntário.jpg)
-A tela de cadastro do voluntário exige que o usuário preencha os campos com nome, data de nascimento, CPF, causas que deseja apoiar, suas habilidades, cidade de residência e telefone, bem como as informações de login como E-mail e senha.
-
-** Tela 5 **
+<br>
 ![Sou uma ONG1](img/SouumaONG1.jpg)
-O cadastro da ONG é dividido em duas partes, sendo a primeira com informações gerais sobre a organização, como nome, endereço, logo e causas.
+A tela de cadastro da ONG exige que o usuário preencha os campos com nome, CNPJ, endereço, telefone e dados bancarios bem como as informações de login como E-mail e senha.
 
-**Tela 6**
-![Sou uma ONG2](img/SouumaONG2.jpg)
-Na segunda parte do cadastro, são necessárias as informações de contato e login, assim como os dados bancários da organização para a realização de doações.
-
-**Tela 7**
+**Tela 5**
 ![Homepage pós login](img/Homepagepóslogin.jpg)
 Após realizar o login, tanto o usuário Voluntário, como o usuário ONG verão a mesma tela.
 
-**Tela 8**
+**Tela 6**
 ![Vaga voluntário](img/Vagavoluntário.jpg)
 Quando selecionar uma vaga, o Voluntário poderá ver a descrição, localização e os horários da vaga. Caso queira se candidatar, o usuário deverá clicar no botão ao lado direito escrito 'Quero me candidatar'.
 
-**Tela 9**
+**Tela 7**
 ![Quero me candidatar](img/Queromecandidatar.jpg)
 Ao clicar no botão, o Voluntário poderá deixar uma mensagem para a organização especificando a motivação para a inscrição na vaga. Além disso, ele deverá concordar com os termos apresentados.
 
