@@ -12,13 +12,13 @@ namespace CentralOngs.Controllers
 
         public UserController(DatabaseContext context)
         {
+            _context = context;
         }
 
-        protected ViewResult createViewStateAndBank()
+        protected void createViewStateAndBank()
         {
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
             ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
-            return View();
         }
 
         [AllowAnonymous]

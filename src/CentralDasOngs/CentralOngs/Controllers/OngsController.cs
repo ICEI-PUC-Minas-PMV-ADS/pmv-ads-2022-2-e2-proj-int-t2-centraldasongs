@@ -62,7 +62,9 @@ namespace CentralOngs.Controllers
         [AllowAnonymous]
         public IActionResult Create()
         {
-            return base.createViewStateAndBank();
+            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
+            return View();
         }
 
         // POST: UserOng/Create
@@ -96,7 +98,8 @@ namespace CentralOngs.Controllers
                 return RedirectToAction("Login");
             }
 
-            base.createViewStateAndBank();
+            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userOngModel);
         }
 
