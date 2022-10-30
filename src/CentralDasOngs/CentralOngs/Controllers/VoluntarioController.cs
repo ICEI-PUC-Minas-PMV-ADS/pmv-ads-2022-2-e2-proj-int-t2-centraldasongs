@@ -96,7 +96,7 @@ namespace CentralOngs.Controllers
                 userOngModel.UserType = UserType.Ong;
                 _context.Add(userOngModel);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Login", "Index");
+                return RedirectToAction("Login");
             }
 
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
