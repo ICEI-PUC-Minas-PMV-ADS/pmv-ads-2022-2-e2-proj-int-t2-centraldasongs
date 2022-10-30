@@ -6,7 +6,9 @@
 
 ### Requisitos
 
-- RF-011 - O usuário voluntario poderá aplicar filtros nas vagas disponíveis. 
+- RF-001 - O sistema permitirá cadastro de usuários gestores de ONG.
+- RF-002 - O sistema permitirá cadastro de usuários voluntários/doadores.
+- RF-003 - O sistema permitirá que os usuários criados efetuem login.
 
 ### Artefatos Produzidos
 
@@ -58,7 +60,7 @@
 
 ### Requisitos
 
-- RF-001 - O sistema permitirá cadastro de usuários gestores de ONG.
+- RF-002 - O sistema permitirá cadastro de usuários voluntários/doadores.
 
 ### Artefatos Produzidos
 
