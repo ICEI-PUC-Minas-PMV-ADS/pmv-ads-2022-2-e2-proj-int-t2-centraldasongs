@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Xml.Linq;
 
 namespace CentralOngs.Controllers
 {
@@ -30,49 +31,42 @@ namespace CentralOngs.Controllers
             return View();
         }
 
+
+        [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(UserModel userModel)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> DoLogin([Bind("Email, Password")] UserVoluntarioModel userVoluntarioModel)
         {
-            //UserModel user = await _context.UserOngModel
-            //    .FirstOrDefaultAsync(u => u.Email == userModel.Email);
+            UserVoluntarioModel user = await _context.UserVoluntarioModel
+                  .Where(u => u.Email == userVoluntarioModel.Email)
+                  .FirstOrDefaultAsync<UserVoluntarioModel>();
 
-            //UserModel userVoluntario = await _context.UserVoluntarioModel
-            //    .FirstOrDefaultAsync(u => u.Email == userModel.Email);
+            if (user == null)
+            {
+                ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
+                return View();
+            }
 
-            //if (user == null || userVoluntario == null)
-            //{
-            //    ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
-            //    return View();
-            //}
+            if (user.Password == userVoluntarioModel.Password)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim(ClaimTypes.UserData, user.Id.ToString()),
+                    new Claim(ClaimTypes.NameIdentifier, user.Name),
+                    new Claim(ClaimTypes.Role, user.UserType.ToString())
+                };
 
-            //if( user == null)
-            //{
-            //    user = userVoluntario;
-            //}
-
-            //if (user.Password == userModel.Password)
-            //{
-            //    var claims = new List<Claim>
-            //    {
-            //        new Claim(ClaimTypes.Name, user.Name),
-            //        new Claim(ClaimTypes.UserData, user.Id.ToString()),
-            //        new Claim(ClaimTypes.NameIdentifier, user.Name),
-            //        new Claim(ClaimTypes.Role, user.UserType.ToString())
-            //    };
-
-            //    var userIdentity = new ClaimsIdentity(claims, "login");
-            //    ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
-            //    var properties = new AuthenticationProperties
-            //    {
-            //        AllowRefresh = true,
-            //        ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7), // Definindo tempo de login do usuario no sistema
-            //        IsPersistent = true
-            //    };
-
-            //    await HttpContext.SignInAsync(principal, properties);
-            //    return Redirect("/"); //Redirecionaria para a home principal
-            //}
+                var userIdentity = new ClaimsIdentity(claims, "login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+                var properties = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7),
+                };
+                await HttpContext.SignInAsync(principal, properties);
+                return Redirect("/");
+            }
             ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
             return View();
         }

@@ -15,12 +15,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CentralOngs.Controllers
 {
-    public class VoluntariosController : UserController<UserVoluntarioModel>
+    public class VoluntariosController : Controller
     {
-        public VoluntariosController(DatabaseContext context) : base(context)
-        {
-        }
+        protected readonly DatabaseContext _context;
 
+        public VoluntariosController(DatabaseContext context)
+        {
+            _context = context;
+        }
         // GET: UserOng
         [AllowAnonymous]
         public async Task<IActionResult> Index()
@@ -94,7 +96,7 @@ namespace CentralOngs.Controllers
                 userOngModel.UserType = UserType.Ong;
                 _context.Add(userOngModel);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Login");
+                return RedirectToAction("Login", "Index");
             }
 
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
@@ -147,6 +149,43 @@ namespace CentralOngs.Controllers
         private bool UserOngModelExists(int id)
         {
             return _context.UserOngModel.Any(e => e.Id == id);
+        }
+        //POST: Login
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login([Bind("Email, Password")] UserVoluntarioModel userVoluntarioModel)
+        {
+            var user = await _context.UserVoluntarioModel
+                .FirstOrDefaultAsync(u => u.Email == userVoluntarioModel.Email);
+            if (user == null)
+            {
+                ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
+                return View();
+            }
+
+            if (user.Password == userVoluntarioModel.Password)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim(ClaimTypes.UserData, user.Id.ToString()),
+                    new Claim(ClaimTypes.NameIdentifier, user.Name),
+                    new Claim(ClaimTypes.Role, user.UserType.ToString())
+                };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+                var properties = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7),
+                };
+                await HttpContext.SignInAsync(principal, properties);
+                return Redirect("/");
+            }
+            ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
+            return View();
         }
     }
 }
