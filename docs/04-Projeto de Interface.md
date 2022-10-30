@@ -19,15 +19,18 @@ Ao clicar no botão 'Entrar', é possível ver as entradas de login (e-mail e se
 **Tela 3**
 <br>
 ![Quero ser voluntário](img/Queroservoluntário.jpg)
+<br>
 A tela de cadastro do voluntário exige que o usuário preencha os campos com nome, data de nascimento, CPF, endereço e telefone, bem como as informações de login como E-mail e senha.
 
 **Tela 4**
 <br>
 ![Sou uma ONG1](img/SouumaONG1.jpg)
+<br>
 A tela de cadastro da ONG exige que o usuário preencha os campos com nome, CNPJ, endereço, telefone e dados bancarios bem como as informações de login como E-mail e senha.
 
 **Tela 5**
 ![Homepage pós login](img/Homepagepóslogin.jpg)
+<br>
 Após realizar o login, tanto o usuário Voluntário, como o usuário ONG verão a mesma tela.
 
 **Tela 6**
