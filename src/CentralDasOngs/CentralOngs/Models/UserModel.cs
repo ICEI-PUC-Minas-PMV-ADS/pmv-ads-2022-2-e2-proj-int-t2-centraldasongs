@@ -12,12 +12,12 @@ namespace CentralOngs.Models
         [Required(ErrorMessage = "É necessário informar o nome!")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "É necessário informar o nome!")]
+        [Required(ErrorMessage = "É necessário informar o email!")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Email não é valido")]
         public string Email { get; set; }
 
         [DataType(DataType.Password)]
-        [Required(ErrorMessage = "É necessário informar o nome!")]
+        [Required(ErrorMessage = "É necessário informar a senha!")]
         public string Password { get; set; }
 
         //[DataType(DataType.PhoneNumber)]

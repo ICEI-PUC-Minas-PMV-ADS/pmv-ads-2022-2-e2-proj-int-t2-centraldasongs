@@ -15,20 +15,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CentralOngs.Controllers
 {
-    public class VoluntariosController : Controller
+    public class VoluntariosController : UserController<UserVoluntarioModel>
     {
-        private readonly DatabaseContext _context;
-
-        public VoluntariosController(DatabaseContext context)
+        public VoluntariosController(DatabaseContext context) : base(context)
         {
-            _context = context;
         }
 
         // GET: UserOng
         [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.UserOngModel.ToListAsync());
+            return View(await _context.UserVoluntarioModel.ToListAsync());
         }
 
         // GET: UserOng/Details/5
@@ -40,7 +37,7 @@ namespace CentralOngs.Controllers
                 return NotFound();
             }
 
-            var userOngModel = await _context.UserOngModel
+            var userOngModel = await _context.UserVoluntarioModel
                 .FirstOrDefaultAsync(o => o.Id == id);
             if (userOngModel == null)
             {
@@ -64,10 +61,7 @@ namespace CentralOngs.Controllers
         [AllowAnonymous]
         public IActionResult Create()
         {
-            ViewData["errorList"] = null;
-            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
-            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
-            return View();
+            return base.createViewStateAndBank();
         }
 
         // POST: UserOng/Create
@@ -101,11 +95,7 @@ namespace CentralOngs.Controllers
                 return RedirectToAction("Login");
             }
 
-            IEnumerable<ModelError> allErrors = ModelState.Values.SelectMany(v => v.Errors);
-            ViewData["errorList"] = allErrors;
-
-            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
-            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
+            base.createViewStateAndBank();
             return View(userOngModel);
         }
 
@@ -145,60 +135,11 @@ namespace CentralOngs.Controllers
             return View();
         }
 
-        //POST: Login
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login([Bind("Email, Password")] UserOngModel userOngModel)
-        {
-            var user = await _context.UserOngModel
-                .FirstOrDefaultAsync(u => u.Email == userOngModel.Email);
-            if (user == null)
-            {
-                ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
-                return View();
-            }
-
-
-            if (user.Password == userOngModel.Password)
-            {
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.Name),
-                    new Claim(ClaimTypes.UserData, user.Id.ToString()),
-                    new Claim(ClaimTypes.NameIdentifier, user.Name),
-                    new Claim(ClaimTypes.Role, user.UserType.ToString())
-                };
-
-                var userIdentity = new ClaimsIdentity(claims, "login");
-                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
-                var properties = new AuthenticationProperties
-                {
-                    AllowRefresh = true,
-                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7), // Definindo tempo de login do usuario no sistema
-                    IsPersistent = true
-                };
-                //Inserindo o usuario na sessão da aplicação com segurança e autenticado
-                await HttpContext.SignInAsync(principal, properties);
-                return Redirect("/"); //Redirecionaria para a home principal
-            }
-            ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
-            return View();
-        }
-
-        [AllowAnonymous]
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync();
-            return Redirect("/");
-        }
-
         [AllowAnonymous]
         public IActionResult AccessDenied()
         {
             return View();
         }
-
 
         private bool UserOngModelExists(int id)
         {

@@ -17,6 +17,8 @@
     <None Remove="Views\Ongs\" />
     <None Remove="Seeds\" />
     <None Remove="Migrations\" />
+    <None Remove="Views\Login\" />
+    <None Remove="Views\AccessDenied\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="6.0.7" />
@@ -34,5 +36,7 @@
     <Folder Include="Views\Ongs\" />
     <Folder Include="Seeds\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\AccessDenied\" />
   </ItemGroup>
 </Project>
