@@ -154,6 +154,15 @@ namespace CentralOngs.Controllers
             return _context.UserOngModel.Any(e => e.Id == id);
         }
 
+
+        //GET: Login
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+
         //POST: Login
         [HttpPost]
         [AllowAnonymous]
