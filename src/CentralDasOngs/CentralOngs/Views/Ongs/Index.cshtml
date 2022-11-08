@@ -13,6 +13,8 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +23,12 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
                 </td>
                 <td>
                     <a asp-action="Details" asp-route-id="@item.Cnpj">Saiba mais</a>

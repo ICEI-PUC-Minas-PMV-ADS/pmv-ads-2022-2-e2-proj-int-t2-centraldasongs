@@ -28,8 +28,8 @@ namespace CentralOngs.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
-            //List<UserOngModel> ongList = await _context.UserOngModel.ToListAsync();
-            return View();
+            List<UserOngModel> ongList = await _context.UserOngModel.ToListAsync();
+            return View(ongList);
         }
 
         // GET: UserOng/Details/5
