@@ -94,39 +94,52 @@ namespace CentralDasOngs.Controllers
         // GET: UserVoluntario/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewData["StateList"] = new SelectList(_context.StateModel, "UF", "UF");
+
             if (id == null)
             {
                 return NotFound();
             }
-            var userAdress = await _context.AddressModel
-                .FirstOrDefaultAsync(m => m.UserId == id);
 
             var userVoluntarioModel = await _context.UserVoluntarioModel.FindAsync(id);
+            var userAdress = await _context.AddressModel.FirstOrDefaultAsync(oa => oa.UserId == id);
+            var userState = await _context.StateModel.FirstOrDefaultAsync(s => s.UF == userAdress.StateId);
+
             if (userVoluntarioModel == null)
             {
                 return NotFound();
             }
-            ViewData["State"] = new SelectList(_context.StateModel, "UF", "UF");
             return View(userVoluntarioModel);
         }
 
-        // POST: UserVoluntario/Edit/5
+        //POST: UserOngModels/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Cpf,DateBirthDay,Id,Name,Email,Password,Contact,UserType, AdressModel")] UserVoluntarioModel userVoluntarioModel)
+        public async Task<IActionResult> Edit([Bind("Id,Cpf,DateBirthDay,Name,Email,Password,Contact,UserType,Address")] UserVoluntarioModel userVoluntarioModel)
         {
-            if (id != userVoluntarioModel.Id)
-            {
-                return NotFound();
-            }
+            var userId = User.Claims.ElementAt(1).Value;
 
-            if (ModelState.IsValid)
+            var user = await _context.UserVoluntarioModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
+            var userAdress = await _context.AddressModel.FirstOrDefaultAsync(oa => oa.UserId == int.Parse(userId));
+
+            user.Name = userVoluntarioModel.Name;
+            user.Contact = userVoluntarioModel.Name;
+
+
+            user.Address.StateId = userVoluntarioModel.Address.StateId;
+            user.Address.City = userVoluntarioModel.Address.City;
+            user.Address.District = userVoluntarioModel.Address.District;
+            user.Address.Street = userVoluntarioModel.Address.Street;
+            user.Address.Number = userVoluntarioModel.Address.Number;
+            user.Address.Complement = userVoluntarioModel.Address.Complement;
+
+            if (user.Id != 0)
             {
                 try
                 {
-                    _context.Update(userVoluntarioModel);
+                    _context.Update(user);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -142,7 +155,7 @@ namespace CentralDasOngs.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["State"] = new SelectList(_context.StateModel, "Uf", "Uf");
+            ViewData["StateList"] = new SelectList(_context.StateModel, "UF", "UF");
             return View(userVoluntarioModel);
         }
 

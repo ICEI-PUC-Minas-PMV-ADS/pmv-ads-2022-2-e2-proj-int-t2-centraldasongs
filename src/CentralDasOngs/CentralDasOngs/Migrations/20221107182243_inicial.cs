@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CentralDasOngs.Migrations
 {
-    public partial class m00 : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -57,7 +57,7 @@ namespace CentralDasOngs.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     District = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Street = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    HouseNumber = table.Column<int>(type: "int", nullable: false),
+                    Number = table.Column<int>(type: "int", nullable: false),
                     Complement = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     StateId = table.Column<string>(type: "nvarchar(450)", nullable: true)
@@ -80,17 +80,18 @@ namespace CentralDasOngs.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "user_ong",
+                name: "UserOng",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    Cnpj = table.Column<long>(type: "bigint", nullable: false)
+                    Cnpj = table.Column<long>(type: "bigint", nullable: false),
+                    About = table.Column<string>(type: "ntext", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_user_ong", x => x.Id);
+                    table.PrimaryKey("PK_UserOng", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_user_ong_UserModel_Id",
+                        name: "FK_UserOng_UserModel_Id",
                         column: x => x.Id,
                         principalTable: "UserModel",
                         principalColumn: "Id",
@@ -123,7 +124,7 @@ namespace CentralDasOngs.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AccountNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Agency = table.Column<int>(type: "int", nullable: false),
+                    Branch = table.Column<int>(type: "int", nullable: false),
                     AccountType = table.Column<int>(type: "int", nullable: false),
                     BankId = table.Column<int>(type: "int", nullable: false),
                     UserOngId = table.Column<int>(type: "int", nullable: false)
@@ -138,9 +139,9 @@ namespace CentralDasOngs.Migrations
                         principalColumn: "Code",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BankAccount_user_ong_UserOngId",
+                        name: "FK_BankAccount_UserOng_UserOngId",
                         column: x => x.UserOngId,
-                        principalTable: "user_ong",
+                        principalTable: "UserOng",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -186,7 +187,7 @@ namespace CentralDasOngs.Migrations
                 name: "Banks");
 
             migrationBuilder.DropTable(
-                name: "user_ong");
+                name: "UserOng");
 
             migrationBuilder.DropTable(
                 name: "UserModel");

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CentralDasOngs.Migrations
 {
     [DbContext(typeof(CentralDasOngsContext))]
-    [Migration("20221027021124_m00")]
-    partial class m00
+    [Migration("20221107182243_inicial")]
+    partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,7 +39,7 @@ namespace CentralDasOngs.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("HouseNumber")
+                    b.Property<int>("Number")
                         .HasColumnType("int");
 
                     b.Property<string>("StateId")
@@ -76,10 +76,10 @@ namespace CentralDasOngs.Migrations
                     b.Property<int>("AccountType")
                         .HasColumnType("int");
 
-                    b.Property<int>("Agency")
+                    b.Property<int>("BankId")
                         .HasColumnType("int");
 
-                    b.Property<int>("BankId")
+                    b.Property<int>("Branch")
                         .HasColumnType("int");
 
                     b.Property<int>("UserOngId")
@@ -155,10 +155,13 @@ namespace CentralDasOngs.Migrations
                 {
                     b.HasBaseType("CentralDasOngs.Models.UserModel");
 
+                    b.Property<string>("About")
+                        .HasColumnType("ntext");
+
                     b.Property<long>("Cnpj")
                         .HasColumnType("bigint");
 
-                    b.ToTable("user_ong");
+                    b.ToTable("UserOng");
                 });
 
             modelBuilder.Entity("CentralDasOngs.Models.UserVoluntarioModel", b =>
@@ -240,7 +243,8 @@ namespace CentralDasOngs.Migrations
 
             modelBuilder.Entity("CentralDasOngs.Models.UserModel", b =>
                 {
-                    b.Navigation("Address");
+                    b.Navigation("Address")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CentralDasOngs.Models.UserOngModel", b =>

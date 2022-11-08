@@ -154,12 +154,12 @@ namespace CentralDasOngs.Migrations
                     b.HasBaseType("CentralDasOngs.Models.UserModel");
 
                     b.Property<string>("About")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("ntext");
 
                     b.Property<long>("Cnpj")
                         .HasColumnType("bigint");
 
-                    b.ToTable("user_ong");
+                    b.ToTable("UserOng");
                 });
 
             modelBuilder.Entity("CentralDasOngs.Models.UserVoluntarioModel", b =>

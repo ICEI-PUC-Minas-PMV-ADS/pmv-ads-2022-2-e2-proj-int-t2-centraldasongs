@@ -19,7 +19,7 @@ namespace CentralDasOngs.Models
 
         [Display(Name = "Senha")]
         [DataType(DataType.Password)]
-        [Required(ErrorMessage = "É necessário informar o nome!")]
+        [Required(ErrorMessage = "É necessário informar a senha!")]
         public string Password { get; set; }
 
         [Display(Name = "Contato")]
