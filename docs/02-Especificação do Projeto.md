@@ -59,11 +59,11 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-006| O sistema deve verificar se o usuário já foi cadastrado   | ALTA |
 |RF-007| O sistema deve informar a a idade do usuario baseado na sua data de nascimento   | MÉDIA |
 |RF-008| O sistema deve permitir que o usuário edite seus dados | MÉDIA |
-|RF-008| O usuário Gestor das ONGs poderá criar vagas para voluntários   | ALTA |
-|RF-009| O usuário Gestor das ONGs poderá inserir informações para doações   | ALTA |
-|RF-010| O usuário Gestor das ONGs poderá descrever as atividades da sua ONG   | ALTA |
-|RF-011| O usuário voluntario poderá aplicar filtros nas vagas disponíveis   | MÉDIA |
-|RF-012| O usuário Gestor das ONGs poderá avaliar o perfil dos candidatos das vagas assim como podendo aceitar ou negar a candidatura   | ALTA |
+|RF-009| O usuário Gestor das ONGs poderá criar vagas para voluntários   | ALTA |
+|RF-010| O usuário Gestor das ONGs poderá inserir informações para doações   | ALTA |
+|RF-011| O usuário Gestor das ONGs poderá descrever as atividades da sua ONG   | ALTA |
+|RF-012| O usuário voluntario poderá aplicar filtros nas vagas disponíveis   | MÉDIA |
+|RF-013| O usuário Gestor das ONGs poderá avaliar o perfil dos candidatos das vagas assim como podendo aceitar ou negar a candidatura   | ALTA |
 |RF-014| Usuários voluntários podem encerrar sua participação nas ONGs pelo site   | BAIXA |
 
 ### Requisitos não Funcionais
