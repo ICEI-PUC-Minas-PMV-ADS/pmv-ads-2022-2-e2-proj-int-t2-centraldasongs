@@ -13,7 +13,9 @@ namespace CentralOngs.Models
         [RegularExpression(@"^\d{2}\d{3}\d{3}\d{4}\d{2}$", ErrorMessage = "Numero de CNPJ invalido! Informar apenas numeros")]
         public long Cnpj { get; set; }
 
-        //public string About { get; set; }
+        [Display(Name = "Sobre a ONG")]
+        [Column(TypeName = "ntext")]
+        public string? About { get; set; }
 
         public virtual BankAccountModel BankAccount { get; set; }
     }

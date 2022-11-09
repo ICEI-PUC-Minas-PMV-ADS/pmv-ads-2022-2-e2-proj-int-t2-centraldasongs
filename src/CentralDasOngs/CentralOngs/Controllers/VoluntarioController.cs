@@ -30,7 +30,7 @@ namespace CentralOngs.Controllers
             return View(await _context.UserVoluntarioModel.ToListAsync());
         }
 
-        // GET: UserOng/Details/5
+        // GET: Details
         [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
@@ -50,16 +50,10 @@ namespace CentralOngs.Controllers
 
             var userState = await _context.StateModel
                 .FirstOrDefaultAsync(s => s.Name == userAddress.StateName);
-
-            var userBankAccount = await _context.BankAccountModel
-                .FirstOrDefaultAsync(ba => ba.UserOngId == id);
-
-            var userBank = await _context.BankModel
-                .FirstOrDefaultAsync(b => b.Code == userBankAccount.BankId);
             return View(userOngModel);
         }
 
-        // GET: UserOng/Create
+        // GET: Create
         [AllowAnonymous]
         public IActionResult Create()
         {
@@ -68,9 +62,7 @@ namespace CentralOngs.Controllers
             return View();
         }
 
-        // POST: UserOng/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Create
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -104,7 +96,7 @@ namespace CentralOngs.Controllers
             return View(userVoluntarioModel);
         }
 
-        // GET: UserOng/Delete/5
+        // GET: Delete
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -112,25 +104,36 @@ namespace CentralOngs.Controllers
                 return NotFound();
             }
 
-            var userOngModel = await _context.UserOngModel
+            var userVoluntarioModel = await _context.UserVoluntarioModel
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (userOngModel == null)
+            if (userVoluntarioModel == null)
             {
                 return NotFound();
             }
 
-            return View(userOngModel);
+            return View(userVoluntarioModel);
         }
 
-        // POST: UserOng/Delete/5
+        // POST: Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var userOngModel = await _context.UserOngModel.FindAsync(id);
-            _context.UserOngModel.Remove(userOngModel);
+            var userVoluntarioModel = await _context.UserVoluntarioModel.FindAsync(id);
+            _context.UserVoluntarioModel.Remove(userVoluntarioModel);
             await _context.SaveChangesAsync();
             return RedirectToAction("Logout");
+        }
+
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+        private bool UserVoluntarioModelExists(int id)
+        {
+            return _context.UserVoluntarioModel.Any(e => e.Id == id);
         }
 
         //GET: Login
@@ -140,16 +143,6 @@ namespace CentralOngs.Controllers
             return View();
         }
 
-        [AllowAnonymous]
-        public IActionResult AccessDenied()
-        {
-            return View();
-        }
-
-        private bool UserOngModelExists(int id)
-        {
-            return _context.UserOngModel.Any(e => e.Id == id);
-        }
         //POST: Login
         [HttpPost]
         [AllowAnonymous]
@@ -187,6 +180,80 @@ namespace CentralOngs.Controllers
             ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
             return View();
         }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return Redirect("/");
+        }
+
+        // GET: Edit
+        public async Task<IActionResult> Edit(int? id)
+        {
+            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var userVoluntarioModel = await _context.UserVoluntarioModel.FindAsync(id);
+            var userAdress = await _context.AddressModel.FirstOrDefaultAsync(oa => oa.UserId == id);
+            var userState = await _context.StateModel.FirstOrDefaultAsync(s => s.Name == userAdress.StateName);
+
+            if (userVoluntarioModel == null)
+            {
+                return NotFound();
+            }
+            return View(userVoluntarioModel);
+        }
+
+        //POST: Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit([Bind("Id,Cpf,DateBirthDay,Name,Email,Password,Contact,UserType,Address")] UserVoluntarioModel userVoluntarioModel)
+        {
+            var userId = User.Claims.ElementAt(1).Value;
+
+            var user = await _context.UserVoluntarioModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
+            var userAdress = await _context.AddressModel.FirstOrDefaultAsync(oa => oa.UserId == int.Parse(userId));
+
+            user.Name = userVoluntarioModel.Name;
+            user.Contact = userVoluntarioModel.Name;
+
+
+            user.Address.StateName = userVoluntarioModel.Address.StateName;
+            user.Address.City = userVoluntarioModel.Address.City;
+            user.Address.District = userVoluntarioModel.Address.District;
+            user.Address.Street = userVoluntarioModel.Address.Street;
+            user.Address.Number = userVoluntarioModel.Address.Number;
+            user.Address.Complement = userVoluntarioModel.Address.Complement;
+
+            if (user.Id != 0)
+            {
+                try
+                {
+                    _context.Update(user);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserVoluntarioModelExists(userVoluntarioModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+            return View(userVoluntarioModel);
+        }
+
     }
 }
 

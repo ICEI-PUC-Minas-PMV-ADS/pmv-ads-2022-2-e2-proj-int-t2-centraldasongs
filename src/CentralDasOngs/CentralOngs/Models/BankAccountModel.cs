@@ -12,7 +12,7 @@ namespace CentralOngs.Models
         public int Id { get; set; }
 
         [Required]
-        //[Display(Name = "Numero da conta")]
+        [Display(Name = "Numero da conta")]
         public string AccountNumber { get; set; }
 
         [Required]
@@ -20,7 +20,7 @@ namespace CentralOngs.Models
         public int Branch { get; set; }
 
         [Required]
-        //[Display(Name = "Operação")]
+        [Display(Name = "Operação")]
         public int AccountType { get; set; }
 
         public virtual BankModel? Bank { get; set; }

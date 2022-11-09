@@ -82,6 +82,13 @@
 
 </div>
 <div>
-    <a asp-action="Delete" asp-route-id="@Model.Id">Deletar</a> |
-    <a asp-controller="Home" asp-action="Index"> Voltar</a>
+    @if (User.Identity.IsAuthenticated)
+    {
+        @if (User.IsInRole("Voluntario") && Model.Id.ToString() == User.Claims.ElementAt(1).Value)
+        {
+            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+        }
+    }
+    <a asp-action="Details" class="btn btn-info"> Voltar</a>
 </div>

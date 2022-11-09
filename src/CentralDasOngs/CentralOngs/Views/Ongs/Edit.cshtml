@@ -1,37 +1,27 @@
 ﻿@model CentralOngs.Models.UserOngModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>Cadastro de ONG</h1>
+<h1>Edit</h1>
 
-<h4>Cadastre aqui sua ONG</h4>
-
+<h4>UserOngModel</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Cnpj" class="control-label"></label>
-                <input asp-for="Cnpj" class="form-control" />
-                <span asp-validation-for="Cnpj" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Cnpj" />
+            <input type="hidden" asp-for="Email" />
+            <input type="hidden" asp-for="Password" />
+            <select asp-for="UserType" hidden></select>
+
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-                <p class="text-danger">@ViewBag.MensageEmail</p>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Contact" class="control-label"></label>
@@ -47,7 +37,7 @@
             <hr>
 
             <div class="form-group">
-                <label asp-for="Address.StateName"></label>
+                <label asp-for="Address.State"></label>
                 <select asp-for="Address.StateName" class="form-control" asp-items="ViewBag.StateList"></select>
             </div>
             <div class="form-group">
@@ -97,17 +87,17 @@
                 <label asp-for="BankAccount.BankId" class="control-label"></label>
                 <select asp-for="BankAccount.BankId" class="form-control" asp-items="ViewBag.BankList"></select>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-success" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-controller="Home" asp-action="Index" type="button" class="btn btn-secondary">Voltar</a>
+    <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-info btn-sm">Voltar</a>
 </div>
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

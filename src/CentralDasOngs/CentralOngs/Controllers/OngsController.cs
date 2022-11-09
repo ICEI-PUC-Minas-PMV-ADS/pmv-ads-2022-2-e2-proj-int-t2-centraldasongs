@@ -32,7 +32,7 @@ namespace CentralOngs.Controllers
             return View(ongList);
         }
 
-        // GET: UserOng/Details/5
+        // GET: Details
         [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
@@ -61,7 +61,7 @@ namespace CentralOngs.Controllers
             return View(userOngModel);
         }
 
-        // GET: UserOng/Create
+        // GET: Create
         [AllowAnonymous]
         public IActionResult Create()
         {
@@ -70,9 +70,7 @@ namespace CentralOngs.Controllers
             return View();
         }
 
-        // POST: UserOng/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Create
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -106,7 +104,7 @@ namespace CentralOngs.Controllers
             return View(userOngModel);
         }
 
-        // GET: UserOng/Delete/5
+        // GET: Delete
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,7 +122,7 @@ namespace CentralOngs.Controllers
             return View(userOngModel);
         }
 
-        // POST: UserOng/Delete/5
+        // POST: Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -133,13 +131,6 @@ namespace CentralOngs.Controllers
             _context.UserOngModel.Remove(userOngModel);
             await _context.SaveChangesAsync();
             return RedirectToAction("Logout");
-        }
-
-        [AllowAnonymous]
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync();
-            return Redirect("/");
         }
 
         [AllowAnonymous]
@@ -153,7 +144,6 @@ namespace CentralOngs.Controllers
         {
             return _context.UserOngModel.Any(e => e.Id == id);
         }
-
 
         //GET: Login
         [AllowAnonymous]
@@ -203,6 +193,182 @@ namespace CentralOngs.Controllers
             ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
             return View();
         }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return Redirect("/");
+        }
+
+        // GET: Edit
+        public async Task<IActionResult> Edit(int? id)
+        {
+            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var userOngModel = await _context.UserOngModel.FindAsync(id);
+
+            var userAddress = await _context.AddressModel.FirstOrDefaultAsync(oa => oa.UserId == id);
+            var userState = await _context.StateModel.FirstOrDefaultAsync(s => s.Name == userAddress.StateName);
+            var userBankAccount = await _context.BankAccountModel.FirstOrDefaultAsync(ba => ba.UserOngId == id);
+            var userBank = await _context.BankModel.FirstOrDefaultAsync(b => b.Code == userBankAccount.BankId);
+
+
+            if (userOngModel == null)
+            {
+                return NotFound();
+            }
+            return View(userOngModel);
+        }
+
+        //POST: Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit([Bind("Id, Cnpj,About,Name,Email,Password,Contact,UserType,Address,BankAccount")] UserOngModel userOngModel)
+        {
+            var userId = User.Claims.ElementAt(1).Value;
+
+            var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
+            var userAdress = await _context.AddressModel.FirstOrDefaultAsync(oa => oa.UserId == int.Parse(userId));
+            var userBankAccount = await _context.BankAccountModel.FirstOrDefaultAsync(ba => ba.UserOngId == int.Parse(userId));
+
+            user.Name = userOngModel.Name;
+            user.Contact = userOngModel.Name;
+            user.About = userOngModel.About;
+
+            user.Address.StateName = userOngModel.Address.StateName;
+            user.Address.City = userOngModel.Address.City;
+            user.Address.District = userOngModel.Address.District;
+            user.Address.Street = userOngModel.Address.Street;
+            user.Address.Number = userOngModel.Address.Number;
+            user.Address.Complement = userOngModel.Address.Complement;
+
+            user.BankAccount.AccountNumber = userOngModel.BankAccount.AccountNumber;
+            user.BankAccount.Branch = userOngModel.BankAccount.Branch;
+            user.BankAccount.AccountType = userOngModel.BankAccount.AccountType;
+            user.BankAccount.BankId = userOngModel.BankAccount.BankId;
+
+            if (user.Id != 0)
+            {
+                try
+                {
+                    _context.Update(user);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserOngModelExists(userOngModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
+            return View(userOngModel);
+        }
+
+        //GET: ForgotPassword
+        [AllowAnonymous]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        //POST: ForgotPassword
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword([Bind("Email, Cnpj")] UserOngModel userOngModel)
+        {
+            var user = await _context.UserOngModel
+                .FirstOrDefaultAsync(u => u.Email == userOngModel.Email);
+            if (user == null)
+            {
+                ViewBag.MensageForgotPassword = "Usuario não encontrado";
+                return View();
+            }
+
+            if (user.Cnpj == userOngModel.Cnpj)
+            {
+                //TempData["UserId"] = user.Id;
+                return RedirectToAction("UpdatePassword", new { id = user.Id });
+            }
+            ViewBag.MensageForgotPassword = "Usuario não encontrado";
+            return View();
+        }
+
+        [AllowAnonymous]
+        // GET: UpdatePassword
+        public async Task<IActionResult> UpdatePassword(int? id)
+        {
+            //int id = (int)TempData["UserId"];
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var userOngModel = await _context.UserOngModel.FindAsync(id);
+
+            if (userOngModel == null)
+            {
+                return NotFound();
+            }
+            return View(userOngModel);
+        }
+
+        //POST: UpdatePassword
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdatePassword(int id, [Bind("Id, Cnpj,About,Name,Email,Password,Contact,UserType,Address,BankAccount")] UserOngModel userOngModel)
+        {
+            //var userId = User.Claims.ElementAt(1).Value;
+
+            //var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
+
+            var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == id);
+
+            user.Password = userOngModel.Password;
+
+            if (user.Id != 0)
+            {
+                try
+                {
+                    _context.Update(user);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserOngModelExists(userOngModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return Redirect("/");
+            }
+
+            ViewData["StateList"] = new SelectList(_context.StateModel, "UF", "UF");
+            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
+            return View(userOngModel);
+        }
+
+
     }
 }
 

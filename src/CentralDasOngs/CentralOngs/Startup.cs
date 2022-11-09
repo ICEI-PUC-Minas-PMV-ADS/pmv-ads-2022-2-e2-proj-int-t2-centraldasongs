@@ -42,7 +42,7 @@ namespace CentralOngs
             });
 
             services.AddDbContext<DatabaseContext>(options =>
-                //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
+                /*options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))*/ // to use migrations
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
             );
 

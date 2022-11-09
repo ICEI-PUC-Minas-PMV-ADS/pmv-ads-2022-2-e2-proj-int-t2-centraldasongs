@@ -17,7 +17,7 @@ namespace CentralOngs.Models
         [Required(ErrorMessage = "É necessário informar a data de nascimento!")]
         public DateTime DateBirthDay { get; set; }
 
-        //[Display(Name = "Idade")]
+        [Display(Name = "Idade")]
         [NotMapped]
         public int Age { get => (int)Math.Floor((DateTime.Now - DateBirthDay).TotalDays / 365.25); }
     }
