@@ -74,34 +74,34 @@ namespace CentralOngs.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(UserOngModel userOngModel)
+        public async Task<IActionResult> Create(UserVoluntarioModel userVoluntarioModel)
         {
             if (ModelState.IsValid)
             {
-                var userOng = await _context.UserOngModel
-                    .FirstOrDefaultAsync(u => u.Cnpj == userOngModel.Cnpj);
-                if (userOng != null)
+                var user = await _context.UserVoluntarioModel
+                    .FirstOrDefaultAsync(u => u.Cpf == userVoluntarioModel.Cpf);
+                if (user != null)
                 {
-                    ViewBag.MensageCNPJ_CPF = "CNPJ já cadastrado";
+                    ViewBag.MensageCNPJ_CPF = "CPF já cadastrado";
                     return View();
                 }
-                userOng = await _context.UserOngModel
-                    .FirstOrDefaultAsync(u => u.Email == userOngModel.Email);
-                if (userOng != null)
+                user = await _context.UserVoluntarioModel
+                    .FirstOrDefaultAsync(u => u.Email == userVoluntarioModel.Email);
+                if (user != null)
                 {
                     ViewBag.MensageEmail = "Email já cadastrado";
                     return View();
                 }
 
-                userOngModel.UserType = UserType.Ong;
-                _context.Add(userOngModel);
+                userVoluntarioModel.UserType = UserType.Voluntario;
+                _context.Add(userVoluntarioModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Login");
             }
 
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
             ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
-            return View(userOngModel);
+            return View(userVoluntarioModel);
         }
 
         // GET: UserOng/Delete/5
