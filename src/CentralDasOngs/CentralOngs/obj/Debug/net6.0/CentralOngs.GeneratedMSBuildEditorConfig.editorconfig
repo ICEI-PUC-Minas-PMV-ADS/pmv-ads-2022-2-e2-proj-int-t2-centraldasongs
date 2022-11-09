@@ -1,0 +1,141 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CentralOngs
+build_property.RootNamespace = CentralOngs
+build_property.ProjectDir = C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\CentralDasOngs_Testes\CentralDasOngs_6.0\CentralOngs\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\CentralDasOngs_Testes\CentralDasOngs_6.0\CentralOngs
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/AccessDenied/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzRGVuaWVkXEFjY2Vzc0RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/Sucess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xTdWNlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Ongs/UpdatePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25nc1xVcGRhdGVQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Voluntarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Voluntarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Voluntarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Voluntarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Voluntarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/Voluntarios/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/CentralDasOngs_Testes/CentralDasOngs_6.0/CentralOngs/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lbz4rc4biq

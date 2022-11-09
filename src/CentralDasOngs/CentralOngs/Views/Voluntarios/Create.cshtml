@@ -1,0 +1,91 @@
+﻿@model CentralOngs.Models.UserVoluntarioModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar conta</h1>
+
+<h4>Voluntário</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cpf" class="control-label"></label>
+                <input asp-for="Cpf" class="form-control" />
+                <span asp-validation-for="Cpf" class="text-danger"></span>
+                <p class="text-danger">@ViewBag.MensageCNPJ_CPF</p>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateBirthDay" class="control-label"></label>
+                <input asp-for="DateBirthDay" class="form-control" />
+                <span asp-validation-for="DateBirthDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <p class="text-danger">@ViewBag.MensageEmail</p>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact" class="control-label"></label>
+                <input asp-for="Contact" class="form-control" />
+                <span asp-validation-for="Contact" class="text-danger"></span>
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+                <label asp-for="Address.StateName"></label>
+                <select asp-for="Address.StateName" class="form-control" asp-items="ViewBag.StateList"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address.City" class="control-label"></label>
+                <input asp-for="Address.City" class="form-control" />
+                <span asp-validation-for="Address.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address.District" class="control-label"></label>
+                <input asp-for="Address.District" class="form-control" />
+                <span asp-validation-for="Address.District" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address.Street" class="control-label"></label>
+                <input asp-for="Address.Street" class="form-control" />
+                <span asp-validation-for="Address.Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address.Number" class="control-label"></label>
+                <input asp-for="Address.Number" class="form-control" />
+                <span asp-validation-for="Address.Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address.Complement" class="control-label"></label>
+                <input asp-for="Address.Complement" class="form-control" />
+                <span asp-validation-for="Address.Complement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Login">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
