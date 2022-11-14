@@ -140,12 +140,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/Views/Voluntarios/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/Views/Voluntarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/Views/Voluntarios/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/Views/Voluntarios/UpdatePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9sdW50YXJpb3NcVXBkYXRlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Matheus Estevam/OneDrive/Documentos/projetos/visual-studio/PUC/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/Views/_ViewImports.cshtml]
