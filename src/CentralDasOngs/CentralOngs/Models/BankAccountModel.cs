@@ -16,7 +16,7 @@ namespace CentralOngs.Models
         public string AccountNumber { get; set; }
 
         [Required]
-        //[Display(Name = "Agência")]
+        [Display(Name = "Agência")]
         public int Branch { get; set; }
 
         [Required]

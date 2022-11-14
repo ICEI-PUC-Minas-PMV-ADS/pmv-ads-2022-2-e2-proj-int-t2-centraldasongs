@@ -41,7 +41,11 @@ namespace CentralOngs
                 .HasOne(ba => ba.Bank)
                 .WithMany(b => b.BankAccount)
                 .HasForeignKey(ba => ba.BankId);
-
+            //Relationship between Job and UserOng account 1:N
+            builder.Entity<JobModel>()
+                .HasOne(j => j.UserOng)
+                .WithMany(uo => uo.Job)
+                .HasForeignKey(j => j.UserOngId);
         }
 
         public DbSet<UserVoluntarioModel> UserVoluntarioModel { get; set; }
@@ -50,5 +54,6 @@ namespace CentralOngs
         public DbSet<UserOngModel> UserOngModel { get; set; }
         public DbSet<BankModel> BankModel { get; set; }
         public DbSet<BankAccountModel> BankAccountModel { get; set; }
+        public DbSet<JobModel> JobModel { get; set; }
     }
 }

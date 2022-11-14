@@ -16,8 +16,8 @@ namespace CentralOngs.Models
         [Display(Name = "Sobre a ONG")]
         [Column(TypeName = "ntext")]
         public string? About { get; set; }
-
         public virtual BankAccountModel BankAccount { get; set; }
+        public ICollection<JobModel>? Job { get; set; }
     }
 }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aTaJRw49g3ueUJQE7sZqJqOqaJ1vQpNmfzOqGUJPdYT8ZyAE2EyrJi2lB3stLA8Lk71r2ELSRPHE+Nr2emk5iQ==",
+  "dgSpecHash": "T9szMcyZomjJ9C9GaQUzZl5y4meAou1vx4zIxLwL/iHbDzcFxp9rZb3iDMQfTxEkOnLYFYPlkCG1yfMAuIRvAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\CentralDasOngs_Testes\\CentralDasOngs_6.0\\CentralOngs\\CentralOngs.csproj",
+  "projectFilePath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\CentralOngs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Estevam\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Matheus Estevam\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

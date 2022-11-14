@@ -24,6 +24,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Ongs" asp-action="Index">Lista de ONGs</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Job" asp-action="Index">Lista de Trabalhos</a>
+                        </li>
+
                         @if (User.Identity.IsAuthenticated)
                         {
                             @if (User.IsInRole("Ong")) //Verificando se o usuario é admin, caso ele seja, aparece o campo de Usuario

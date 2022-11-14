@@ -117,6 +117,7 @@
     {
         @if (User.IsInRole("Ong") && Model.Id.ToString() == User.Claims.ElementAt(1).Value)
         {
+            <a asp-action="CreateJob" class="btn btn-primary">Criar trabalho</a>
             <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
         }

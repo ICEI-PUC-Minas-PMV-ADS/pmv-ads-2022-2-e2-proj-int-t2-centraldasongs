@@ -152,7 +152,6 @@ namespace CentralOngs.Controllers
             return View();
         }
 
-
         //POST: Login
         [HttpPost]
         [AllowAnonymous]
@@ -188,6 +187,7 @@ namespace CentralOngs.Controllers
                 };
                 //Inserindo o usuario na sessão da aplicação com segurança e autenticado
                 await HttpContext.SignInAsync(principal, properties);
+                TempData["UserId"] = user.Id;
                 return Redirect("/"); //Redirecionaria para a home principal
             }
             ViewBag.MensageLogin = "Usuario e/ou Senha invalidos";
@@ -368,6 +368,43 @@ namespace CentralOngs.Controllers
             return View(userOngModel);
         }
 
+        // GET: CreateJob
+        public IActionResult CreateJob()
+        {
+            return View();
+        }
+
+        // POST: CreateJob
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateJob(JobModel jobModel, UserOngModel userOngModel)
+        {
+            var userId = User.Claims.ElementAt(1).Value;
+            var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
+            jobModel.UserOng = user;
+            jobModel.UserOngId = user.Id;
+
+            if (user.Id != 0)
+            {
+                try
+                {
+                    _context.Update(jobModel);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserOngModelExists(userOngModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+            return View(jobModel);
+        }
 
     }
 }
