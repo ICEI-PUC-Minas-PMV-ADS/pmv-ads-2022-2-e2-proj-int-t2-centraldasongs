@@ -403,7 +403,7 @@ namespace CentralOngs.Controllers
                     }
                 }
             }
-            return View(jobModel);
+            return Redirect("/");
         }
 
     }
