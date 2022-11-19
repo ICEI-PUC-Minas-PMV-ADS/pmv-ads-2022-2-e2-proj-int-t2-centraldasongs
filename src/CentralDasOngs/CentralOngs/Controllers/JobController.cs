@@ -20,9 +20,25 @@ namespace CentralOngs.Controllers
         }
 
         // GET: Job
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString, JobType? jobType, string? state)
         {
-            var databaseContext = _context.JobModel.Include(j => j.UserOng);
+            var databaseContext = from p in _context.JobModel.Include(j => j.UserOng) select p;
+            
+            ViewBag.State = new SelectList(_context.StateModel, "Name", "Name");
+            
+            if (jobType.HasValue)
+            {
+                databaseContext = databaseContext.Where(j => j.JobType == jobType);
+            }
+            if (!String.IsNullOrEmpty(state))
+            {
+                databaseContext = databaseContext.Where(s => s.UserOng.Address.StateName == state);
+            }
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                databaseContext = databaseContext.Where(s => s.Name.ToUpper().Contains(searchString.ToUpper()));
+            }
+
             return View(await databaseContext.ToListAsync());
         }
 

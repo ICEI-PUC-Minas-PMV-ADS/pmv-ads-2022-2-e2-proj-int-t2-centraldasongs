@@ -811,3 +811,5 @@ C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralOngs\obj\Debug\net6.0\CentralOngs.pdb
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralOngs\obj\Debug\net6.0\CentralOngs.genruntimeconfig.cache
 C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralOngs\obj\Debug\net6.0\ref\CentralOngs.dll
+C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralOngs\bin\Debug\net6.0\PagedList.dll
+C:\Users\Matheus Estevam\OneDrive\Documentos\projetos\visual-studio\PUC\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\src\CentralDasOngs\CentralOngs\bin\Debug\net6.0\PagedList.Mvc.dll

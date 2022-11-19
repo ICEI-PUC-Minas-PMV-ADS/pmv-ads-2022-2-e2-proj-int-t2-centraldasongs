@@ -6,11 +6,21 @@
 
 <h1>Index</h1>
 
+@using (Html.BeginForm())
+{
+    <div>
+        Pesquisa: @Html.TextBox("SearchString")
+        @Html.DropDownList("jobType", new SelectList(Enum.GetValues(typeof(JobType))), "Todos os tipos")
+        @Html.DropDownList("state", null, "Todos os estados")     
+        <input type="submit" value="Search" />
+    </div>
+}
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NumberOfVacancies)
