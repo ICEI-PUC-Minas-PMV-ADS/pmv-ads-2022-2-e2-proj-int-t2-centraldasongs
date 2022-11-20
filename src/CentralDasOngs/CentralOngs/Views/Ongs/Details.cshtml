@@ -84,7 +84,7 @@
         </dd>
     </dl>
     <hr />
-    <p>Conta bacanria</p>
+    <p>Conta Bancaria</p>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BankAccount.Bank.Name)
@@ -117,10 +117,10 @@
     {
         @if (User.IsInRole("Ong") && Model.Id.ToString() == User.Claims.ElementAt(1).Value)
         {
-            <a asp-action="CreateJob" class="btn btn-primary">Criar trabalho</a>
+            <a asp-action="CreateJob" class="btn btn-success">Criar trabalho</a>
             <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
         }
     }
-    <a asp-action="Index" class="btn btn-info">Voltar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </div>

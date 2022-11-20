@@ -4,10 +4,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalhes da Vaga</h1>
 
 <div>
-    <h4>JobModel</h4>
+   
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -39,8 +39,8 @@
 <div>
     @if (User.IsInRole("Ong") && Model.UserOngId.ToString() == User.Claims.ElementAt(1).Value)
     {
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
-        <a asp-action="Delete" asp-route-id="@Model?.Id">Deletar</a>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Editar</a>
+        <a asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">Deletar</a>
     }
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </div>
