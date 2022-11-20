@@ -33,6 +33,7 @@ namespace CentralOngs.Models
         [Required]
         public AddressModel? Address { get; set; }
 
+        [Display(Name = "Imagem")]
         public string? ImagemUrl { get; set; }
     }
 }

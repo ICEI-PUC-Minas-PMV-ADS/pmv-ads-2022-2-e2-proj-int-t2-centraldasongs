@@ -18,10 +18,12 @@ namespace CentralOngs.Controllers
     public class OngsController : Controller
     {
         protected readonly DatabaseContext _context;
+        private string _filePath;
 
-        public OngsController(DatabaseContext context)
+        public OngsController(DatabaseContext context, IWebHostEnvironment env)
         {
-            _context = context;
+            _filePath = env.WebRootPath;
+            _context = context;      
         }
 
         // GET: UserOng
@@ -74,7 +76,7 @@ namespace CentralOngs.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(UserOngModel userOngModel)
+        public async Task<IActionResult> Create(UserOngModel userOngModel, IFormFile anexo)
         {
             if (ModelState.IsValid)
             {
@@ -93,6 +95,16 @@ namespace CentralOngs.Controllers
                     return View();
                 }
 
+                //Validar imagem
+                if (!ValidaImagem(anexo))
+                {
+                    return View(userOngModel);
+                }
+                //Salvar imagem
+                var nome = SalvarAquivo(anexo);
+                userOngModel.ImagemUrl = nome;
+
+
                 userOngModel.UserType = UserType.Ong;
                 _context.Add(userOngModel);
                 await _context.SaveChangesAsync();
@@ -102,6 +114,39 @@ namespace CentralOngs.Controllers
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
             ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userOngModel);
+        }
+
+        private bool ValidaImagem(IFormFile anexo)
+        {
+            switch (anexo.ContentType)
+            {
+                case "image/jpeg":
+                    return true;
+                case "image/bmp":
+                    return true;
+                case "image/gif":
+                    return true;
+                case "image/png":
+                    return true;
+                default:
+                    return false;
+                    break;
+            }
+        }
+
+        public string SalvarAquivo(IFormFile anexo)
+        {
+            var nome = Guid.NewGuid().ToString() + anexo.FileName;
+            var filePath = _filePath + "\\images";
+            if (!Directory.Exists(filePath))
+            {
+                Directory.CreateDirectory(filePath);
+            }
+            using(var stream = System.IO.File.Create(filePath + "\\" + nome))
+            {
+                anexo.CopyToAsync(stream);
+            }
+            return nome;
         }
 
         // GET: Delete
@@ -367,8 +412,6 @@ namespace CentralOngs.Controllers
             ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userOngModel);
         }
-
-
     }
 }
 
