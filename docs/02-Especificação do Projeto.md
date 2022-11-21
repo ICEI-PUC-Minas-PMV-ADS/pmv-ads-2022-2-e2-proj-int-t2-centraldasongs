@@ -26,20 +26,16 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 |Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Evitar cadastros duplicados               |
 |Hugo Martins  | Acessar regularmente sua conta cadastrada por meio de login           | Evitar cadastros duplicados               |
 |Paula Matos   | Cadastrar a ONG Marmitas Solidárias e as vagas em aberto para voluntários interessados em participar da distribuição das marmitas          | Buscar voluntários para apoiar e ampliar as ações do projeto              |
-|Paula Matos   | Cadastrar informações sobre pontos de coleta de arrecadação de alimentos          | Facilitar a arrecadação de alimentos para a ONG              |
-|Paula Matos   | Avaliar o perfil dos candidatos que aplicaram para ocupar as vagas          | Para decidir se vai aceitar ou negar a candidatura                |
+|Paula Matos   | Visualizar o perfil dos candidatos que aplicaram para ocupar as vagas          | Para decidir qual candidatura será aceita                |
 |Paula Matos   | Buscar voluntários maiores de 18 anos          | Assegurar que menores de idade não estão realizando tarefas vedadas para suas idades                |
-|Beatriz Costa   | Ter a possibilidade encerrar sua participação como voluntária quando necessário           | Encerrar formalmente sua participação caso não seja possível prosseguir com o trabalho voluntário              |
-|Beatriz Costa   | Avaliar a qualidade do trabalho prestado pela ONG           | Permitir que outros voluntários tenham mais fundamento para decidirem se desejam ou não trabalhar na instituição              |
-|Beatriz Costa   | Cadastrar-se para apoiar ONGs  que estejam envolvidas com proteção animal           | Evitar cadastros duplicados               |
-|Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Dedicar o tempo livre a causas que despertam o interesse pessoal e ganhar experiência profissional               |
+|Beatriz Costa   | Encerrar sua participação como voluntária quando necessário           | Encerrar formalmente sua participação caso não seja possível prosseguir com o trabalho voluntário 
+|Beatriz Costa   | Editar sua participação como voluntária quando necessário           | Editar seus dados e manter o cadastro atualizado|
+|Beatriz Costa   | Cadastrar-se para apoiar ONGs  que estejam envolvidas com proteção animal           | Dedicar o tempo livre a causas que despertam o interesse pessoal e ganhar experiência profissional               |
+|Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Evitar cadastros duplicados              |
 |Renata Alcântara   | Recuperar o acesso ao site em caso de perda da senha          | Evitar ter que cadastrar um novo usuário e perder o acesso aos registros anteriores               |
-|Renata Alcântara   | Ser notificada por e-mail quando for aprovada para a vaga          | Acompanhar se o processo de candidatura foi bem sucedido                 |
 |Renata Alcântara   | Cadastrar-se como voluntária para auxiliar estudantes a melhorarem seu desempenho nos estudos          | Elevar as chances de estudantes conseguirem ingressar no ensino superior ou serem aprovados no ano letivo                |
 |Pedro Silva   | Cadastrar a ONG e as vagas para encontrar professores que possam ensinar aos alunos que farão o ENEM           | Poder discutir com os amigos e colegas de trabalhos sobre temas de interesse                |
 |Pedro Silva   | Cadastrar informações para arrecadação de doações financeiras           | Garantir a manutenção das instalações físicas da escola e proporcionar material didático aos alunos.               |
-|Pedro Silva  | Avaliar o trabalho prestado pelos voluntários à ONG           | Permitir que outras ONGs avaliem melhor a candidatura do voluntário              |
-
 
 ## Requisitos
 
