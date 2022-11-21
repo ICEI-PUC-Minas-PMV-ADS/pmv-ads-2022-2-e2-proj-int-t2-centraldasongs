@@ -51,11 +51,11 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O sistema permitirá cadastro de usuários gestores de ONG; | ALTA | 
-|RF-002| O sistema permitirá cadastro de usuários voluntários/doadores;   | ALTA |
-|RF-003| O sistema permitirá que os usuários criados efetuem login;   | ALTA |
-|RF-004| O sistema permitirá que os usuários criados possam excluir seu usuário;   | ALTA |
-|RF-005| O sistema deve permitir que o usuário cadastre uma nova senha caso ele esqueça a atual;   | MÉDIA |
+|RF-001| O sistema permitirá cadastro de usuários gestores de ONG | ALTA | 
+|RF-002| O sistema permitirá cadastro de usuários voluntários/doadores   | ALTA |
+|RF-003| O sistema permitirá que os usuários criados efetuem login   | ALTA |
+|RF-004| O sistema permitirá que os usuários criados possam excluir seu usuário   | ALTA |
+|RF-005| O sistema deve permitir que o usuário cadastre uma nova senha caso ele esqueça a atual   | MÉDIA |
 |RF-006| O sistema deve verificar se o usuário já foi cadastrado   | ALTA |
 |RF-007| O sistema deve informar a a idade do usuario baseado na sua data de nascimento   | MÉDIA |
 |RF-008| O sistema deve permitir que o usuário edite seus dados | MÉDIA |
@@ -63,7 +63,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-010| O usuário Gestor das ONGs poderá inserir informações para doações   | ALTA |
 |RF-011| O usuário Gestor das ONGs poderá descrever as atividades da sua ONG   | ALTA |
 |RF-012| O usuário voluntario poderá aplicar filtros nas vagas disponíveis   | MÉDIA |
-|RF-013| O usuário Gestor das ONGs poderá avaliar o perfil dos candidatos das vagas assim como podendo aceitar ou negar a candidatura   | ALTA |
+|RF-013| O usuário Gestor das ONGs poderá visualizar os voluntários candidatos à vaga   | ALTA |
 |RF-014| Usuários voluntários podem encerrar sua participação nas ONGs pelo site   | BAIXA |
 
 ### Requisitos não Funcionais
