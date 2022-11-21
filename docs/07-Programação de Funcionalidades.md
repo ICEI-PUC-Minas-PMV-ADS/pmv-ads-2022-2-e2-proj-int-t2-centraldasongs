@@ -6,14 +6,12 @@
 
 ### Requisitos
 
-- RF-001 - O sistema permitirá cadastro de usuários gestores de ONG.
-- RF-002 - O sistema permitirá cadastro de usuários voluntários/doadores.
 - RF-003 - O sistema permitirá que os usuários criados efetuem login.
 
 ### Artefatos Produzidos
-
-- index.cshtml
--  _Layout.cshtml
+- HomeController.cs
+- Index.cshtml
+- Privacy.cshtml
 
 ## Tela "Sou uma ONG"
 
@@ -25,8 +23,13 @@
 
 ### Artefatos Produzidos
 
-- Login.cshtml 
-- _Layout.cshtml 
+- UserModel.cs
+- UserONGModel.cs
+- UserType.cs
+- ErrorViewModel.cs
+- LoginController.cs
+- Index.cshtml
+- Login.cshtml
 
 ## Tela "Sou Voluntário"
 
@@ -38,8 +41,13 @@
 
 ### Artefatos Produzidos
 
-- Login.cshtml 
-- _Layout.cshtml 
+- UserModel.cs
+- UserVoluntarioModel.cs
+- UserType.cs
+- ErrorViewModel.cs
+- LoginController.cs
+- Index.cshtml
+- Login.cshtml
 
 ## Tela de Cadastro de ONG
 
@@ -54,8 +62,15 @@
 
 ### Artefatos Produzidos
 
-- Create.cshtml 
-- _Layout.cshtml
+- UserController.cs
+- AddressModel.cs
+- bankAccountModel.cs
+- BankModel.cs
+- StateModel.cs
+- UserModel.cs
+- UserONGModel.cs
+- UserType.cs
+- Create.cshtml
 
 ## Tela de Cadastro de Voluntário
 
@@ -68,8 +83,13 @@
 
 ### Artefatos Produzidos
 
-- Create.cshtml 
-- _Layout.cshtml
+- UserController.cs
+- AddressModel.cs
+- StateModel.cs
+- UserModel.cs
+- UserVoluntarioModel.cs
+- UserType.cs
+- Create.cshtml
 
 ## Tela de Recuperação de Senha do Usuário da ONG
 
@@ -83,6 +103,10 @@ Essa tela permite a recuperação da senha do cadastro de uma ONG.
 
 ### Artefatos Produzidos
 
+- ONGController.cs
+- UserONGModel.cs
+- ForgotPassword.cshtml
+- UpdatePassword.cshtml
 
 ## Tela de Recuperação de Senha do Usuário do Voluntário
 
@@ -96,6 +120,10 @@ Essa tela permite a recuperação da senha do cadastro de um usuário.
 
 ### Artefatos Produzidos
 
+- VoluntarioController.cs
+- UserVoluntarioModel.cs
+- ForgotPassword.cshtml
+- UpdatePassword.cshtml
 
 ## Tela de Informações do Cadastro da ONG
 
@@ -109,6 +137,9 @@ Essa tela permite a visualização das informações de cadastro de uma ONG.
 
 ### Artefatos Produzidos
 
+- ONGController.cs
+- UserONGModel.cs
+- Details.cshtml
 
 ## Tela de Informações do Cadastro do Voluntário
 
@@ -122,6 +153,9 @@ Essa tela permite a visualização das informações de cadastro de um voluntár
 
 ### Artefatos Produzidos
 
+- VoluntarioController.cs
+- UserVoluntarioModel.cs
+- Details.cshtml
 
 ## Tela de Edição das Informações do Cadastro da ONG
 
@@ -136,6 +170,9 @@ Essa tela permite a edição das informações de cadastro de uma ONG.
 - RF-011 -	O usuário Gestor das ONGs poderá descrever as atividades da sua ONG.
 ### Artefatos Produzidos
 
+- ONGController.cs
+- UserONGModel.cs
+- Edit.cshtml
 
 ## Tela de Edição das Informações do Cadastro do Voluntário
 
@@ -149,6 +186,9 @@ Essa tela permite a edição das informações de cadastro de um voluntário.
 - 
 ### Artefatos Produzidos
 
+- VoluntarioController.cs
+- UserVoluntarioModel.cs
+- Edit.cshtml
 
 ## Tela de Exclusão do Cadastro da ONG
 
@@ -162,6 +202,9 @@ Essa tela permite a edição das informações de cadastro de uma ONG.
 
 ### Artefatos Produzidos
 
+- ONGController.cs
+- UserONGModel.cs
+- Delete.cshtml
 
 ## Tela de Exclusão do Cadastro do Voluntário
 
@@ -175,6 +218,9 @@ Essa tela permite a edição das informações de cadastro de um voluntário.
 
 ### Artefatos Produzidos
 
+- VoluntarioController.cs
+- UserVoluntarioModel.cs
+- Delete.cshtml
 
 ## Tela de Cadastro da Vaga de Trabalho
 
@@ -188,6 +234,10 @@ Essa tela permite a criação de vagas de trabalho.
 
 ### Artefatos Produzidos
 
+- JobController.cs
+- JobModel.cs
+- JobType.cs
+- CreateJob.cshtml
 
 ## Tela de Busca das Vagas de Trabalho
 
@@ -201,6 +251,10 @@ Essa tela permite a busca de vagas de trabalho. Mais detalhes sobre as vagas pod
 
 ### Artefatos Produzidos
 
+- JobController.cs
+- JobModel.cs
+- JobType.cs
+- Index.cshtml
 
 ## Tela de Informações das Vagas de Trabalho
 
@@ -212,6 +266,12 @@ Essa tela permite a visualização dos detalhes das vagas de trabalho cadastrada
 
 ### Artefatos Produzidos
 
+- JobController.cs
+- JobModel.cs
+- JobType.cs
+- Details.cshtml
+- Edit.cshtml
+- Delete.cshtml
 
 ## Tela de Candidatura às Vagas de Trabalho
 
