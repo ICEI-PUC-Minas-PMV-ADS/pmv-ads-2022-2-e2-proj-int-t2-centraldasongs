@@ -61,6 +61,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-012| O usuário voluntario poderá aplicar filtros nas vagas disponíveis   | MÉDIA |
 |RF-013| O usuário Gestor das ONGs poderá visualizar os voluntários candidatos à vaga   | ALTA |
 |RF-014| Usuários voluntários podem encerrar sua participação nas ONGs pelo site   | BAIXA |
+|RF-015| Usuários voluntários podem candidatar-se às vagas cadastradas pelas ONGs   | ALTA |
 
 ### Requisitos não Funcionais
 
