@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Login";
 }
-
+<a asp-controller="Job" asp-action="Index" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 <h1>Login da ONG</h1>
 
 <hr />
@@ -30,7 +30,6 @@
 </div>
 <br />
 <div>
-    <a asp-controller="Home" asp-action="Index" type="button" class="btn btn-secondary">Voltar</a>
     <a asp-action="Create" type="button" class="btn btn-success"> Criar conta</a>
     <a asp-action="ForgotPassword" type="button" class="btn btn-dark">Esqueci minha senha</a>
 </div>

@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Details";
 }
+<a asp-controller="Job" asp-action="Index" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 
 <h1>Informações do Voluntário Cadastrado</h1>
 
@@ -88,7 +89,7 @@
         {
             <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+            <a asp-action="MyVacancies" asp-route-id="@Model.Id" class="btn btn-primary">Minhas candidaturas</a>
         }
     }
-    <a asp-action="Details" class="btn btn-secondary"> Voltar</a>
 </div>

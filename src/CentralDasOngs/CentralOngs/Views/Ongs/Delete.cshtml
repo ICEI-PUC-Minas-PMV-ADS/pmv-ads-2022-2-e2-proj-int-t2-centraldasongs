@@ -4,6 +4,7 @@
     ViewData["Title"] = "Delete";
 }
 
+<a asp-action="Details" asp-route-id="@Model.Id" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 <h1>Você tem certeza que deseja apagar a conta?</h1>
 
 <div>
@@ -26,7 +27,6 @@
 
     <form asp-action="Delete">
         <input type="submit" value="Deletar" class="btn btn-danger" /> |
-        <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">Voltar</a>
     </form>
 </div>
 @section Scripts {

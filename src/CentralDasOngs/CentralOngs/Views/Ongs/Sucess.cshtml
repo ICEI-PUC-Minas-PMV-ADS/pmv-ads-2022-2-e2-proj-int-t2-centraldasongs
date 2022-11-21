@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Details";
 }
+<a asp-action="Index" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 
 <h1>Criação de Ongs</h1>
 
@@ -18,5 +19,4 @@
             <a asp-action="UpdatePassword" asp-route-id="@Model.Id" class="btn btn-primary">Mudar Senha |</a>
         }
     }
-    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </div>

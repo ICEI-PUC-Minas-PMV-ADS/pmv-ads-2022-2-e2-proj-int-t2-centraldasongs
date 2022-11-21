@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CentralOngs.Models.VacancyModel>
+
+@{
+    ViewData["Title"] = "AllCandidates";
+}
+<a asp-controller="Ongs" asp-action="MyJobs" asp-route-id="@User.Claims.ElementAt(1).Value" type="button" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar para lista de meus trabalhos</a>
+<h1>Lista de candidatos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Job)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserVoluntario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserVoluntarioAbout)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Job.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserVoluntario.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserVoluntarioAbout)
+            </td>
+            <td>
+                <a asp-controller="Voluntarios" asp-action="Details" asp-route-id="@item.UserVoluntarioId">Details</a> |
+                <a asp-controller="Vacancy" asp-action="Delete" asp-route-id="@item.Id">Remover candidatura</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

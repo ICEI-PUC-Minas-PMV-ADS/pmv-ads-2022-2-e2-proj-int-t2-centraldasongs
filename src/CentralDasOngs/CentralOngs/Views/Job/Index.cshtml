@@ -9,22 +9,22 @@
 @using (Html.BeginForm())
 {
     <div class="container">
-    <div class="mx-auto text-center">
-    <div class="row">
+        <div class="mx-auto text-center">
+            <div class="row">
                 <div class="col">
                     @Html.TextBox("SearchString", null ,new { placeholder = "Pesquisa", @class = "form-control" })
-            </div>
+                </div>
                 <div class="col">
-            @Html.DropDownList("jobType", new SelectList(Enum.GetValues(typeof(JobType))), "Todos os tipos", new { @class = "form-select" })
-            </div>
+                    @Html.DropDownList("jobType", new SelectList(Enum.GetValues(typeof(JobType))), "Todos os tipos", new { @class = "form-select" })
+                </div>
                 <div class="col">
-            @Html.DropDownList("state", null, "Todos os estados", new { @class = "form-select" })
-                    </div>
-        <div class="col">
-                    <input type="submit" class="btn btn-primary" value="Buscar Vagas" />
-                    </div>
-    </div>
-    </div>
+                    @Html.DropDownList("state", null, "Todos os estados", new { @class = "form-select" })
+                </div>
+                <div class="col">
+                    <input type="submit" class="btn btn-primary" value="Buscar Vagas"/>
+                </div>
+            </div>
+        </div>
     </div>
 }
 <br />
@@ -33,9 +33,6 @@
         <tr>
             <th>
                 @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm })
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumberOfVacancies)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
@@ -56,9 +53,6 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NumberOfVacancies)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
@@ -68,7 +62,7 @@
                 @Html.DisplayFor(modelItem => item.UserOng.Name)
             </td>
             <td>
-                    <a asp-action="Details" asp-route-id="@item.Id" >Mais Informações</a>
+                <a asp-action="Details" asp-route-id="@item.Id" >Mais Informações</a>
             </td>
         </tr>
 }

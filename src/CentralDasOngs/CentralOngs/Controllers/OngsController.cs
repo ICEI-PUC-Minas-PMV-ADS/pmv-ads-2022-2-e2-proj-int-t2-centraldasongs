@@ -302,7 +302,6 @@ namespace CentralOngs.Controllers
 
             if (user.Cnpj == userOngModel.Cnpj)
             {
-                //TempData["UserId"] = user.Id;
                 return RedirectToAction("UpdatePassword", new { id = user.Id });
             }
             ViewBag.MensageForgotPassword = "Usuario não encontrado";
@@ -368,11 +367,6 @@ namespace CentralOngs.Controllers
             return View(userOngModel);
         }
 
-        // GET: CreateJob
-        public IActionResult CreateJob()
-        {
-            return View();
-        }
 
         // POST: CreateJob
         [HttpPost]
@@ -388,7 +382,7 @@ namespace CentralOngs.Controllers
             {
                 try
                 {
-                    _context.Update(jobModel);
+                    _context.Add(jobModel);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -403,7 +397,29 @@ namespace CentralOngs.Controllers
                     }
                 }
             }
-            return Redirect("/");
+            return RedirectToAction("Details", new { id = user.Id });
+        }
+
+        //Get: MyJobs
+        // GET: Job
+        public async Task<IActionResult> MyJobs(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var userOngModel = await _context.UserOngModel
+                .FirstOrDefaultAsync(o => o.Id == id);
+            if (userOngModel == null)
+            {
+                return NotFound();
+            }
+
+            var databaseContext = from p in _context.JobModel.Include(j => j.UserOng) select p;
+            databaseContext = databaseContext.Where(s => s.UserOngId == id);
+
+            return View(await databaseContext.ToListAsync());
         }
 
     }
