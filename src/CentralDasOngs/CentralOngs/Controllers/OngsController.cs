@@ -287,6 +287,7 @@ namespace CentralOngs.Controllers
             user.Name = userOngModel.Name;
             user.Contact = userOngModel.Name;
             user.About = userOngModel.About;
+            
 
             user.Address.StateName = userOngModel.Address.StateName;
             user.Address.City = userOngModel.Address.City;
@@ -413,6 +414,60 @@ namespace CentralOngs.Controllers
             ViewData["StateList"] = new SelectList(_context.StateModel, "UF", "UF");
             ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userOngModel);
+        }
+
+        // POST: CreateJob
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateJob(JobModel jobModel, UserOngModel userOngModel)
+        {
+            var userId = User.Claims.ElementAt(1).Value;
+            var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
+            jobModel.UserOng = user;
+            jobModel.UserOngId = user.Id;
+
+            if (user.Id != 0)
+            {
+                try
+                {
+                    _context.Add(jobModel);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserOngModelExists(userOngModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+            return RedirectToAction("Details", new { id = user.Id });
+        }
+
+        //Get: MyJobs
+        // GET: Job
+        public async Task<IActionResult> MyJobs(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var userOngModel = await _context.UserOngModel
+                .FirstOrDefaultAsync(o => o.Id == id);
+            if (userOngModel == null)
+            {
+                return NotFound();
+            }
+
+            var databaseContext = from p in _context.JobModel.Include(j => j.UserOng) select p;
+            databaseContext = databaseContext.Where(s => s.UserOngId == id);
+
+            return View(await databaseContext.ToListAsync());
         }
     }
 }

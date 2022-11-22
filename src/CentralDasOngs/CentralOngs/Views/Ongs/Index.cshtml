@@ -3,10 +3,10 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<a asp-controller="Job" asp-action="Index" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 <h1>Nossas ONGs parceiras</h1>
 
-<<div class="row" id="myCard">
+<div class="row" id="myCard">
     @foreach (var item in Model)
     {
         <div class="col-lg-2 col-md-4 mb-4">
@@ -26,5 +26,4 @@
     }
 </div>
 
-<a asp-controller="Home" asp-action="Index">Voltar</a>
 

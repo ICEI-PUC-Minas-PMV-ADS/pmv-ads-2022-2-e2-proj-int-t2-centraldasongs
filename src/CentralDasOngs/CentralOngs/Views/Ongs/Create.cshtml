@@ -7,7 +7,7 @@
 <h1>Cadastro de ONG</h1>
 
 <h4>Cadastre aqui sua ONG</h4>
-
+<a asp-action="Login" type="button" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create" enctype="multipart/form-data">
@@ -112,11 +112,6 @@
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-controller="Home" asp-action="Index" type="button" class="btn btn-secondary">Voltar</a>
-</div>
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

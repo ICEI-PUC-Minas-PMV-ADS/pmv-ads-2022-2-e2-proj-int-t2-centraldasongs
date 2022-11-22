@@ -30,7 +30,7 @@ namespace CentralOngs
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                //options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
@@ -42,7 +42,7 @@ namespace CentralOngs
             });
 
             services.AddDbContext<DatabaseContext>(options =>
-                /*options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))*/ // to use migrations
+                //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
             );
 
@@ -74,7 +74,7 @@ namespace CentralOngs
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Job}/{action=Index}/{id?}");
             });
         }
     }

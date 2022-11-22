@@ -42,4 +42,24 @@
     <Folder Include="Views\Login\" />
     <Folder Include="Views\AccessDenied\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Job\AllCandidates.cshtml" />
+    <None Include="Views\Job\ApplyVacancy.cshtml" />
+    <None Include="Views\Job\Create.cshtml" />
+    <None Include="Views\Job\Delete.cshtml" />
+    <None Include="Views\Job\Details.cshtml" />
+    <None Include="Views\Job\Index.cshtml" />
+    <None Include="Views\Vacancy\Delete.cshtml" />
+    <None Include="Views\Vacancy\Details.cshtml" />
+    <None Include="Views\Vacancy\Index.cshtml" />
+    <None Include="Views\Voluntarios\Create.cshtml" />
+    <None Include="Views\Voluntarios\Delete.cshtml" />
+    <None Include="Views\Voluntarios\Details.cshtml" />
+    <None Include="Views\Voluntarios\Edit.cshtml" />
+    <None Include="Views\Voluntarios\ForgotPassword.cshtml" />
+    <None Include="Views\Voluntarios\Index.cshtml" />
+    <None Include="Views\Voluntarios\Login.cshtml" />
+    <None Include="Views\Voluntarios\MyVacancies.cshtml" />
+    <None Include="Views\Voluntarios\UpdatePassword.cshtml" />
+  </ItemGroup>
 </Project>

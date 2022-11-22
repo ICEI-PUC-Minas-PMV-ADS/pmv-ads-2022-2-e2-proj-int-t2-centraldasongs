@@ -18,6 +18,8 @@ namespace CentralOngs.Models
         public string? About { get; set; }
 
         public virtual BankAccountModel BankAccount { get; set; }
+        public virtual ICollection<JobModel>? Job { get; set; }
+
     }
 }
 
