@@ -63,9 +63,9 @@
 |  	|  	|
 | **Caso de Teste** 	| **CT-11 – Filtrar vagas disponíveis** 	|
 |	Requisito Associado 	| RF-012 - O usuário Voluntario poderá aplicar filtros nas vagas |
-| Objetivo do Teste 	| O usuário Voluntario poderá aplicar filtros para que apareça apenas vagas/doeações de seu interesse |
-| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Clicar em "Quero ser voluntario"; <br>Escolher no menu superior a esquerda quais filtros deseja aplicar.|
-|Critério de Êxito | -  Aparecer somente as vagas/doações de seu interesse. |
+| Objetivo do Teste 	| O usuário Voluntario poderá aplicar filtros para que apareça apenas vagas de seu interesse |
+| Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Fazer o login; <br>Escolher quais filtros deseja aplicar.|
+|Critério de Êxito | -  Aparecer somente as vagas de seu interesse. |
 |  	|  	|
 | **Caso de Teste** 	| **CT-012 – Excluir usuário** 	|
 |	Requisito Associado 	| RF-004 - O sistema permitirá que os usuários criados possam excluir seu usuário. |
