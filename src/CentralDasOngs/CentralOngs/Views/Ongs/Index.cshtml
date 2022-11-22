@@ -19,9 +19,7 @@
                 <div class="card-body">
                     <h5 id="title" class="card-title bg-light">@item.Name</h5>
                     <h6>@item.Email</h6>
-                    <p class="card-text">@item.Contact</p>
-                    <p class="card-text">@item.Cnpj</p>
-                    <a type="button" asp-controller="OngsController" asp-action="Details" asp-route-id="@item.Id">Saiba mais sobre esta Ong.</a>
+                    <a type="button" asp-controller="Ongs" asp-action="Details" asp-route-id="@item.Id">Saiba mais sobre esta Ong.</a>
                 </div>
             </div>
         </div>

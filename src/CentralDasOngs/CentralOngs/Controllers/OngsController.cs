@@ -122,6 +122,8 @@ namespace CentralOngs.Controllers
             {
                 case "image/jpeg":
                     return true;
+                case "image/jpg":
+                    return true;
                 case "image/bmp":
                     return true;
                 case "image/gif":
