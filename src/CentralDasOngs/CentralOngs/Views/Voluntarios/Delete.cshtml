@@ -3,12 +3,12 @@
 @{
     ViewData["Title"] = "Delete";
 }
+<a asp-action="Details" asp-route-id="@Model.Id" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 
-<h1>Delete</h1>
+<h1>Você tem certeza que deseja deletar sua conta?</h1>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>UserVoluntarioModel</h4>
+    
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -22,6 +22,5 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Cpf" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Details" asp-route-id="@Model.Id"> Voltar</a>
     </form>
 </div>

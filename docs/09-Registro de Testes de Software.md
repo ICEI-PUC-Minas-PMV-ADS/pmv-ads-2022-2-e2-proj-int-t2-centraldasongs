@@ -1,12 +1,117 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+Nesta seção constam os registros fotográficos dos testes descritos nos casos do tópico anterior.
 
-Para cada caso de teste definido no Plano de Testes de Software, realize o registro das evidências dos testes feitos na aplicação pela equipe, que comprovem que o critério de êxito foi alcançado (ou não!!!). Para isso, utilize uma ferramenta de captura de tela que mostre cada um dos casos de teste definidos (obs.: cada caso de teste deverá possuir um vídeo do tipo _screencast_ para caracterizar uma evidência do referido caso).
+## CT-01 – Cadastrar usuário gestores de ONG
+- Nessa tela, preenchemos os campos para realização do cadastro.
 
-## Avaliação
+*inserir imagem*
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+- Em seguida, os campos são preenchidos e o usuário clica em "Cadastrar"
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+*inserir imagem*
+
+## CT-02 – Cadastrar perfil usuário voluntários/doadores
+- Nessa tela, preenchemos os campos para realização do cadastro.
+
+*inserir imagem*
+
+- Em seguida, os campos são preenchidos e o usuário clica em "Cadastrar"
+
+*inserir imagem*
+
+## CT-03 – Efetuar Login
+- Nessa tela, preenchemos os campos e efetuamos o Login.
+
+*inserir imagem*
+
+ - Em seguida, o usuário é redirecionado para a página "Home".
+
+*inserir imagem*
+
+## CT-04 – Cadastrar perfil utilizando e-mail já cadastrado
+- O usuário recebe uma mensagem de erro, informando que o e-mail ja foi cadastrado.
+
+*inserir imagem*
+
+## CT-05 – Edição dos Dados Cadastrados do Usuário
+- Nessa tela, o usuário clica em "Editar".
+
+*inserir imagem*
+
+- Em seguida, o usuário edita os dados previamente cadastrados.
+
+*inserir imagem*
+
+## CT-06 – Verificação de idade do candidato
+- Nessa tela, aparece um campo informando a idade do ususário.
+
+*inserir imagem*
+
+## CT-07 – Encerrar participação em atividades
+- Nessa tela, o candidato clica no botão "Cancelar".
+
+*inserir imagem*
+
+- Em seguida, a candidatura desaparece.
+
+*inserir imagem*
+
+## CT-08 – Recuperar Senha
+- Nessa tela, o usuário clica no botão "Recuperar Senha".
+
+*inserir imagem*
+
+- Em seguida, o usuário altera a senha.
+
+*inserir imagem*
+
+- Por fim, o usuário faz o login com a nova senha.
+
+*inserir imagem*
+
+## CT-09 – Visualizar Candidaturas
+- Nessa tela, o usuário clica no botão "Mais Informações".
+
+*inserir imagem*
+
+- Em seguida, o usuário visualiza as candidaturas.
+
+*inserir imagem*
+
+## CT-10 – Criar atividades para os voluntários
+- Nessa tela, a ONG clica no botão "Cadastrar Vaga".
+
+*inserir imagem*
+
+- Em seguida, a vaga é mostrada na "Lista de Trabalhos".
+
+*inserir imagem*
+
+## CT-11 – Filtrar vagas disponíveis
+- Nessa tela, o usuário seleciona os filtros de busca desejados.
+
+*inserir imagem*
+
+- Em seguida, somente as vagas que obedeçam aos critérios são exibidas.
+
+*inserir imagem*
+
+## CT-012 – Excluir usuário
+
+- Nessa tela, o usuário seleciona o botão "Excluir".
+
+*inserir imagem*
+
+- Em seguida, o usuário confirma a exclusão.
+
+*inserir imagem*
+
+## CT-013 – Voluntários podem candidatar-se às vagas cadastradas
+- Nessa tela, o usuário seleciona o botão "Candidatar-se".
+
+*inserir imagem*
+
+- Em seguida, o usuário visualiza a candidatura em seu perfil.
+
+*inserir imagem*

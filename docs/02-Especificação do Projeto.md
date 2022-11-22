@@ -26,20 +26,16 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 |Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Evitar cadastros duplicados               |
 |Hugo Martins  | Acessar regularmente sua conta cadastrada por meio de login           | Evitar cadastros duplicados               |
 |Paula Matos   | Cadastrar a ONG Marmitas Solidárias e as vagas em aberto para voluntários interessados em participar da distribuição das marmitas          | Buscar voluntários para apoiar e ampliar as ações do projeto              |
-|Paula Matos   | Cadastrar informações sobre pontos de coleta de arrecadação de alimentos          | Facilitar a arrecadação de alimentos para a ONG              |
-|Paula Matos   | Avaliar o perfil dos candidatos que aplicaram para ocupar as vagas          | Para decidir se vai aceitar ou negar a candidatura                |
+|Paula Matos   | Visualizar o perfil dos candidatos que aplicaram para ocupar as vagas          | Para decidir qual candidatura será aceita                |
 |Paula Matos   | Buscar voluntários maiores de 18 anos          | Assegurar que menores de idade não estão realizando tarefas vedadas para suas idades                |
-|Beatriz Costa   | Ter a possibilidade encerrar sua participação como voluntária quando necessário           | Encerrar formalmente sua participação caso não seja possível prosseguir com o trabalho voluntário              |
-|Beatriz Costa   | Avaliar a qualidade do trabalho prestado pela ONG           | Permitir que outros voluntários tenham mais fundamento para decidirem se desejam ou não trabalhar na instituição              |
-|Beatriz Costa   | Cadastrar-se para apoiar ONGs  que estejam envolvidas com proteção animal           | Evitar cadastros duplicados               |
-|Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Dedicar o tempo livre a causas que despertam o interesse pessoal e ganhar experiência profissional               |
+|Beatriz Costa   | Encerrar sua participação como voluntária quando necessário           | Encerrar formalmente sua participação caso não seja possível prosseguir com o trabalho voluntário 
+|Beatriz Costa   | Editar sua participação como voluntária quando necessário           | Editar seus dados e manter o cadastro atualizado|
+|Beatriz Costa   | Cadastrar-se para apoiar ONGs  que estejam envolvidas com proteção animal           | Dedicar o tempo livre a causas que despertam o interesse pessoal e ganhar experiência profissional               |
+|Hugo Martins  | Ser notificado caso tente cadastrar um novo usuário com o mesmo e-mail          | Evitar cadastros duplicados              |
 |Renata Alcântara   | Recuperar o acesso ao site em caso de perda da senha          | Evitar ter que cadastrar um novo usuário e perder o acesso aos registros anteriores               |
-|Renata Alcântara   | Ser notificada por e-mail quando for aprovada para a vaga          | Acompanhar se o processo de candidatura foi bem sucedido                 |
 |Renata Alcântara   | Cadastrar-se como voluntária para auxiliar estudantes a melhorarem seu desempenho nos estudos          | Elevar as chances de estudantes conseguirem ingressar no ensino superior ou serem aprovados no ano letivo                |
 |Pedro Silva   | Cadastrar a ONG e as vagas para encontrar professores que possam ensinar aos alunos que farão o ENEM           | Poder discutir com os amigos e colegas de trabalhos sobre temas de interesse                |
 |Pedro Silva   | Cadastrar informações para arrecadação de doações financeiras           | Garantir a manutenção das instalações físicas da escola e proporcionar material didático aos alunos.               |
-|Pedro Silva  | Avaliar o trabalho prestado pelos voluntários à ONG           | Permitir que outras ONGs avaliem melhor a candidatura do voluntário              |
-
 
 ## Requisitos
 
@@ -51,11 +47,11 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O sistema permitirá cadastro de usuários gestores de ONG; | ALTA | 
-|RF-002| O sistema permitirá cadastro de usuários voluntários/doadores;   | ALTA |
-|RF-003| O sistema permitirá que os usuários criados efetuem login;   | ALTA |
-|RF-004| O sistema permitirá que os usuários criados possam excluir seu usuário;   | ALTA |
-|RF-005| O sistema deve permitir que o usuário cadastre uma nova senha caso ele esqueça a atual;   | MÉDIA |
+|RF-001| O sistema permitirá cadastro de usuários gestores de ONG | ALTA | 
+|RF-002| O sistema permitirá cadastro de usuários voluntários/doadores   | ALTA |
+|RF-003| O sistema permitirá que os usuários criados efetuem login   | ALTA |
+|RF-004| O sistema permitirá que os usuários criados possam excluir seu usuário   | ALTA |
+|RF-005| O sistema deve permitir que o usuário cadastre uma nova senha caso ele esqueça a atual   | MÉDIA |
 |RF-006| O sistema deve verificar se o usuário já foi cadastrado   | ALTA |
 |RF-007| O sistema deve informar a a idade do usuario baseado na sua data de nascimento   | MÉDIA |
 |RF-008| O sistema deve permitir que o usuário edite seus dados | MÉDIA |
@@ -63,8 +59,9 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-010| O usuário Gestor das ONGs poderá inserir informações para doações   | ALTA |
 |RF-011| O usuário Gestor das ONGs poderá descrever as atividades da sua ONG   | ALTA |
 |RF-012| O usuário voluntario poderá aplicar filtros nas vagas disponíveis   | MÉDIA |
-|RF-013| O usuário Gestor das ONGs poderá avaliar o perfil dos candidatos das vagas assim como podendo aceitar ou negar a candidatura   | ALTA |
+|RF-013| O usuário Gestor das ONGs poderá visualizar os voluntários candidatos à vaga   | ALTA |
 |RF-014| Usuários voluntários podem encerrar sua participação nas ONGs pelo site   | BAIXA |
+|RF-015| Usuários voluntários podem candidatar-se às vagas cadastradas pelas ONGs   | ALTA |
 
 ### Requisitos não Funcionais
 

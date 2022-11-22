@@ -4,9 +4,10 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<a asp-action="Details" asp-route-id="@Model.Id" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 
-<h4>UserVoluntarioModel</h4>
+<h1>Editar Cadastro do Voluntário</h1>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -72,10 +73,6 @@
                 </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-info btn-sm">Voltar</a>
 </div>
 
 @section Scripts {

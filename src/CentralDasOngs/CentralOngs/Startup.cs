@@ -30,7 +30,7 @@ namespace CentralOngs
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                //options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
@@ -42,40 +42,40 @@ namespace CentralOngs
             });
 
             services.AddDbContext<DatabaseContext>(options =>
-            /*options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))*/ // to use migrations
+            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
-            );
+);
 
-            services.AddControllersWithViews();
-        }
+services.AddControllersWithViews();
+}
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-            app.UseStaticFiles();
+// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+if (env.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+}
+app.UseStaticFiles();
 
-            app.UseRouting();
+app.UseRouting();
 
-            app.UseCookiePolicy();
+app.UseCookiePolicy();
 
-            app.UseAuthentication();
+app.UseAuthentication();
 
-            app.UseAuthorization();
+app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-        }
-    }
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Job}/{action=Index}/{id?}");
+});
+}
+}
 }

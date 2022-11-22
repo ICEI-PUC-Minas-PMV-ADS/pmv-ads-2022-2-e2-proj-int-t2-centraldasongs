@@ -13,10 +13,6 @@ namespace CentralOngs.Models
         [Required(ErrorMessage = "É necessario informar o nome")]
         public string Name { get; set; }
 
-        [Display(Name = "Numero de vagas")]
-        [Required(ErrorMessage = "É necessario informar o numero de vagas")]
-        public int  NumberOfVacancies { get; set; }
-
         [Display(Name = "Descrição")]
         [Required(ErrorMessage ="É necessario adicionar uma descrição")]
         public string Description { get; set; }
@@ -27,6 +23,9 @@ namespace CentralOngs.Models
 
         public int UserOngId { get; set; }
         public UserOngModel? UserOng { get; set; }
+
+        public virtual ICollection<VacancyModel> Vacancy { get; set; }
+
 
 
     }

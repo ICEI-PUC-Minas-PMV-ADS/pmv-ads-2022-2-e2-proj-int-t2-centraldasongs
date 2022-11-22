@@ -58,7 +58,6 @@ namespace CentralOngs.Controllers
         public IActionResult Create()
         {
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
-            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View();
         }
 
@@ -92,7 +91,6 @@ namespace CentralOngs.Controllers
             }
 
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
-            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userVoluntarioModel);
         }
 
@@ -341,7 +339,27 @@ namespace CentralOngs.Controllers
             return View(userVoluntarioModel);
         }
 
+        //Get: MyVacancies
+        public async Task<IActionResult> MyVacancies(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var userOngModel = await _context.UserVoluntarioModel
+                .FirstOrDefaultAsync(o => o.Id == id);
+            if (userOngModel == null)
+            {
+                return NotFound();
+            }
+
+            var databaseContext = from p in _context.VacancyModel.Include(j=>j.Job).Include(u=>u.UserVoluntario) select p;
+            
+            databaseContext = databaseContext.Where(s => s.UserVoluntarioId == id);
+
+            return View(await databaseContext.ToListAsync());
+        }
     }
 }
 

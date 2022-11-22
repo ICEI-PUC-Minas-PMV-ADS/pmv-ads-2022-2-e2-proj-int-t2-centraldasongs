@@ -3,9 +3,8 @@
 @{
     ViewData["Title"] = "Details";
 }
-
+<a asp-action="Index" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 <h1>Informações</h1>
-
 <div>
     <hr />
     <dl class="row">
@@ -84,7 +83,7 @@
         </dd>
     </dl>
     <hr />
-    <p>Conta bacanria</p>
+    <p>Conta Bancaria</p>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BankAccount.Bank.Name)
@@ -113,14 +112,14 @@
     </dl>
 </div>
 <div>
+    <a asp-action="Myjobs" asp-route-id="@Model.Id" class="btn btn-primary">Meus Trabalhos</a>
     @if (User.Identity.IsAuthenticated)
     {
         @if (User.IsInRole("Ong") && Model.Id.ToString() == User.Claims.ElementAt(1).Value)
         {
-            <a asp-action="CreateJob" class="btn btn-primary">Criar trabalho</a>
+            <a asp-controller="Job" asp-action="Create" class="btn btn-success">Criar trabalho</a>
             <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
         }
     }
-    <a asp-action="Index" class="btn btn-info">Voltar</a>
 </div>

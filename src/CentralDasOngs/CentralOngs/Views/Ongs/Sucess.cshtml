@@ -3,20 +3,20 @@
 @{
     ViewData["Title"] = "Details";
 }
+<a asp-action="Index" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 
 <h1>Criação de Ongs</h1>
 
 <div>
-    <p>Ong Criada com sucesso</p>
+    <p>ONG Criada com Sucesso</p>
 </div>
 <div>
     @if (User.Identity.IsAuthenticated)
     {
         @if (User.IsInRole("Ong") && Model.Id.ToString() == User.Claims.ElementAt(1).Value)
         {
-            <a asp-action="Delete" asp-route-id="@Model.Id">Deletar |</a>
-            <a asp-action="UpdatePassword" asp-route-id="@Model.Id">Mudar Senha |</a>
+            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar |</a>
+            <a asp-action="UpdatePassword" asp-route-id="@Model.Id" class="btn btn-primary">Mudar Senha |</a>
         }
     }
-    <a asp-action="Index">Voltar</a>
 </div>

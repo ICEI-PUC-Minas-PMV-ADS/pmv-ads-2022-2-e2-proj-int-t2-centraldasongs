@@ -3,10 +3,10 @@
 @{
     ViewData["Title"] = "Login";
 }
+<a asp-controller="Job" asp-action="Index" type="button" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
 
-<h1>Login</h1>
+<h1>Login do Voluntário</h1>
 
-<h4>Voluntário</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -29,11 +29,10 @@
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-controller="Home" asp-action="Index" type="button" class="btn btn-secondary">Voltar</a> |
-    <a asp-action="Create" type="button" class="btn btn-info"> Criar conta</a>
-    <a asp-action="ForgotPassword" type="button" class="btn btn-info">Esqueci a senha</a>
+    <a asp-action="Create" type="button" class="btn btn-success"> Criar conta</a>
+    <a asp-action="ForgotPassword" type="button" class="btn btn-dark">Esqueci minha senha</a>
 </div>
 
 @section Scripts {

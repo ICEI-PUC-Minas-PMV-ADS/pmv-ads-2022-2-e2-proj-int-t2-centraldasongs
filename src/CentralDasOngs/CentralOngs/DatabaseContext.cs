@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System;
 using System.Reflection.Metadata;
+using System.Reflection.Emit;
 
 namespace CentralOngs
 {
@@ -46,6 +47,19 @@ namespace CentralOngs
                 .HasOne(j => j.UserOng)
                 .WithMany(uo => uo.Job)
                 .HasForeignKey(j => j.UserOngId);
+
+
+            //Relationship between Job and Vaga account 1:N
+            builder.Entity<VacancyModel>()
+                .HasOne(v => v.Job)
+                .WithMany(j => j.Vacancy)
+                .HasForeignKey(v => v.JobId);
+
+            //Relationship between UserVoluntario and Vaga account 1:N
+            builder.Entity<VacancyModel>()
+                .HasOne(v => v.UserVoluntario)
+                .WithMany(u => u.Vacancy)
+                .HasForeignKey(v => v.UserVoluntarioId);
         }
 
         public DbSet<UserVoluntarioModel> UserVoluntarioModel { get; set; }
@@ -55,5 +69,6 @@ namespace CentralOngs
         public DbSet<BankModel> BankModel { get; set; }
         public DbSet<BankAccountModel> BankAccountModel { get; set; }
         public DbSet<JobModel> JobModel { get; set; }
+        public DbSet<VacancyModel> VacancyModel { get; set; }
     }
 }

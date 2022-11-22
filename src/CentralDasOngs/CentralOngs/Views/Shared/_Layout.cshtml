@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - CentralDasOngs</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/f0703e39dd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -19,18 +20,14 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Job" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Ongs" asp-action="Index">Lista de ONGs</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Job" asp-action="Index">Lista de Trabalhos</a>
-                        </li>
-
                         @if (User.Identity.IsAuthenticated)
                         {
-                            @if (User.IsInRole("Ong")) //Verificando se o usuario é admin, caso ele seja, aparece o campo de Usuario
+                            @if (User.IsInRole("Ong")) 
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Ongs" asp-action="Details" asp-route-id="@User.Claims.ElementAt(1).Value">Minha ONG</a>
