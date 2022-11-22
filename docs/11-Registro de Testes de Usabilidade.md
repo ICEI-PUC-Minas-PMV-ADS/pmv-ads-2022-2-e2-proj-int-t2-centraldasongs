@@ -1,8 +1,41 @@
 # Registro de Testes de Usabilidade
 
-Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O Registro de Testes de Usabilidade é um relatório que contém as evidências dos testes e relatos dos usuários participantes, baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
+## CT-01 – Cadastrar Usuários Gestores de ONG
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
+*inserir imagem*
 
-> **Links Úteis**:
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+## CT-02 – Cadastrar Usuários Voluntários/Doares
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
+
+*inserir imagem*
+
+## CT-03 – Usuário ONG Cadastrar Nova Vaga
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
+
+*inserir imagem*
+
+## CT-04 – Busca por vagas
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
+
+*inserir imagem*
+
+## CT-05 – Cadastro em vaga, usuário logado
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
+
+*inserir imagem*
+
+## CT-06 – Cadastro em vaga, usuário não logado
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
+
+*inserir imagem*
+
+## CT-07 – Responsividade do sistema
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
+
+*inserir imagem*
+
+## CT-08 – Links direcionáveis
+- Resultado Obtido: A aplicação cumpre os critérios de êxito propostos no Plano de Testes de Usabilidade.
+
+*inserir imagem*
