@@ -57,10 +57,6 @@ Nesta seção constam os registros fotográficos dos testes descritos nos casos 
 
 ![ExcluirCandidaturaVoluntario](https://user-images.githubusercontent.com/100412134/203561877-3b692983-d273-42bb-b07f-f2608679132b.png)
 
-- Em seguida, a candidatura desaparece.
-
-*inserir imagem*
-
 ## CT-08 – Recuperar Senha
 - Nessa tela, o usuário clica no botão "Esqueci minha Senha".
 
