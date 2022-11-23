@@ -38,7 +38,7 @@ namespace CentralOngs
             .AddCookie(options =>
             {
                 options.AccessDeniedPath = "/UsuariosVoluntario/AccessDenied/";
-                options.LoginPath = "/Home/Index/";
+                options.LoginPath = "/Job/Index/";
             });
 
             services.AddDbContext<DatabaseContext>(options =>
