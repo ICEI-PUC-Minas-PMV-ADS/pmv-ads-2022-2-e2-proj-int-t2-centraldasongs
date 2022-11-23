@@ -19,11 +19,11 @@
 | Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Clicar em "Entrar"; <br> - Preencher os campos obrigatórios (e-mail e senha); <br> - Clicar em "Login". |
 |Critério de Êxito | - Redirecionamento para a página home com o login efetuado. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-04 – Cadastrar perfil utilizando e-mail já cadastrado** 	|
+| **Caso de Teste** 	| **CT-04 – Cadastrar perfil utilizando CPF/CNPJ já cadastrado** 	|
 |	Requisito Associado 	| RF-006 - O sistema deve verificar se o usuário já foi cadastrado. |
-| Objetivo do Teste 	| Verificar se o usuário consegue se cadastradar utilizando um email ja presente no banco de dados. |
+| Objetivo do Teste 	| Verificar se o usuário consegue se cadastradar utilizando um CPF/CNPJ ja presente no banco de dados. |
 | Passos 	| - Acessar o navegador; <br> - Informar o endereço do site; <br> - Clicar em "Sou uma ONG" ou  "Quero ser voluntário"; <br> - Preencher os campos obrigatórios; <br> - Clicar em "Cadastrar". |
-|Critério de Êxito | - Mensagem de erro, informando que o e-mail ja foi cadastrado. |
+|Critério de Êxito | - Mensagem de erro, informando que o CPF/CNPJ ja foi cadastrado. |
 |  	|  	|
 | **Caso de Teste** 	| **CT-05 – Edição dos Dados Cadastrados do Usuário** 	|
 |	Requisito Associado 	| RF-008 - O sistema deve permitir que o usuário edite seus dados. |
