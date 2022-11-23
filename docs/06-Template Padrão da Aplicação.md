@@ -118,13 +118,19 @@ Essa tela permite que a ONG veja os voluntários candidatos às suas vagas.
 
 ## Tela de Recusar a Candidatura de Candidatos
 
+Essa tela permite que as ONGs recusem as candidaturas dos voluntários.
+
 ![RejeitarCandidatoONG](https://user-images.githubusercontent.com/100412134/203561799-d6cc7e96-716f-4f40-89e5-b0cec37fdc66.png)
 
 
 ## Tela de Desistir da Candidatura à Vaga
 
+Essa tela permite que o voluntário desista da vaga.
+
 ![ExcluirCandidaturaVoluntario](https://user-images.githubusercontent.com/100412134/203561877-3b692983-d273-42bb-b07f-f2608679132b.png)
 
 ## Tela "Meus Trabalhos" da ONG
+
+Essa tela permite que a ONG gerencie as vagas de trabalho criadas por ela.
 
 ![MeusTrabalhosONG](https://user-images.githubusercontent.com/100412134/203562308-4e84e635-0302-4a14-967c-5c8eda057a54.png)
