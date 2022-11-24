@@ -75,7 +75,7 @@ Roteiro:
 
 | Caso de Teste       | CT-08 – Links direcionaveis                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
-| Requisito Associado |                                                                                 |
+| Requisito Associado | RNF-004	O site deve ser compatível com os principais navegadores do mercado     |
 | Objetivo do Teste   | Verificar a facilidade de navegabilidade no site                                |
 | Passos              | - Acessar o navegador pelo celular;<br>- Informar o endereço do site;           |
-| Critérios de Êxito  | - Todos os links internos e externos devem ser efetivos no seu redirecionamento |
+| Critérios de Êxito  | - Todos os links internos e externos devem ser efetivos no seu redirecionamento. |
