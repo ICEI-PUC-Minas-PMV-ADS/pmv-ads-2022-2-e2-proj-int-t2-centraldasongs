@@ -276,6 +276,82 @@ namespace CentralOngs.Controllers
             return View(await databaseContext.ToListAsync());
         }
 
+        //GET: ForgotPassword	
+        [AllowAnonymous]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        //POST: ForgotPassword	
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword([Bind("Email, Cpf")] UserVoluntarioModel userVoluntarioModel)
+        {
+            var user = await _context.UserVoluntarioModel
+                .FirstOrDefaultAsync(u => u.Email == userVoluntarioModel.Email);
+            if (user == null)
+            {
+                ViewBag.MensageForgotPassword = "Usuario não encontrado";
+                return View();
+            }
+            if (user.Cpf == userVoluntarioModel.Cpf)
+            {
+                //TempData["UserId"] = user.Id;	
+                return RedirectToAction("UpdatePassword", new { id = user.Id });
+            }
+            ViewBag.MensageForgotPassword = "Usuario não encontrado";
+            return View();
+        }
+        [AllowAnonymous]
+        // GET: UpdatePassword	
+        public async Task<IActionResult> UpdatePassword(int? id)
+        {
+            //int id = (int)TempData["UserId"];	
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var userVoluntarioModel = await _context.UserVoluntarioModel.FindAsync(id);
+            if (userVoluntarioModel == null)
+            {
+                return NotFound();
+            }
+            return View(userVoluntarioModel);
+        }
+        //POST: UpdatePassword	
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdatePassword(int id, [Bind("Id, Cpf,About,Name,Email,Password,Contact,UserType,Address")] UserVoluntarioModel userVoluntarioModel)
+        {
+            //var userId = User.Claims.ElementAt(1).Value;	
+            //var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));	
+            var user = await _context.UserVoluntarioModel.FirstOrDefaultAsync(u => u.Id == id);
+            user.Password = userVoluntarioModel.Password;
+            if (user.Id != 0)
+            {
+                try
+                {
+                    _context.Update(user);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserVoluntarioModelExists(userVoluntarioModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return Redirect("/");
+            }
+            ViewData["StateList"] = new SelectList(_context.StateModel, "UF", "UF");
+            return View(userVoluntarioModel);
+        }
 
     }
 }
