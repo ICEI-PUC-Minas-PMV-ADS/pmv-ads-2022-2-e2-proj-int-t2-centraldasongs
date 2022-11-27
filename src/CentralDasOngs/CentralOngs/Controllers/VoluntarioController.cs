@@ -58,6 +58,7 @@ namespace CentralOngs.Controllers
         public IActionResult Create()
         {
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View();
         }
 
@@ -91,6 +92,7 @@ namespace CentralOngs.Controllers
             }
 
             ViewData["StateList"] = new SelectList(_context.StateModel, "Name", "Name");
+            ViewData["BankList"] = new SelectList(_context.BankModel, "Code", "Name");
             return View(userVoluntarioModel);
         }
 
@@ -252,14 +254,35 @@ namespace CentralOngs.Controllers
             return View(userVoluntarioModel);
         }
 
-        //GET: ForgotPassword
+        //Get: MyVacancies
+        public async Task<IActionResult> MyVacancies(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var userOngModel = await _context.UserVoluntarioModel
+                .FirstOrDefaultAsync(o => o.Id == id);
+            if (userOngModel == null)
+            {
+                return NotFound();
+            }
+
+            var databaseContext = from p in _context.VacancyModel.Include(j => j.Job).Include(u => u.UserVoluntario) select p;
+
+            databaseContext = databaseContext.Where(s => s.UserVoluntarioId == id);
+
+            return View(await databaseContext.ToListAsync());
+        }
+
+        //GET: ForgotPassword	
         [AllowAnonymous]
         public IActionResult ForgotPassword()
         {
             return View();
         }
-
-        //POST: ForgotPassword
+        //POST: ForgotPassword	
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -272,49 +295,40 @@ namespace CentralOngs.Controllers
                 ViewBag.MensageForgotPassword = "Usuario não encontrado";
                 return View();
             }
-
             if (user.Cpf == userVoluntarioModel.Cpf)
             {
-                //TempData["UserId"] = user.Id;
+                //TempData["UserId"] = user.Id;	
                 return RedirectToAction("UpdatePassword", new { id = user.Id });
             }
             ViewBag.MensageForgotPassword = "Usuario não encontrado";
             return View();
         }
-
         [AllowAnonymous]
-        // GET: UpdatePassword
+        // GET: UpdatePassword	
         public async Task<IActionResult> UpdatePassword(int? id)
         {
-            //int id = (int)TempData["UserId"];
+            //int id = (int)TempData["UserId"];	
             if (id == null)
             {
                 return NotFound();
             }
-
             var userVoluntarioModel = await _context.UserVoluntarioModel.FindAsync(id);
-
             if (userVoluntarioModel == null)
             {
                 return NotFound();
             }
             return View(userVoluntarioModel);
         }
-
-        //POST: UpdatePassword
+        //POST: UpdatePassword	
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdatePassword(int id, [Bind("Id, Cpf,About,Name,Email,Password,Contact,UserType,Address")] UserVoluntarioModel userVoluntarioModel)
         {
-            //var userId = User.Claims.ElementAt(1).Value;
-
-            //var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
-
+            //var userId = User.Claims.ElementAt(1).Value;	
+            //var user = await _context.UserOngModel.FirstOrDefaultAsync(u => u.Id == int.Parse(userId));	
             var user = await _context.UserVoluntarioModel.FirstOrDefaultAsync(u => u.Id == id);
-
             user.Password = userVoluntarioModel.Password;
-
             if (user.Id != 0)
             {
                 try
@@ -339,27 +353,6 @@ namespace CentralOngs.Controllers
             return View(userVoluntarioModel);
         }
 
-        //Get: MyVacancies
-        public async Task<IActionResult> MyVacancies(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var userOngModel = await _context.UserVoluntarioModel
-                .FirstOrDefaultAsync(o => o.Id == id);
-            if (userOngModel == null)
-            {
-                return NotFound();
-            }
-
-            var databaseContext = from p in _context.VacancyModel.Include(j=>j.Job).Include(u=>u.UserVoluntario) select p;
-            
-            databaseContext = databaseContext.Where(s => s.UserVoluntarioId == id);
-
-            return View(await databaseContext.ToListAsync());
-        }
     }
 }
 

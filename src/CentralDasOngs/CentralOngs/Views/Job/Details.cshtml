@@ -15,25 +15,25 @@
 <h1>Detalhes da Vaga</h1>
 
 <div>
-   
+
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Description)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Description)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.UserOng)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.UserOng.Name)
         </dd>
     </dl>
@@ -44,7 +44,8 @@
         <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Deletar</a>
         <a asp-action="AllCandidates" asp-route-id="@Model.Id" class="btn btn-primary">Candidatos</a>
     }
-    @if (User.IsInRole("Voluntario")){
+    @if (User.IsInRole("Voluntario"))
+    {
         <form asp-action="Details">
             <input type="submit" value="To dentro!" class="btn btn-primary" />
             <p class="text-danger">@ViewBag.MensageErrorVacancy</p>

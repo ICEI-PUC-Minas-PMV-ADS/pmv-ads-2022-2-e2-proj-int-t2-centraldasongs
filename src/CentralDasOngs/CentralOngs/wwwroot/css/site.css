@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar {
+    background-color: #7EB9CC !important;
+}
+
+
+.footer {
+    background-color: #7EB9CC !important;
+}

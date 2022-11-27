@@ -5,13 +5,37 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CentralOngs.Migrations
 {
-    public partial class newFeatures : Migration
+    public partial class newFeature : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "NumberOfVacancies",
-                table: "Jobs");
+            //migrationBuilder.AddColumn<string>(
+            //    name: "ImagemUrl",
+            //    table: "UserModel",
+            //    type: "text",
+            //    nullable: true);
+
+            migrationBuilder.CreateTable(
+                name: "Jobs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    JobType = table.Column<int>(type: "integer", nullable: false),
+                    UserOngId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Jobs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Jobs_user_ong_UserOngId",
+                        column: x => x.UserOngId,
+                        principalTable: "user_ong",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
             migrationBuilder.CreateTable(
                 name: "Vacancies",
@@ -41,6 +65,11 @@ namespace CentralOngs.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Jobs_UserOngId",
+                table: "Jobs",
+                column: "UserOngId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Vacancies_JobId",
                 table: "Vacancies",
                 column: "JobId");
@@ -56,12 +85,12 @@ namespace CentralOngs.Migrations
             migrationBuilder.DropTable(
                 name: "Vacancies");
 
-            migrationBuilder.AddColumn<int>(
-                name: "NumberOfVacancies",
-                table: "Jobs",
-                type: "integer",
-                nullable: false,
-                defaultValue: 0);
+            migrationBuilder.DropTable(
+                name: "Jobs");
+
+            //migrationBuilder.DropColumn(
+            //    name: "ImagemUrl",
+            //    table: "UserModel");
         }
     }
 }

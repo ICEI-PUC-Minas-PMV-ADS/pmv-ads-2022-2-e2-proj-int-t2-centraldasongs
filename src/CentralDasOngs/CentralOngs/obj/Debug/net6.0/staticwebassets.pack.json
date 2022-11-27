@@ -1,275 +1,335 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CentralOngs.bundle.scp.css",
-      "PackagePath": "staticwebassets\\CentralOngs.bundle.scp.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/obj/Debug/net6.0/scopedcss/projectbundle/CentralOngs.bundle.scp.css",
+      "PackagePath": "staticwebassets/CentralOngs.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\img\\CentralDasOngsLogo.png",
-      "PackagePath": "staticwebassets\\img\\CentralDasOngsLogo.png"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/1432263d-6aaa-4019-829c-f5cbe0f20cb8Ong Azul copy.jpg",
+      "PackagePath": "staticwebassets/images/1432263d-6aaa-4019-829c-f5cbe0f20cb8Ong Azul copy.jpg"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\img\\CentralDasOngsTexto.png",
-      "PackagePath": "staticwebassets\\img\\CentralDasOngsTexto.png"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/1a5739f8-0ba9-4870-9036-857cbd8767d3Ocas da Amazônia.png",
+      "PackagePath": "staticwebassets/images/1a5739f8-0ba9-4870-9036-857cbd8767d3Ocas da Amazônia.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\img\\favicon.ico",
-      "PackagePath": "staticwebassets\\img\\favicon.ico"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/5ce2026a-8a91-4b76-8b01-cd9a68d163d0ONG Banco de Alimentos.png",
+      "PackagePath": "staticwebassets/images/5ce2026a-8a91-4b76-8b01-cd9a68d163d0ONG Banco de Alimentos.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/786a3f51-2c2e-48e6-9748-d03f0d0cba99Associação prover.png",
+      "PackagePath": "staticwebassets/images/786a3f51-2c2e-48e6-9748-d03f0d0cba99Associação prover.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/78ac12e8-3687-454c-b0d1-fe2ff2ee0b87Instituto Sociocultural Ecovida.png",
+      "PackagePath": "staticwebassets/images/78ac12e8-3687-454c-b0d1-fe2ff2ee0b87Instituto Sociocultural Ecovida.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/872f7a6e-6aa0-4e3e-bf56-046aff952704Saúde Criança Repensar.png",
+      "PackagePath": "staticwebassets/images/872f7a6e-6aa0-4e3e-bf56-046aff952704Saúde Criança Repensar.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/8feded87-ea9f-4edd-83ba-a6b1ee281abfAções do Bem.png",
+      "PackagePath": "staticwebassets/images/8feded87-ea9f-4edd-83ba-a6b1ee281abfAções do Bem.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/9ca9ba7d-008f-4791-9c16-180a41363435ELOS TRANS.png",
+      "PackagePath": "staticwebassets/images/9ca9ba7d-008f-4791-9c16-180a41363435ELOS TRANS.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/9fa23bf9-2b9e-4ee8-ba05-fb44db59ac1eABBA - ACOLHIDOS PARA ACOLHER.png",
+      "PackagePath": "staticwebassets/images/9fa23bf9-2b9e-4ee8-ba05-fb44db59ac1eABBA - ACOLHIDOS PARA ACOLHER.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/bd404f10-0436-4747-bf42-ddeb3f66ec82Lar Dona Zélia.png",
+      "PackagePath": "staticwebassets/images/bd404f10-0436-4747-bf42-ddeb3f66ec82Lar Dona Zélia.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/d39de8f8-f364-4e15-9f2d-84e423874354Escoteiros do Brasil.png",
+      "PackagePath": "staticwebassets/images/d39de8f8-f364-4e15-9f2d-84e423874354Escoteiros do Brasil.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/d85183e2-ef5c-4329-8afd-536e2835e6fdAulas primária.png",
+      "PackagePath": "staticwebassets/images/d85183e2-ef5c-4329-8afd-536e2835e6fdAulas primária.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/e4a7d9f7-ae2b-4792-8329-c5f962d2d55fMultiplicadores do bem.png",
+      "PackagePath": "staticwebassets/images/e4a7d9f7-ae2b-4792-8329-c5f962d2d55fMultiplicadores do bem.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/e795eb07-b134-4470-acfe-71ffac15250fong-voluntari.jpg",
+      "PackagePath": "staticwebassets/images/e795eb07-b134-4470-acfe-71ffac15250fong-voluntari.jpg"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/images/eeb83b85-2af9-4602-8411-cf14b3c3fd44Brasil Forte.png",
+      "PackagePath": "staticwebassets/images/eeb83b85-2af9-4602-8411-cf14b3c3fd44Brasil Forte.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/img/CentralDasOngsLogo.png",
+      "PackagePath": "staticwebassets/img/CentralDasOngsLogo.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/img/CentralDasOngsTexto.png",
+      "PackagePath": "staticwebassets/img/CentralDasOngsTexto.png"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/img/favicon.ico",
+      "PackagePath": "staticwebassets/img/favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CentralOngs.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.CentralOngs.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.CentralOngs.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.CentralOngs.props",
       "PackagePath": "build\\CentralOngs.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.CentralOngs.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.CentralOngs.props",
       "PackagePath": "buildMultiTargeting\\CentralOngs.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.CentralOngs.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.CentralOngs.props",
       "PackagePath": "buildTransitive\\CentralOngs.props"
     }
   ],

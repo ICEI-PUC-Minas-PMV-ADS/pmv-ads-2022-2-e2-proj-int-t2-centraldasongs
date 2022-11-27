@@ -35,7 +35,6 @@ namespace CentralOngs.Models
 
         [Display(Name = "Estado")]
         public virtual StateModel? State { get; set; }
-        
         [Display(Name = "Estado")]
         public string StateName { get; set; }
     }

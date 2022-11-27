@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CentralOngs;
 using CentralOngs.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CentralOngs.Controllers
 {
+    [Authorize]
     public class JobController : Controller
     {
         private readonly DatabaseContext _context;
@@ -21,6 +23,7 @@ namespace CentralOngs.Controllers
 
 
         // GET: Job
+        [AllowAnonymous]
         public async Task<IActionResult> Index(string searchString, JobType? jobType, string? state)
         {
             var databaseContext = from p in _context.JobModel.Include(j => j.UserOng) select p;
@@ -44,6 +47,7 @@ namespace CentralOngs.Controllers
         }
 
         // GET: Job/Details/5
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.JobModel == null)

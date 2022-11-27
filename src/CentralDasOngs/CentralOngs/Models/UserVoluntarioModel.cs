@@ -16,9 +16,7 @@ namespace CentralOngs.Models
         [Display(Name = "Data de nascimento")]
         [Required(ErrorMessage = "É necessário informar a data de nascimento!")]
         public DateTime DateBirthDay { get; set; }
-
         public virtual ICollection<VacancyModel>? Vacancy { get; set; }
-
 
         [Display(Name = "Idade")]
         [NotMapped]

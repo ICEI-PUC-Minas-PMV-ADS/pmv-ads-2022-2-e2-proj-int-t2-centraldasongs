@@ -1,5 +1,5 @@
-﻿Insert into UFs (Name) values ('AL');
-Insert into UFs (Name) values ('AC');
+﻿Insert into UFs (Name) values ('AC');
+Insert into UFs (Name) values ('AL');
 Insert into UFs (Name) values ('AP');
 Insert into UFs (Name) values ('AM');
 Insert into UFs (Name) values ('BA');

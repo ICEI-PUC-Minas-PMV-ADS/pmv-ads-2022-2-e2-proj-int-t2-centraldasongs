@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CentralOngs.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221121224554_newFeatures")]
-    partial class newFeatures
+    [Migration("20221122144304_newFeature")]
+    partial class newFeature
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -172,6 +172,9 @@ namespace CentralOngs.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImagemUrl")
                         .HasColumnType("text");
 
                     b.Property<string>("Name")

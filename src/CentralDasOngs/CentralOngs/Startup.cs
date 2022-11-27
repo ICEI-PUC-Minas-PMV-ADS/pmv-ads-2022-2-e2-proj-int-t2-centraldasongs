@@ -38,44 +38,44 @@ namespace CentralOngs
             .AddCookie(options =>
             {
                 options.AccessDeniedPath = "/UsuariosVoluntario/AccessDenied/";
-                options.LoginPath = "/Home/Index/";
+                options.LoginPath = "/Job/Index/";
             });
 
             services.AddDbContext<DatabaseContext>(options =>
-            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
-            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
-);
+                //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")) // to use migrations
+            );
 
-services.AddControllersWithViews();
-}
+            services.AddControllersWithViews();
+        }
 
-// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-if (env.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
-else
-{
-    app.UseExceptionHandler("/Home/Error");
-}
-app.UseStaticFiles();
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+            app.UseStaticFiles();
 
-app.UseRouting();
+            app.UseRouting();
 
-app.UseCookiePolicy();
+            app.UseCookiePolicy();
 
-app.UseAuthentication();
+            app.UseAuthentication();
 
-app.UseAuthorization();
+            app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Job}/{action=Index}/{id?}");
-});
-}
-}
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Job}/{action=Index}/{id?}");
+            });
+        }
+    }
 }

@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CentralOngs.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221114141629_AddPropAbout_And_AddJob")]
-    partial class AddPropAbout_And_AddJob
+    [Migration("20221109231304_AddPropAbout")]
+    partial class AddPropAbout
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -117,38 +117,6 @@ namespace CentralOngs.Migrations
                     b.HasKey("Code");
 
                     b.ToTable("Banks");
-                });
-
-            modelBuilder.Entity("CentralOngs.Models.JobModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("JobType")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("NumberOfVacancies")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("UserOngId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserOngId");
-
-                    b.ToTable("Jobs");
                 });
 
             modelBuilder.Entity("CentralOngs.Models.StateModel", b =>
@@ -257,17 +225,6 @@ namespace CentralOngs.Migrations
                     b.Navigation("UserOng");
                 });
 
-            modelBuilder.Entity("CentralOngs.Models.JobModel", b =>
-                {
-                    b.HasOne("CentralOngs.Models.UserOngModel", "UserOng")
-                        .WithMany("Job")
-                        .HasForeignKey("UserOngId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("UserOng");
-                });
-
             modelBuilder.Entity("CentralOngs.Models.UserOngModel", b =>
                 {
                     b.HasOne("CentralOngs.Models.UserModel", null)
@@ -306,8 +263,6 @@ namespace CentralOngs.Migrations
                 {
                     b.Navigation("BankAccount")
                         .IsRequired();
-
-                    b.Navigation("Job");
                 });
 #pragma warning restore 612, 618
         }

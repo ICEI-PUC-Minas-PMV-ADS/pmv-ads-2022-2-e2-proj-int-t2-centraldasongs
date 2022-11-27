@@ -3,32 +3,27 @@
 @{
     ViewData["Title"] = "Index";
 }
-
 <a asp-controller="Job" asp-action="Index" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-<h1>Lista de ONGs Parceiras</h1>
+<h1>Nossas ONGs Parceiras</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Saiba mais</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="row" id="myCard">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-2 col-md-4 mb-4">
+            <div class="card">
+                <div class="bg-image hover-overlay">
+                    <a asp-action="Details" asp-route-id="@item.Id">
+                        <img src="\images\@item.ImagemUrl" class="img-fluid" width="200px"/>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 id="title" class="card-title bg-light">@item.Name</h5>
+                    <h6>@item.Email</h6>
+                    <a type="button" asp-controller="Ongs" asp-action="Details" asp-route-id="@item.Id">Saiba mais sobre esta Ong.</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
 
 

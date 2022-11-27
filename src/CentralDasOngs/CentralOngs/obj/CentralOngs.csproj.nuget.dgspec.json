@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\CentralOngs.csproj": {}
+    "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/CentralOngs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\CentralOngs.csproj": {
+    "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/CentralOngs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\CentralOngs.csproj",
+        "projectUniqueName": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/CentralOngs.csproj",
         "projectName": "CentralOngs",
-        "projectPath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\CentralOngs.csproj",
-        "packagesPath": "C:\\Users\\Matheus Estevam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus Estevam\\OneDrive\\Documentos\\projetos\\visual-studio\\PUC\\pmv-ads-2022-2-e2-proj-int-t2-centraldasongs\\src\\CentralDasOngs\\CentralOngs\\obj\\",
+        "projectPath": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/CentralOngs.csproj",
+        "packagesPath": "/Users/outrogato/.nuget/packages/",
+        "outputPath": "/Users/outrogato/Documents/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs/src/CentralDasOngs/CentralOngs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matheus Estevam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/outrogato/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -100,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

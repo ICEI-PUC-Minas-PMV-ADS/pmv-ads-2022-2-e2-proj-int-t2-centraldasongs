@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CentralOngs;
 using CentralOngs.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CentralOngs.Controllers
 {
+    [Authorize]
     public class VacancyController : Controller
     {
         private readonly DatabaseContext _context;
