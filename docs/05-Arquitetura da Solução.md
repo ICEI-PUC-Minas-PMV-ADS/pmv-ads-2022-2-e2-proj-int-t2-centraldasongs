@@ -27,6 +27,6 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Hospedagem
 
-O site utiliza a ferramenta GitHub Pages pelo domínio github.io como ambiente de hospedagem do site do projeto, disponibilizado gratuitamente pelo próprio github. E Microsoft Azure - Microsoft SQL Server para a hospedagem do banco de dados, utilizando o credito que PUC Minas disponibilizou para estudos.
+O site utiliza a ferramenta Heroku pelo domínio www.heroku.com como ambiente de hospedagem do site do projeto, disponibilizado gratuitamente pelo próprio Heroku. E o Elephantsql (https://www.elephantsql.com/), para a hospedagem do banco de dados, ferramenta 100% gratuita para até 20MB de dados.
 
 
