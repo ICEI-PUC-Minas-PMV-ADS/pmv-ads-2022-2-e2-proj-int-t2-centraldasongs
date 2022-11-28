@@ -77,9 +77,9 @@ Já as ferramentas empregadas no projeto e suas respectivas funções são:
 |Função     |Ferramentas          |
 |-----------|---------------------|
 |Ferramenta de repositório e documentação | [Github](https://github.com) |
-|Editor de código |Visual Studio Code |
+|Editor de código |Visual Studio 2022 /  Visual Studio 2019|
 |Ferramentas de comunicação |Github, Microsoft Teams, WhatsApp |
 |Ferramentas de diagramação | Figma, Canva|
 |Ferramentas de modelagem de processos | Lucidchart, MySQL Worbench |
-|Ferramentas de gestão de projetos |GitHub Projects ]
+|Ferramentas de gestão de projetos |GitHub Projects 
 
