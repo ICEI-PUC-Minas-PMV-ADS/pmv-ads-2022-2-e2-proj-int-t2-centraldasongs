@@ -24,7 +24,7 @@ Essa tela permite o login de voluntários. Para isso, os campos devem ser preech
 
 Essa tela permite o cadastro de um usuário para uma ONG. Para isso, os campos devem ser preechidos com as informações requisitadas e, em seguida, deve-se clicar no botão "cadastrar".
 
-![CadastroONG](https://user-images.githubusercontent.com/100412134/203559894-d784dade-8e0c-409b-82be-e0caa9b70cb0.png)
+![CriarONG](https://user-images.githubusercontent.com/100412134/206039262-0f91eddf-acf4-4811-a651-b896d3358953.png)
 
 ## Tela de Cadastro de Voluntário
 
