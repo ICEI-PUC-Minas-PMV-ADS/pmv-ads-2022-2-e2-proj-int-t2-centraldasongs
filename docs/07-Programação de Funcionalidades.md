@@ -51,7 +51,7 @@
 
 ## Tela de Cadastro de ONG
 
-![CadastroONG](https://user-images.githubusercontent.com/100412134/203559894-d784dade-8e0c-409b-82be-e0caa9b70cb0.png)
+![CriarONG](https://user-images.githubusercontent.com/100412134/206039262-0f91eddf-acf4-4811-a651-b896d3358953.png)
 
 ### Requisitos
 
