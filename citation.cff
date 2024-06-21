@@ -1,28 +1,24 @@
-message: Aplicação interativa, criada com o objetivo de ONG's e Voluntários se encontrarem. 
-title: Central das ONG's
+message: Please cite this software using these metadata.
+title: ONG Coração Voluntário
 authors:
-  - family-names: Jorge Buzelin
-    given-names: Felipe
-  - family-names: Pinheiro Leal Do Couto
-    given-names: Janaína
-  - family-names: Estevam Nunes Cordeiro
-    given-names: Matheus
-  - family-names: Martins Oliveira
-    given-names: Samara
-  - family-names: Malta Boscatti
-    given-names: Thais
-  - family-names: Munhoz Carneiro
-    given-names: Thais
-  - family-names: Monteiro Fortino
-    given-names: Vinicius
+  - family-names: Marílda Pinheiro Leal do Couto
+    given-names: Janaina
+  - family-names: Henrique de Oliveira Reis
+    given-names: Leandro
+  - family-names: Paulo Assiz Maciel
+    given-names: Marcos
+  - family-names: Eugênia Barbosa
+    given-names: Silmara
+  - family-names: Castro Simão
+    given-names: Silvestre
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Wilson da Costa
-    given-names: José
+    family-names: Curcino de Lima
+    given-names: Mateus 
+ 
 keywords:
-  - Ong
-  - Dodação
-  - Voluntário
-repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs
+  - 
+  - 
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t5-pmv-ads-2023-2-e3-proj-mov-t5-gp3-ong
 version: 1.0.0
-date-released: 2022-12-09
+date-released: 2023-08-01
