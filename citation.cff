@@ -1,0 +1,28 @@
+message: Aplicação interativa, criada com o objetivo de ONG's e Voluntários se encontrarem. 
+title: Central das ONG's
+authors:
+  - family-names: Jorge Buzelin
+    given-names: Felipe
+  - family-names: Pinheiro Leal Do Couto
+    given-names: Janaína
+  - family-names: Estevam Nunes Cordeiro
+    given-names: Matheus
+  - family-names: Martins Oliveira
+    given-names: Samara
+  - family-names: Malta Boscatti
+    given-names: Thais
+  - family-names: Munhoz Carneiro
+    given-names: Thais
+  - family-names: Monteiro Fortino
+    given-names: Vinicius
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Wilson da Costa
+    given-names: José
+keywords:
+  - Ong
+  - Dodação
+  - Voluntário
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t2-centraldasongs
+version: 1.0.0
+date-released: 2022-12-09
